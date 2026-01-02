@@ -1,6 +1,26 @@
 {
     "rewrites": [
         {
+            "source": "/sitemap.xml",
+            "destination": "/sitemap.xml"
+        },
+        {
+            "source": "/robots.txt",
+            "destination": "/robots.txt"
+        },
+        {
+            "source": "/ads.txt",
+            "destination": "/ads.txt"
+        },
+        {
+            "source": "/manifest.json",
+            "destination": "/manifest.json"
+        },
+        {
+            "source": "/favicon.ico",
+            "destination": "/favicon.ico"
+        },
+        {
             "source": "/(.*)",
             "destination": "/index.html"
         }
