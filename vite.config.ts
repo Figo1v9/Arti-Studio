@@ -35,16 +35,9 @@ export default defineConfig(({ mode }) => ({
             return 'vendor-animation';
           }
 
-          // Charts (Recharts + ALL d3 dependencies in ONE chunk)
-          // This prevents circular dependency issues
-          if (id.includes('node_modules/recharts') ||
-            id.includes('node_modules/d3') ||
-            id.includes('node_modules/internmap') ||
-            id.includes('node_modules/delaunator') ||
-            id.includes('node_modules/robust-predicates') ||
-            id.includes('node_modules/victory')) {
-            return 'vendor-charts';
-          }
+          // NOTE: Recharts/D3 are NOT split into separate chunks 
+          // to avoid circular dependency issues that cause runtime errors
+          // They will be bundled with Recharts usages directly
 
           // Sentry (optional, but can be large)
           if (id.includes('node_modules/@sentry/')) {
