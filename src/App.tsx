@@ -14,6 +14,24 @@ import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 import { initGA, trackPageView } from "@/lib/analytics";
 import { useDevToolsProtection } from "@/hooks/useDevToolsProtection";
 
+/**
+ * StaticFileRedirect - Forces a hard browser redirect to static files
+ * This prevents React Router from intercepting requests to files like sitemap.xml
+ */
+function StaticFileRedirect({ file }: { file: string }) {
+  useEffect(() => {
+    // Force a hard redirect to the actual static file
+    window.location.href = `/${file}`;
+  }, [file]);
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-violet-500" />
+    </div>
+  );
+}
+
+
 // Lazy Loaded Pages
 const LandingPage = lazy(() => import("./pages/LandingPage"));
 const Index = lazy(() => import("./pages/Index"));
@@ -164,6 +182,12 @@ function AnimatedRoutes() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/user/:username" element={<ProfilePage />} />
           <Route path="/user/:username/collection/:slug" element={<CollectionPage />} />
+
+          {/* Static files - force hard redirect to actual files */}
+          <Route path="/sitemap.xml" element={<StaticFileRedirect file="sitemap.xml" />} />
+          <Route path="/robots.txt" element={<StaticFileRedirect file="robots.txt" />} />
+          <Route path="/ads.txt" element={<StaticFileRedirect file="ads.txt" />} />
+
           <Route path="/:username" element={<ProfilePage />} />
         </Route>
 
