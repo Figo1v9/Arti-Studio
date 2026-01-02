@@ -1,0 +1,3155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://artistudio.fun/</loc>
+    <lastmod>2026-01-02T15:55:22.995Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/explore</loc>
+    <lastmod>2026-01-02T15:55:22.995Z</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/trends</loc>
+    <lastmod>2026-01-02T15:55:22.995Z</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/search</loc>
+    <lastmod>2026-01-02T15:55:22.995Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/about</loc>
+    <lastmod>2026-01-02T15:55:22.995Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/contact</loc>
+    <lastmod>2026-01-02T15:55:22.995Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/privacy</loc>
+    <lastmod>2026-01-02T15:55:22.995Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/terms</loc>
+    <lastmod>2026-01-02T15:55:22.995Z</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/6ddd4b19-b7ed-4170-9cad-68b44cf5c5b4</loc>
+    <lastmod>2026-01-02T12:14:51.844519+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767356091423-b6kmn81647.webp</image:loc>
+      <image:title>Fashion Editorial</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;poster_design_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;3:4&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1152,
+      &quot;</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/90c834bf-fb2a-49fa-8f88-8ba55dbe48ff</loc>
+    <lastmod>2025-12-31T18:49:38.519079+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767206978047-f8osu0n9wlb.webp</image:loc>
+      <image:title>Boxer in Vintage Gym</image:title>
+      <image:caption>A hyper-realistic 8k medium shot, 40mm lens, frames the subject in a vintage boxing gym, leaning on ring
+
+ropes. Outfit: open hoodie over a performance tee, hand wraps, athletic pants; chain at the ne</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/eb8e4753-6d89-4c8e-9de4-0fdbdf7ed4b6</loc>
+    <lastmod>2025-12-30T20:05:47.054511+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767125146243-2k5pfk4vrn.webp</image:loc>
+      <image:title>Ultra-Realistic Suit Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/02248dd6-534e-4bf3-bca2-6b4dd7de4b53</loc>
+    <lastmod>2025-12-30T19:56:47.14996+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767124606267-b9sbw8tspmw.webp</image:loc>
+      <image:title>Funny Ice Cream Scene</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/68984b6d-fd39-4ef2-b540-13cefb36306c</loc>
+    <lastmod>2025-12-30T19:22:50.21061+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767122569455-jw5qlyyxnu.webp</image:loc>
+      <image:title>Neo-Constructivist Portrait: High-Contrast Fashion Poster</image:title>
+      <image:caption>A man in his early thirties, with facial structure and proportions precisely inspired by the reference, captured with absolute sharpness and authentic skin texture,
+A bold, high-contrast poster-style </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/01e838d3-e75f-4f6c-90d4-e5946c606572</loc>
+    <lastmod>2025-12-30T19:09:35.944008+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767121775487-jzib1aoy7af.webp</image:loc>
+      <image:title>Graphic Male Portrait</image:title>
+      <image:caption>A man, likely in his early thirties with facial proportions, structure, and overall appearance inspired by the reference, captured in full sharp detail and natural skin texture,
+A high-contrast, graph</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/41292dde-9e14-42fa-9070-cb73f109ecd9</loc>
+    <lastmod>2025-12-30T14:19:41.849339+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767104381325-x8pwez00evn.webp</image:loc>
+      <image:title>Moody B&amp;W Portrait</image:title>
+      <image:caption>A Study in Contrast and Thought
+A black and white portrait of the man from image_0.png, maintaining his exact pose. He is seated in deep shadow, arms crossed, with his left hand raised holding a pen a</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/2a7cf3bb-527c-4d08-86bb-a4695683c9c3</loc>
+    <lastmod>2025-12-30T14:17:32.538562+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767104252004-2rb37e9z3ko.webp</image:loc>
+      <image:title>Surreal City Portrait Sculpture</image:title>
+      <image:caption>Ultra-detailed surreal sculpture portrait of a human male head constructed entirely from an ancient fantasy city, the entire face formed from countless miniature stone buildings, domes, arches, stairw</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/8c47afd8-cb78-4a8d-a915-f4b4047d5dbf</loc>
+    <lastmod>2025-12-30T14:14:03.801339+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767104043316-hsaerty5il.webp</image:loc>
+      <image:title>Panic Pilot Cinematic Disaster thumbnail</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;cinematic_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;16:9&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1536,
+      &quot;hei</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/3b983a79-04af-4c1f-a988-1331a18081a1</loc>
+    <lastmod>2025-12-30T12:01:16.231951+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767096075869-pl3q95fftqg.webp</image:loc>
+      <image:title>Realistic Portrait Study</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+
+Do NOT alter or beautify the face.
+Create an ultra-realisti</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/467901ba-be90-4f3f-89a9-627588155b79</loc>
+    <lastmod>2025-12-30T12:00:03.211086+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767096002739-18heauid7p2.webp</image:loc>
+      <image:title>Funny Study Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f560b6fc-e60e-4485-8a1c-352857e366d1</loc>
+    <lastmod>2025-12-30T11:52:01.560422+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767095521079-cbpp7e3mrfv.webp</image:loc>
+      <image:title>Ultra-Realistic Christmas Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/00d97bd4-bdeb-4829-b8e9-d9b1df89cdd1</loc>
+    <lastmod>2025-12-30T11:50:08.923371+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767095408524-yo4rh1xld4.webp</image:loc>
+      <image:title>Christmas Chaos Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+
+Do NOT alter or beautify the face.
+Create an ultra-realisti</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f69e9d71-4312-4879-9ec5-1c488a6df90f</loc>
+    <lastmod>2025-12-30T11:48:30.463726+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767095310056-xvdkwwk7g0i.webp</image:loc>
+      <image:title>Stuck in Xmas Tree</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/060b36fb-c3f8-4e56-8903-79fd25c5f0b2</loc>
+    <lastmod>2025-12-30T11:45:51.794352+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767095151441-9u6r08wlnae.webp</image:loc>
+      <image:title>Cozy Christmas Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/b4b9bcac-e3e5-4eed-b575-5387f939b583</loc>
+    <lastmod>2025-12-30T11:44:39.991464+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767095079544-qx10n4b3wzn.webp</image:loc>
+      <image:title>Christmas Portrait Realism</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/cdd86cfa-2877-4011-9acf-18d163842f7c</loc>
+    <lastmod>2025-12-30T11:42:36.844028+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767094956151-paxaqrjllh.webp</image:loc>
+      <image:title>Ultra-Realistic Fashion Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+
+Do NOT alter or beautify the face.
+Create an ultra-realisti</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/59cb58a8-9d15-429a-acc5-c53e6b7f0c40</loc>
+    <lastmod>2025-12-30T11:40:29.098816+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767094828655-4dw7m2jgp3b.webp</image:loc>
+      <image:title>Cafe Portrait Ultra-Realism</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+
+Do NOT alter or beautify the face.
+Create an ultra-realisti</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c58395a8-298c-47d5-85c5-7d542e283b0b</loc>
+    <lastmod>2025-12-30T11:39:18.028482+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767094757514-htwqag3k41q.webp</image:loc>
+      <image:title>Luxury Fashion Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/7c4119aa-5c78-46b9-8e97-9865f2df644d</loc>
+    <lastmod>2025-12-30T11:37:54.029381+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767094673514-5e1mndp35yw.webp</image:loc>
+      <image:title>Ultra-Realistic Ice Cave Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ef9d53bb-96d8-4623-88c9-bbf0608275e3</loc>
+    <lastmod>2025-12-30T11:37:02.810488+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767094622419-0mzedj0q417h.webp</image:loc>
+      <image:title>Ultra-Realistic Fashion Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+
+Do NOT alter or beautify the face.
+Create an ultra-realisti</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/a9a42b47-c82e-49a2-a100-67f4bfdc8544</loc>
+    <lastmod>2025-12-30T11:35:23.217323+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767094522656-k4snlotoyyo.webp</image:loc>
+      <image:title>Ultra-Realistic Rooftop Fashion Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical.
+Do NOT alter or beautify the face.
+
+Create an ultra-realistic</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/fa5a8058-b465-41f2-8184-88266e8cb692</loc>
+    <lastmod>2025-12-30T11:29:56.611005+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767094196179-brhkr5gvls5.webp</image:loc>
+      <image:title>Astronaut Face Distortion</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face features identical but apply heavy wind distortion.
+Scene: Inside a NASA astronaut training centrifuge capsule.
+Action: The </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/dffdf445-8bf3-4c16-9af9-0f373ce27418</loc>
+    <lastmod>2025-12-30T11:28:07.43107+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767094087083-wu52ystjxbm.webp</image:loc>
+      <image:title>Eagle Feeds Worm</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: High up in a bird&apos;s nest on a cliff edge.
+Character: The user is sitting in the giant nest. They are </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/603b74d7-c44c-4838-85e2-2cbffa88d7b3</loc>
+    <lastmod>2025-12-30T11:25:13.906555+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767093913265-fa4hts2j6ws.webp</image:loc>
+      <image:title>Mosaic Armor Fashion</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face 100% identical.
+Scene: A modern architectural background with concrete walls.
+Attire: A futuristic outfit constructed from t</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f4cde69f-bd8e-4597-9f77-cd5c8a21d5e5</loc>
+    <lastmod>2025-12-30T11:22:09.402184+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767093729015-6wg2exqm1je.webp</image:loc>
+      <image:title>Liquid Marble Gown</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, and skin texture 100% identical.
+Scene: A minimalist gallery space with soft, heavenly lighting.
+Attire: An avant</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/5f25d3a6-00d6-4128-a523-1c69bb2a4ec7</loc>
+    <lastmod>2025-12-30T11:20:29.137503+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767093628736-psymikzan8s.webp</image:loc>
+      <image:title>Golden Emperor Robes</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, and features 100% identical.
+Scene: The vast courtyard of the Forbidden City in Beijing with majestic palace arch</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/b4467934-639f-4f91-a643-425fdc1cceb7</loc>
+    <lastmod>2025-12-30T11:17:47.650404+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767093467266-sha6y414kd.webp</image:loc>
+      <image:title>Futuristic Watchtower Macro</image:title>
+      <image:caption>البرومبط:
+Hyper-realistic eye-level macro photography. A large, glossy red Google Maps location pin stuck into the ground, acting as a futuristic watchtower. A tiny real human is climbing a ladder on </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/bbeccf4a-d0cf-4e2e-bc75-beeac05fa2b1</loc>
+    <lastmod>2025-12-30T11:16:54.256644+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767093413800-5sxw2ojyldu.webp</image:loc>
+      <image:title>YouTube Stage Macro Photo</image:title>
+      <image:caption> Hyper-realistic isometric view macro photography. A giant red rectangular YouTube &apos;Play&apos; button acting as a concert stage. A tiny real human band is performing on top of the white triangle play symbo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/50d213fd-5f91-4bb5-aa8c-563599d44ac3</loc>
+    <lastmod>2025-12-30T10:04:31.893391+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767089071492-dkyhwharn6t.webp</image:loc>
+      <image:title>3D Cartoon Characters</image:title>
+      <image:caption>[
+  {
+    &quot;image_generation&quot;: {
+      &quot;quality&quot;: &quot;hyper-realistic&quot;,
+      &quot;face&quot;: { &quot;preserve_original&quot;: true },
+      &quot;subject&quot;: {
+        &quot;clothing&quot;: &quot;light grey knitted sweater, blue high-waisted j</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/4016ada4-2fe0-4463-a503-0e6c87e9ec1a</loc>
+    <lastmod>2025-12-30T09:01:00.047195+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767085259634-ni7prhgjpaj.webp</image:loc>
+      <image:title>Flintstones Movie Scene</image:title>
+      <image:caption>Create a movie scene in 9:16 format, warm and familiar in Piedradura. The floor is of the dirt. Illumination:
+Golden hour, warm and soft light, delicate shadows, blue sky with soft clouds Cozy and nos</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/29257045-c810-463e-8c90-2a3ea537a59b</loc>
+    <lastmod>2025-12-29T23:21:17.283914+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767050476844-6flths6sjcq.webp</image:loc>
+      <image:title>Dark Psy Art Book</image:title>
+      <image:caption>Create a dark, psychological book cover illustration for In Search of Darkness by Mr. Thousand. The cover should evoke a sense of mystery, suspense, and deep psychological tension. Include:
+
+A shadowy</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ea6de81b-1b08-47f6-ac99-ab5614211480</loc>
+    <lastmod>2025-12-29T23:02:02.31919+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767049345928-8xt4m3u67z2.webp</image:loc>
+      <image:title>WhatsApp Table Macro</image:title>
+      <image:caption>Hyper-realistic top-down macro photography. A long, light green WhatsApp speech bubble acting as a dining table. Two real living humans (shrunk to tiny scale) are sitting at opposite ends. They are NO</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/614a900e-49b2-4828-8e22-3c6d3a9fd0a1</loc>
+    <lastmod>2025-12-29T22:54:57.526587+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767048896940-b0rk3xkkifr.webp</image:loc>
+      <image:title>Man &amp; Kuntilanak Night Scene</image:title>
+      <image:caption>Hyper-realistic cinematic wide shot , a beautiful man sitting cross-legged on the side of a quiet deserted asphalt road at night . She is wearing a denim jacket, black pants , and black sneakers , wit</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/d65c1839-72bf-46ab-b56b-3120f06bff4b</loc>
+    <lastmod>2025-12-29T22:54:16.096539+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767048855436-u8iupbtlq8r.webp</image:loc>
+      <image:title>PUBG Soldier Prepares Grenade</image:title>
+      <image:caption>A close-up of a man in his late 20s&apos; hands and face as he primes a Frag Grenade. He is hiding behind a hay bale in an Erangel wheat field. He wears a Level 2 camo helmet and a dirty white shirt with r</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/90050e73-8d91-4bc4-aff1-2642206f7d51</loc>
+    <lastmod>2025-12-29T21:51:28.337672+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767045087970-xx874353ppl.webp</image:loc>
+      <image:title>Serene Rainy Moment</image:title>
+      <image:caption>A young man standing alone in a lush green field during light rain, wearing modern over-ear headphones, eyes closed, head tilted upward, arms slightly open as if embracing the moment. Wind gently move</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c7260314-3ac5-450a-a1a0-5cc91b62c9eb</loc>
+    <lastmod>2025-12-29T21:22:25.560958+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767043345099-vzzf84l6grm.webp</image:loc>
+      <image:title>Modern Urban Man in Suit: High-Contrast Editorial Style</image:title>
+      <image:caption>Create an image that captures a stylish, modern man (uploaded photo for 100.999% facial reference) mid-stride on a city street, exuding a polished yet effortless &quot;urban professional&quot; aesthetic.
+The Su</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/0e8c32db-effb-4455-ae09-91230041b5fa</loc>
+    <lastmod>2025-12-29T13:35:03.008125+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767015301993-i01gpftz6gj.webp</image:loc>
+      <image:title>McDonald&apos;s 24hr Fries Nightlight Poster</image:title>
+      <image:caption>
+
+The creative poster features a box of fries transformed into a nightlight in the center. The golden fries act as light, reflecting off the wall behind the outlet and casting a yellow glow on the McD</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/8fe2cd2b-f1e9-4337-987c-a47be0151b94</loc>
+    <lastmod>2025-12-29T11:27:21.118146+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767007640726-sowbj394dq.webp</image:loc>
+      <image:title>Martial Arts Hero in Foggy Bamboo</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, and features 100% identical.
+Scene: A mystical, foggy bamboo forest with tall green stalks.
+Attire: Wearing a tra</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/a483ab6a-2334-4a17-a4ab-2c8f8cbb34fe</loc>
+    <lastmod>2025-12-29T10:40:16.763336+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767004816183-t6dc29urdme.webp</image:loc>
+      <image:title>Cinematic Portrait Young Man</image:title>
+      <image:caption>Use my image upload in Ultra-realistic black-and-white cinematic portrait of a young man in a dark studio, half-body framing. He holds a glowing white LED ring light around his neck with both hands, s</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/8d50e3f2-df48-4f7b-baab-6a1c0243a251</loc>
+    <lastmod>2025-12-29T10:00:57.405458+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767002456889-davrf2oxhew.webp</image:loc>
+      <image:title>Sticky Note Suit Chaos</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face 100% identical.
+Scene: Busy office environment or windy street.
+Attire: A suit covered entirely in layers of yellow sticky n</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/df19b8ca-20d2-447e-9245-e21d0324489a</loc>
+    <lastmod>2025-12-29T09:59:32.984253+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767002372572-rledtc1c6y.webp</image:loc>
+      <image:title>Pop Art Latex Balloon</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face 100% identical.
+Scene: Minimalist studio with pop-art colors.
+Attire: An exaggerated, oversized outfit made of inflated, shi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/4ce22d1a-b6d6-460d-a926-bd6b82e17bfc</loc>
+    <lastmod>2025-12-29T09:57:12.617379+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767002232051-m0ucy2tck6o.webp</image:loc>
+      <image:title>Surreal Cloud Fashion</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, and proportions 100% identical.
+Scene: A dreamy, surreal sky background.
+Attire: An avant-garde outfit made entir</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c0ab7b86-afe2-44f8-8703-e0baa30b08c2</loc>
+    <lastmod>2025-12-29T09:55:19.408363+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767002118423-q19l19h0f1.webp</image:loc>
+      <image:title>Winter Portrait: Man &amp; Olaf</image:title>
+      <image:caption>Prompt:
+Create an ultra-realistic 8K winter portrait, maintaining the young man&apos;s exact appearance and facial features. He stands outdoors in a snowy winter park, leaning slightly towards a snowman wi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/da798058-5c8d-43b1-a40d-e0d13c9a6bc3</loc>
+    <lastmod>2025-12-29T09:49:19.191906+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767001758023-55vt6r3dqkd.webp</image:loc>
+      <image:title>Football Goal Celebration</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, and features 100% identical.
+Scene: A dramatic goal celebration during a night match.
+Action: The player is slidi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/606e396d-ed14-4cb2-98b8-a264f5ac8ccc</loc>
+    <lastmod>2025-12-29T09:26:39.535975+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767000399086-tkchnw1tsys.webp</image:loc>
+      <image:title>Moody Film Noir Portrait</image:title>
+      <image:caption>Cinematic portrait of me sitting on a chair seen through a blurred keyhole spotlight, wearing a dark suit and white shirt, no cigarette, just thinking under a warm lamp. moody lighting, soft haze, fil</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/756ba580-1bf9-4232-8fab-e0fe670cf4fa</loc>
+    <lastmod>2025-12-29T09:25:09.698521+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767000309124-hryvgbt4y27.webp</image:loc>
+      <image:title>Split Reality Street Art</image:title>
+      <image:caption>64K DSLR ultra-sharp split-reality street art portrait using the uploaded image as exact face reference. Vertical frame, man leaning against a light-gray concrete wall. Left side photorealistic: red c</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/d8d09249-b3c4-4fec-8959-d0990de2ab52</loc>
+    <lastmod>2025-12-28T21:14:42.080605+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766956481207-6dm4wktzag.webp</image:loc>
+      <image:title>Drone Light Show Portrait</image:title>
+      <image:caption>Edit the uploaded photo (face based on the reference photo). A vibrant drone light show at night featuring a large, glowing, mans face formation of colorful lights in the sky composed of bright, pixel</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/98646687-df85-44e5-8bf8-c6381044b325</loc>
+    <lastmod>2025-12-28T19:59:21.723809+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766951961215-i2vsarm7f3.webp</image:loc>
+      <image:title>Winter Portrait Realism</image:title>
+      <image:caption>Create an ultra-realistic image of me, preserving my appearance as much as possible, without altering my face, keeping it exactly as in the original. I am in warm winter clothing: a bulky black puffer</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/82bbaa05-cce2-49fb-98b5-f8052a73b93b</loc>
+    <lastmod>2025-12-28T19:46:41.056301+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766951200476-jh8uz3o7qj.webp</image:loc>
+      <image:title>Mujer en balcón con gato</image:title>
+      <image:caption>Foto realista de una mujer atractiva, con el rostro y rasgos faciales basados en la foto de referencia, cabello completamente visible y natural (sin ningún accesorio que lo cubra). Lleva gafas transpa</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/a3181727-5f56-4a2a-a175-0a9cddce7dfc</loc>
+    <lastmod>2025-12-28T19:43:32.926425+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766951012312-z3f0ecp5uqo.webp</image:loc>
+      <image:title>Rock Fan in Poster Booth</image:title>
+      <image:caption>A person from photo reference in their mid-20s stands in a fish-eye lens photo booth from above, where every wall and ceiling are covered with posters of rock and metal bands—Nirvana, Metallica, AC/DC</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/9f63dbb9-ab7e-4da7-9878-10bf8b0520a2</loc>
+    <lastmod>2025-12-28T19:41:09.020334+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766950868295-95p53nzpamd.webp</image:loc>
+      <image:title>Knitted New Year Art</image:title>
+      <image:caption>&quot;New Year&apos;s card illustration in a knitted style: a person&apos;s face exactly as per the reference, with a knitted teddy bear, background of stitched snow and candles, the inscription &apos;Happy New Year!&apos; at</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/62c232d6-d0c0-4858-8b40-3ea9068e7d92</loc>
+    <lastmod>2025-12-28T19:33:34.852968+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766950413869-a0e67t11ksl.webp</image:loc>
+      <image:title>Scribble Fashion Collage</image:title>
+      <image:caption>Hand-Drawn Scribble Breakdown &quot;Breakdown the look into a fun OOTD Fashion Collage, 9:16. Paper scribble aesthetic with hand-drawn arrows, doodles, and handwritten labels pointing to each outfit piece.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/82972b32-7303-4c13-a5d0-91cfebf992eb</loc>
+    <lastmod>2025-12-28T19:25:32.171045+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766949931414-7wt1z8w94jk.webp</image:loc>
+      <image:title>Winter Portrait: Elegant Man</image:title>
+      <image:caption> Use my image upload in Ultra-realistic, hyper-detailed, 8K cinematic portrait of a young stylish man, using the uploaded image for exact face and hairstyle.
+Outfit: elegant dark wool overcoat layered</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/888e0d80-a172-4ba8-91ca-ad3b013d54e2</loc>
+    <lastmod>2025-12-28T19:20:28.682624+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766949628248-yxvc5xx1pks.webp</image:loc>
+      <image:title>Stylish Portrait in 3D Frame</image:title>
+      <image:caption>Use my photo uploaded (keep original face), A high-quality of a stylish my photo with sunglasses, wearing a vibrant blue hoodie and khaki cargo pants. He sitting casually and &quot;stepping out&quot; of a giant</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/d79795a7-4edc-4c65-888e-8fb8a839b5bd</loc>
+    <lastmod>2025-12-28T19:16:47.802443+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766949407149-ypvihqa5syi.webp</image:loc>
+      <image:title>Heroic Editorial Portrait: Dramatic Orange Studio Lighting</image:title>
+      <image:caption>You are a world-class editorial portrait photographer specializing in dramatic, colorful studio lighting. Your task is to create a powerful, dynamic portrait with a &quot;heroic&quot; fee
+
+ATTACHED
+
+IDENTITY AN</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ab480c9b-a0d7-47e2-8da5-c00771fb90d4</loc>
+    <lastmod>2025-12-27T22:32:38.33581+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766874757947-3ijl7j24si6.webp</image:loc>
+      <image:title>Ultra-Realistic Cyberpunk Samurai: High Fashion Editorial</image:title>
+      <image:caption>&quot;A cinematic cyberpunk samurai woman standing on the edge of a skyscraper rooftop, overlooking a futuristic. city skyline far below. She has long braided dreadlocks with orange accents, intricate faci</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/04741672-d5fe-49e3-b89c-54bf8d5c7217</loc>
+    <lastmod>2025-12-27T19:52:58.640436+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766865178121-hojqbisuqyt.webp</image:loc>
+      <image:title>Urban Duality: Split Reality Street Art Portrait</image:title>
+      <image:caption>Transform this image [Upload Your Image] into a 64K DSLR shot resolution of ​A creative split-reality street art portrait featuring a young man (same face as the uploaded image) leaning back against t</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c29aa91b-e83c-4dee-9aee-d3f726dba466</loc>
+    <lastmod>2025-12-27T19:50:07.335691+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766865006499-19l8b1aurrb.webp</image:loc>
+      <image:title>8K Hyper-Realistic Hunter &amp; Social Media ID Card Design</image:title>
+      <image:caption>A hyper-realistic, 8k, highly detailed studio shot of a modern Hunter X Hunter ID card, positioned at a high-angle, slightly tilted diagonally from top-left to bottom-right, resting on a clean, minima</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/99c0bfc6-3a4a-4333-9e30-ec59f69b948d</loc>
+    <lastmod>2025-12-27T19:36:52.354722+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766864211793-zgjfesiskog.webp</image:loc>
+      <image:title>Shocked Home Alone Scream Pose | Cinematic Christmas Poster</image:title>
+      <image:caption>Using my uploaded reference photo, preserve my exact facial features, EXACT HAIRSTYLE, and general likeness (USER&apos;S LIKENESS).
+**Create a HYPER-REALISTIC, ultra-detailed photograph that is a direct re</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/7aa0a08a-7704-4f45-ba46-938ef8763a0a</loc>
+    <lastmod>2025-12-27T19:31:43.821679+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766863902903-7fteoo0gykn.webp</image:loc>
+      <image:title>Framed 3D Hyperrealistic Caricature Couple: Tin Can Talk</image:title>
+      <image:caption>Two 3D big head hyperrealistic caricature couple using photo reference, they are communicating using a tin can telephone, one in each of two black picture frames on a white wall. The frames are side b</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/8d9f1376-1910-4d5e-aca3-40d74a103b8e</loc>
+    <lastmod>2025-12-27T18:24:11.712743+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766859851332-z8vw7slvy5b.webp</image:loc>
+      <image:title>Dynamic Full-Body Pose with 3D Text | Ultra-Realistic Art</image:title>
+      <image:caption>Prompt:
+“Create ultra-realistic digital art of a person (use reference photo) in a dynamic full-body pose. The subject wears casual relaxed outfits in bold colors (shirt, pants, shoes), appearing styl</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c8d1bab7-0c5c-482b-a181-558f9e418b96</loc>
+    <lastmod>2025-12-27T18:12:57.225725+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766859176804-ruudr0dcnac.webp</image:loc>
+      <image:title>Ultra Realistic Giant Stomp: Extreme Perspective Art</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/52c9da09-6534-47f4-b7b7-cdcdb533735c</loc>
+    <lastmod>2025-12-27T18:11:48.568728+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766859107845-6vv2gg6z2p9.webp</image:loc>
+      <image:title>Photorealistic 3D Mockup: Futuristic WhatsApp Premium Card</image:title>
+      <image:caption> A high-quality, photorealistic 3D mockup of a futuristic WhatsApp premium membership card lying on a white textured surface. The card has a sleek matte black background featuring glowing neon green d</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f14f4192-f787-4a6c-90de-038241fc900d</loc>
+    <lastmod>2025-12-27T18:06:33.507584+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766858793176-e7uwfmdtz26.webp</image:loc>
+      <image:title>8K Realistic Christmas Portrait: Biker and Santa in Saigon</image:title>
+      <image:caption>Prompt:
+Use my image upload  in Give the exact same face 8k ultra image.He drives a cycle and back side seat the Santa Claus is sitted.Create an ultra-realistic high-resolution Christmas street portra</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/4e53a373-f56d-4164-ae49-d038c90b89ea</loc>
+    <lastmod>2025-12-27T18:04:39.230917+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766858678925-5qme6ma7n16.webp</image:loc>
+      <image:title>Vibrant Pop Art Commercial Shampoo Packaging Design</image:title>
+      <image:caption>Product commercial photography, product design, shampoo packaging design. The bottle label features a patchwork of red, yellow, purple, green, white, and blue color blocks, with blue text &quot;MOYUN&quot; and </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/efa8cfa5-0710-49e8-aec7-d6946b8d8d39</loc>
+    <lastmod>2025-12-27T18:01:20.954342+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766858480326-lr3q0cmh2j.webp</image:loc>
+      <image:title>Dynamic Hard Candy Ad: Explosive Orange Commercial Photo</image:title>
+      <image:caption>Advertising photography, commercial advertisement: a strip of hard candy packaging. The background is dynamic and full of vitality, with the hard candy prominently displayed in the center and the labe</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/3cc03873-ac4e-4938-aea2-5f0ccb39d704</loc>
+    <lastmod>2025-12-27T17:57:22.208342+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766858241861-e9i8muh0mus.webp</image:loc>
+      <image:title>Warm Portrait: Man with Hot Chocolate at Christmas Market</image:title>
+      <image:caption>Prompt:
+Use my image upload in A portrait size image of a young man (uploaded photo) with short dark hair and beard with subtle smile stands leaning against a wooden counter at a festive Christmas mar</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/be5b51ad-716b-40a7-a5f5-027c78ba7e95</loc>
+    <lastmod>2025-12-27T17:56:01.20582+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766858160749-eb1fz11gec.webp</image:loc>
+      <image:title>Cozy New Year Couple Portrait | Photorealistic Winter Art</image:title>
+      <image:caption>Ultra-realistic cozy New Year couple portrait using the uploaded reference photo of [COUPLE]. Preserve the exact facial features, skin tone, body structure, and expressions of both people from the upl</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/179382d0-e713-4bf4-8880-fbe03582b4cd</loc>
+    <lastmod>2025-12-27T14:46:30.712321+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766846790147-ur0ndxy5l.webp</image:loc>
+      <image:title>Conceptual Surrealism: Headless Figure, Floating Head</image:title>
+      <image:caption>The figure&apos;s head is exaggerated and enlarged, held up in both hands while the body maintains normal proportions, creating a headless state. The head appears to float in the air, detached from the bod</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/b321df3e-834c-4e35-aa89-92e752c93b4f</loc>
+    <lastmod>2025-12-27T14:43:03.74384+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766846583300-tcbmdg142gs.webp</image:loc>
+      <image:title>Minimalist Bakery Poster Set: Donuts, Croissants &amp; Baguettes</image:title>
+      <image:caption>Based on the reference image of the bagel poster, create 4 promotional photos of different bread products: donuts, croissants, pain au chocolat, and baguettes. Keep the poster style, composition, and </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/66900c9d-2756-43ec-8c20-8b008a0091fe</loc>
+    <lastmod>2025-12-27T14:42:37.165328+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766846556645-jvfh569how.webp</image:loc>
+      <image:title>Minimalist Step-by-Step Food Infographic Design</image:title>
+      <image:caption>Create a complete step-by-step food infographic, presented from a top-down perspective. Use a minimalist style with a white background. Include labeled photos of the ingredients, connect icons represe</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/0e547b40-74ae-439b-9b58-23743f129d32</loc>
+    <lastmod>2025-12-27T14:41:35.109026+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766846494722-9ckm59nu3qj.webp</image:loc>
+      <image:title>Orthographic Views: 4 Angle Digital Art Presentation</image:title>
+      <image:caption>Generate four views, including left view, front view, right view and back view, with the image, background and shot size unchanged.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/6964da5c-6496-412e-b9eb-86300202ec9e</loc>
+    <lastmod>2025-12-27T14:41:22.345407+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766846481734-qd9lujj7ph.webp</image:loc>
+      <image:title>Lost Ruins Movie Poster: Dark Double Exposure Key Art</image:title>
+      <image:caption>Movie poster for a film titled &apos;Lost Ruins&apos;. The design features a prominent double exposure effect, merging the dark silhouette of a female explorer wearing a hat with ancient jungle ruins glowing fr</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/cb2c15d7-02ac-40c7-a09f-c56772332c57</loc>
+    <lastmod>2025-12-27T14:40:11.563313+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766846411020-tb3jzth55pe.webp</image:loc>
+      <image:title>Dreamy Christmas Photoshoot: Woman Feeding Reindeer in Snow</image:title>
+      <image:caption>A studio photo shoot filled with Christmas spirit. In the picture, a young woman wearing a white fur coat and snow boots [user uploaded photo] is smiling happily as she feeds a prop reindeer wearing a</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/b96c77eb-c116-4735-af61-79edb6633b7e</loc>
+    <lastmod>2025-12-27T14:39:20.17721+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766846359643-7tnaqke3jav.webp</image:loc>
+      <image:title>Cinematic Double Exposure Movie Poster: Lost Ruins</image:title>
+      <image:caption>Movie poster for a film titled &apos;Lost Ruins&apos;. The design features a prominent double exposure effect, merging the dark silhouette of a female explorer wearing a hat with ancient jungle ruins glowing fr</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/1dfac17b-cb99-4eee-8520-8efceea55255</loc>
+    <lastmod>2025-12-27T14:38:17.492508+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766846297098-zmsssvx07i.webp</image:loc>
+      <image:title>Nightmare Vision: Surreal Dark Fantasy Horror Poster</image:title>
+      <image:caption>A surreal horror movie poster titled &apos;NIGHTMARE VISION&apos;. In the center of a dark gothic cathedral with biomechanical architecture, a giant, unsettling red eye made of stained glass stares down. A lone</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/183bacac-f754-4fd7-ab79-642036a11710</loc>
+    <lastmod>2025-12-27T14:37:54.12978+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766846273366-xgrwtsv3kab.webp</image:loc>
+      <image:title>Monkey Driving Banana Car - Comical 3D Pixar Art</image:title>
+      <image:caption>A single IP image of a bizarre, absurd and comical car with its character, 16:9 aspect ratio. A cheerful monkey in a blue racing suit and helmet is driving a car shaped like a giant banana, the car ha</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/b14bd512-3cfa-4794-b438-f5f5da6f8aa6</loc>
+    <lastmod>2025-12-27T14:23:53.27823+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766845432919-udulfr5xhyj.webp</image:loc>
+      <image:title>Smug 3D Rapper Emoji Character Portrait Render</image:title>
+      <image:caption>A high-resolution 3D render of a rapper emoji character. The character is a yellow emoji face without a nose, featuring a smug and confident expression with a slight smirk. It wears a trendy black snu</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ea9c4608-21ee-49af-aaf8-1101d97f117b</loc>
+    <lastmod>2025-12-27T14:14:58.452083+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766844897436-idl8xvju77c.webp</image:loc>
+      <image:title>Colossal Figure Looms Over Magical Christmas City Streets</image:title>
+      <image:caption>Surrealistic perspective: a colossal reference image looms like a deity over city streets, partially obscured by buildings. The main subject perfectly replicates the input image&apos;s core features: ident</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/637a0d77-670d-4072-acde-8f3ac5aaec16</loc>
+    <lastmod>2025-12-27T13:58:02.952575+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766843882600-9x143577ts.webp</image:loc>
+      <image:title>Modern SaaS Dashboard UI/UX Design - X-Flow Concept</image:title>
+      <image:caption>This is the UI design for a dashboard for a modern SaaS web application called &quot;X-Flow&quot;. The layout features a navigation bar on the left with icons for &quot;Dashboard&quot;, &quot;Form Designer&quot;, and &quot;Data Entry&quot;.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ba7b28bd-8d6e-48f4-a776-2f22b25d8adc</loc>
+    <lastmod>2025-12-27T13:56:35.88775+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766843795071-lz6y0n3opfq.webp</image:loc>
+      <image:title>Vintage Scrapbook Resume Layout Design: Aged Parchment Collage</image:title>
+      <image:caption>Vintage scrapbook style resume layout design.
+Concept: Aged parchment paper textures, layered cutouts with rough torn deckle edges.
+Colors: Deep sepia tones, coffee stains, burnt orange edges, muted c</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/d1eba842-8938-4a6f-8734-06aaae237068</loc>
+    <lastmod>2025-12-27T13:45:27.477094+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766843126629-1obtv8xtg89.webp</image:loc>
+      <image:title>Elegant Hijabi Portrait: Luxury New Year Magazine Cover</image:title>
+      <image:caption>Luxury New Year greeting card design for a hijabi woman.
+Use the uploaded reference photo of the same person and keep facial features highly accurate.
+Transform the woman into a sophisticated lady wea</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/a0b81dd8-8ea0-47fb-a109-3082966e36d0</loc>
+    <lastmod>2025-12-27T13:41:35.525076+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766842894379-dxg64oeep.webp</image:loc>
+      <image:title>Luxury Hijabi New Year Card Design: Elegant Portrait</image:title>
+      <image:caption>Luxury New Year greeting card design for a hijabi woman.
+Use the uploaded reference photo of the same person and keep facial features highly accurate.
+Transform the woman into an elegant, confident hi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/be775f5b-0eb0-4d82-ad18-f2c22128e9b5</loc>
+    <lastmod>2025-12-27T13:31:35.156332+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766842294682-tw7zdoi7nwk.webp</image:loc>
+      <image:title>Graffiti Camo Streetwear: Editorial Fashion Portrait</image:title>
+      <image:caption>A full-body editorial fashion portrait against a white wall completely covered in chaotic handwritten graffiti, doodles, signatures, hearts, symbols, and layered text in black, red, and blue marker.
+A</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/59895d00-9b9c-4df2-9e7f-390f196cf3f3</loc>
+    <lastmod>2025-12-27T13:30:03.281987+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766842202922-ex6gr2pwjps.webp</image:loc>
+      <image:title>Elegant Winter Portrait: Hijab, Hat, Victorian Style</image:title>
+      <image:caption>Don&apos;t change the face,Make a hyper-realistic cinematic portrait of a young European woman with delicate porcelain skin, soft rosy blush, light blue eyes, natural pink lips, refined symmetrical facial </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/cb4a9f18-2f17-4ba4-a146-508e316e8911</loc>
+    <lastmod>2025-12-27T13:29:34.384344+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766842173744-is4ofjbtpvf.webp</image:loc>
+      <image:title>Hyper-Realistic Composite Portrait with Facebook UI Overlay</image:title>
+      <image:caption>A hyper-realistic, 8k, highly detailed composite image featuring two instances of the same person against a vibrant blue and white background, separated by a diagonal white line running from the top-l</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/3be6ffb0-b530-4adc-9cae-40f56a1b9f13</loc>
+    <lastmod>2025-12-27T12:23:44.889427+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766838224026-qii4twkq8tj.webp</image:loc>
+      <image:title>Emotional Candid Portrait on Train: Travel Photography</image:title>
+      <image:caption>Use my image in A 35-year-old boy sitting beside a train window, chin resting on hand, thoughtful look, reflection overlapping face, short textured hair, casual outfit, candid lifestyle documentary po</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/e9c4fde9-a9c6-4493-aa4d-06a24dc4ec08</loc>
+    <lastmod>2025-12-26T23:02:11.704339+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766790130897-t9z4b20b9.webp</image:loc>
+      <image:title>VOLT Energy Drink Commercial Ad Poster | 3D Visualization</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;social_media_advertising&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;9:16&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1080,
+      &quot;h</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/fd332b11-5691-47ea-a6d5-b3ff3348a4bd</loc>
+    <lastmod>2025-12-26T23:00:29.884343+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766790029018-ek9msw3mwd.webp</image:loc>
+      <image:title>Dynamic Energy Drink Studio Shot | Neon Photo Art</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, and proportions 100% identical.
+Scene: High-speed commercial photography studio shot.
+Action: The user is shoutin</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/6a62736e-ec21-4896-84de-dfbe7ba5cc3f</loc>
+    <lastmod>2025-12-26T22:59:27.251055+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766789966486-tb2atgqxlxe.webp</image:loc>
+      <image:title>Ramadan Thirst Struggle: Humorous Realistic Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/4ebde82b-5968-4492-969d-0b871d8b03dc</loc>
+    <lastmod>2025-12-26T22:58:22.753284+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766789901983-w242ruldnq.webp</image:loc>
+      <image:title>Serene Portrait: Reading Quran in Mosque (Ultra Realistic)</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/3d7987ae-5c1b-4494-b0a8-559137f8082d</loc>
+    <lastmod>2025-12-26T22:57:17.678091+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766789836883-6ymbipo01eh.webp</image:loc>
+      <image:title>Vibrant Night Photography: Cairo&apos;s Historic Al-Muizz Street</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/9852f9a8-5225-4435-9230-aee4991a85e3</loc>
+    <lastmod>2025-12-26T22:56:18.939874+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766789778198-1qviwk3sni.webp</image:loc>
+      <image:title>Luxurious Iftar Feast Portrait: Realistic Ramadan Photo</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/4d60c207-7e88-4f18-aed7-f194e7a16063</loc>
+    <lastmod>2025-12-26T22:55:25.983349+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766789724989-spgoiq1zz2.webp</image:loc>
+      <image:title>Ultra Realistic Cinematic Ramadan Lantern Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/339795dd-d967-4269-ac2e-4c1ca4b2b9db</loc>
+    <lastmod>2025-12-26T22:47:55.159127+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766789274344-eyd240oes1n.webp</image:loc>
+      <image:title>Minions Photobomb Selfie: Ultra Realistic Daylight Chaos</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/21a48830-c633-4934-b268-6b0d9228b0ee</loc>
+    <lastmod>2025-12-26T22:42:43.411632+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788962565-psgqfbcg3id.webp</image:loc>
+      <image:title>Ultra Realistic Adult Success Kid: Beach Triumph Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/6e315022-ddbe-44e1-94b4-83b73aa534a5</loc>
+    <lastmod>2025-12-26T22:41:16.343802+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788875510-kx07ewis8zr.webp</image:loc>
+      <image:title>Cinematic DiCaprio Toast: Ultra Realistic Party Scene</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/96c0804d-b42d-48bc-b810-421b4b468506</loc>
+    <lastmod>2025-12-26T22:40:18.183437+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788817474-f9d1fhvpc1w.webp</image:loc>
+      <image:title>Roll Safe Meme: Ultra-Realistic Cinematic Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/367b4eae-1b5c-4637-aad1-f4725432fe40</loc>
+    <lastmod>2025-12-26T22:38:58.259503+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788737494-k4kmry4krsk.webp</image:loc>
+      <image:title>Hide the Pain Harold: Realistic Stock Photo Meme Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/6efb53a2-e199-4e40-891c-55bfc1e6f953</loc>
+    <lastmod>2025-12-26T22:37:15.251281+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788634460-bj29qlpp1rh.webp</image:loc>
+      <image:title>Cyberpunk Techwear Warrior: Rainy Tokyo Night Photography</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face 100% identical.
+Scene: Rainy street in Tokyo at night, blurred neon lights.
+Attire: High-end Techwear outfit. Matte black wa</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/7fdcf6cf-b636-4820-9387-9c6e47e660d3</loc>
+    <lastmod>2025-12-26T22:36:25.896433+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788584885-xh3l7ax84ae.webp</image:loc>
+      <image:title>Cyber-Bedouin Portrait: Cinematic Desert Nomad at Sunset</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face 100% identical.
+Scene: Vast desert dunes at sunset (golden hour).
+Attire: &quot;Cyber-Bedouin&quot; fusion style. Layers of textured b</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/e5767218-8dae-40b5-a721-59110c4e29ad</loc>
+    <lastmod>2025-12-26T22:35:32.148292+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788531478-4qr52efsk3w.webp</image:loc>
+      <image:title>Surreal Molten Gold Fashion Portrait | High Contrast</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face 100% identical.
+Scene: Dark studio with spotlighting.
+Attire: Wearing a surreal fashion piece that resembles molten liquid g</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f1caca9f-9d18-401a-b867-42caf7c90928</loc>
+    <lastmod>2025-12-26T22:30:37.833134+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788237000-jo3q8jog6gq.webp</image:loc>
+      <image:title>Ultra Realistic Luxury: Cozy Winter Window Seat Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ea38b371-6822-4ead-9a56-ad88b67d5985</loc>
+    <lastmod>2025-12-26T22:28:43.906489+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788123099-8m6xfq0gg9t.webp</image:loc>
+      <image:title>Ultra Realistic Portrait: Man Toasting, Golden Bokeh</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, makeup style, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ul</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/6634339f-4ee1-408e-8910-ef4de7ae6e1d</loc>
+    <lastmod>2025-12-26T22:27:41.011678+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766788060162-zsegc2h8py.webp</image:loc>
+      <image:title>Urban Luxury Winter Fashion Photography: NYC Holiday Chic</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/251fff5a-c8a9-4b61-b7b2-3cfa5326219c</loc>
+    <lastmod>2025-12-26T22:24:07.19717+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766787846266-4du3n8cul7.webp</image:loc>
+      <image:title>Ultra Realistic Glamorous Portrait: Velvet &amp; Firelight</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/3d6eacf8-07cc-48e5-88fd-d4de0128d76d</loc>
+    <lastmod>2025-12-26T22:21:20.589279+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766787679854-z5tpqeqfnk.webp</image:loc>
+      <image:title>christmas Portrait: Realistic Luxury Editorial Art</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, makeup style, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ul</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/76eb8c30-12a0-4a0e-82db-e98442181ed1</loc>
+    <lastmod>2025-12-26T22:16:46.294139+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766787405523-74c2mzykapq.webp</image:loc>
+      <image:title>Cardboard Batman Rooftop Sunset | Realistic Trash Art</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face identical.
+Scene: Rooftop at sunset, looking over a city.
+Attire: A Batman costume made entirely of cardboard boxes, black d</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/7ec393ee-180a-4aff-b5cd-cee7fe039301</loc>
+    <lastmod>2025-12-26T22:15:10.959332+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766787310151-lk26vcmobt.webp</image:loc>
+      <image:title>Adult in Baby Stroller Photo: Grumpy Realistic 8K</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face identical.
+Scene: Park sidewalk.
+Action: A full-grown adult user is crammed into a small baby stroller. Legs are dragging on</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/76817cb0-8d6e-4d91-aae2-ef64b1ab91d4</loc>
+    <lastmod>2025-12-26T22:13:53.877383+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766787233135-2droed7sa4w.webp</image:loc>
+      <image:title>Funny Professional Duck Boxer Video Call Mishap 8K</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face identical.
+Scene: Home office, standing up from a desk during a video call.
+Attire: Top half is a professional suit jacket a</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/a4f4ca92-e997-4ad6-9161-0e3f7d2dde11</loc>
+    <lastmod>2025-12-26T22:13:06.265435+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766787185591-xlu6mqej6e.webp</image:loc>
+      <image:title>Watermelon Knight: Majestic Mock-Epic Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face identical.
+Scene: Outdoors in a field.
+Attire: Full armor and helmet crudely crafted from carved watermelon rinds.
+Action: S</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/e20faf30-e0f3-4b4a-98c6-bf4fe36ef195</loc>
+    <lastmod>2025-12-26T22:12:38.003798+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766787157326-up1qfh4tace.webp</image:loc>
+      <image:title>Surreal Realistic Photo: Head in Persian Rug</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face identical.
+Scene: Living room corner.
+Action: The user is tightly rolled up inside a patterned Persian rug, standing upright</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/2d8905d8-96e1-4bd5-95d9-ed1a657e527b</loc>
+    <lastmod>2025-12-26T22:05:57.623916+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766786756868-tyzw66jqlzn.webp</image:loc>
+      <image:title>Shocked Face Selfie: Shaved Hair Disaster 8K</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face identical.
+Scene: Bathroom mirror reflection selfie.
+Action: Holding an electric shaver. Half of the user&apos;s hair (or one eye</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f7b97fde-596d-42ed-b41a-67a8dcfcbf45</loc>
+    <lastmod>2025-12-26T22:04:16.531614+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766786655583-ori1j44xo8i.webp</image:loc>
+      <image:title>Hilarious Awkward Party Photo: You as Coffee Table</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face identical.
+Scene: A busy house party.
+Action: The user is on hands and knees on the floor, acting as a coffee table. A table</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/76979e79-8e9f-42a5-9ce9-f018176861a9</loc>
+    <lastmod>2025-12-26T22:03:12.740111+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766786592038-qr159j5jhsk.webp</image:loc>
+      <image:title>Ultra Realistic Monchhichi Monkey Suit Photo, Bizarre Contrast</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face, hairline, and expression identical.
+Scene: Sitting on a floor surrounded by vintage toys.
+Attire: Dressed in a full fluffy </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/08e7eb43-ee62-46fd-9fcf-23e24a8a4bd6</loc>
+    <lastmod>2025-12-26T22:01:41.200928+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766786500438-yaapx96xvcn.webp</image:loc>
+      <image:title>Cinematic Scuba Diver Portrait in Tropical Coral Reef</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Underwater, surrounded by colorful coral and fish.
+Attire: Scuba gear, mask clear showing face, bubbl</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/dc22c0e8-12d5-433d-978e-6f0b364ff170</loc>
+    <lastmod>2025-12-26T22:00:27.063529+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766786426116-kqqlwbrkxx.webp</image:loc>
+      <image:title>Cinematic Astronaut on Mars Surface Sci-Fi Realism</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Standing on the red surface of Mars. Earth is a small dot in the sky.
+Attire: Futuristic white space </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/562103af-21d5-404f-ac9d-4b9f58c47f45</loc>
+    <lastmod>2025-12-26T21:56:54.607205+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766786213731-ycoeifybwjh.webp</image:loc>
+      <image:title>Sepia Western Gunslinger - 8k Digital Art</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Standing in a dusty saloon doorway at high noon.
+Attire: Cowboy hat, poncho, hand hovering over a rev</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/0c5f153a-4585-46da-a10b-6665b5e3c030</loc>
+    <lastmod>2025-12-26T21:56:03.643213+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766786162761-j3hgp7t6wgh.webp</image:loc>
+      <image:title>Mid-Air Banana Slip - Shocked Face, 8K Art</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Mid-air, horizontal, legs flying up.
+Action: Slipping on a banana peel in a grocery store.
+Expression</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/99647b22-bb56-4e15-aefc-7fbef92e67ac</loc>
+    <lastmod>2025-12-26T21:54:16.89024+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766786055998-otjobfc5wt.webp</image:loc>
+      <image:title>Ghost Pepper Pain: Face Red, Tears Flow!</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Holding a half-eaten ghost pepper.
+Expression: Face red, sweating profusely, steam coming out of ears</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/e4cc1deb-e72b-4bbd-a8d8-0cdf441e6456</loc>
+    <lastmod>2025-12-26T21:53:16.847064+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785996154-qsb1o587fg.webp</image:loc>
+      <image:title>Terrified Escape: Bee Chase in Flower Field!</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Running through a field of flowers.
+Action: Being chased by a swarm of angry cartoonish bees.
+Express</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/8487bfe7-e9ad-4395-8614-009a949eedee</loc>
+    <lastmod>2025-12-26T21:52:10.207425+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785929478-vh8dqymwkuq.webp</image:loc>
+      <image:title>Paint Splash Shock: Vibrant Macro Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: The exact moment a bucket of colorful paint is thrown at the user&apos;s face.
+Action: The paint is mid-ai</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/b4dabe80-068c-471f-b1d6-f715f6be0526</loc>
+    <lastmod>2025-12-26T21:51:27.711383+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785887004-jqvxjyu5k7c.webp</image:loc>
+      <image:title>Fiery Cake Blowout: Epic Candle Mishap!</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Close up, cheeks puffed out huge, blowing candles on a cake.
+Details: There are too many candles, cre</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ecf82541-bd3f-4642-9b3e-3738eb30f542</loc>
+    <lastmod>2025-12-26T21:50:29.837157+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785829124-vq06jq3boo.webp</image:loc>
+      <image:title>Cyberpunk Coder in Green Matrix Glow</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Dark room filled with multiple screens displaying green code.
+Attire: Black hoodie (hood up), glasses</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/20b5dd7b-f79e-4979-a432-e890dc67a4f1</loc>
+    <lastmod>2025-12-26T21:49:13.480603+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785752786-e3ltkp8wwg7.webp</image:loc>
+      <image:title>F1 Pilot&apos;s Intense Cockpit Focus, 8K Speed</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Inside the cockpit of a fast F1 car on a race track.
+Attire: Racing helmet (visor open), racing suit.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/8c6a0217-ad6f-4bff-9883-b6c668b7f548</loc>
+    <lastmod>2025-12-26T21:48:02.531915+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785681789-u8651y495dl.webp</image:loc>
+      <image:title>Godfather Style Man in Tuxedo with Cigar and Rose</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Sitting in a dark, smoky room on a leather chair.
+Attire: Expensive black tuxedo, red rose on lapel, </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ad6f5ddf-1732-4225-aaac-5b1320d447b9</loc>
+    <lastmod>2025-12-26T21:47:18.880168+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785638064-ges6n8qio9i.webp</image:loc>
+      <image:title>Fierce Viking Warrior&apos;s Snow Battle Cry</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference. FACE LOCK: keep the face 100% identical.
+Scene: Close-up portrait in the middle of a snowy battlefield.
+Attire: Fur armor, leather straps, war paint </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/1c2a9233-d8d9-4e33-af42-e0f2c5d2297c</loc>
+    <lastmod>2025-12-26T21:46:04.379492+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785563270-owi6ujz4yck.webp</image:loc>
+      <image:title>Terrified Patient&apos;s POV: Dentist&apos;s Scary Tools Loom</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/4f1df109-a465-4107-9654-36cdd64a206c</loc>
+    <lastmod>2025-12-26T21:45:08.45796+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785507590-nhnfdwxs2g.webp</image:loc>
+      <image:title>Terrified POV: Phone Falls Towards Face!</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f9861c6f-75a5-4c4e-881c-42f907d1f67d</loc>
+    <lastmod>2025-12-26T21:38:51.768552+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785130768-ge41bvcs2b9.webp</image:loc>
+      <image:title>Dizzy Face Through Washing Machine Glass POV</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/d5471e3b-9d06-4acc-add0-4f8fea4a7995</loc>
+    <lastmod>2025-12-26T21:37:15.935916+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766785035264-ud0ujqrleda.webp</image:loc>
+      <image:title>Shocked Face at ATM - CCTV Horror</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/44b82106-3bc6-416d-87dc-eef63eb257ca</loc>
+    <lastmod>2025-12-26T21:36:24.087406+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766784983374-m4y0h4suo6.webp</image:loc>
+      <image:title>Distorted Spoon Reflection Funny Face Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face features identical but apply the specific distortion described. Create an ultra realistic macro photography shot.
+
+Camera An</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/6dd546f1-6bb2-407a-adea-575f6144882e</loc>
+    <lastmod>2025-12-26T21:34:52.755121+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766784891954-5r1jm7ys1xs.webp</image:loc>
+      <image:title>Giant Stomp: Extreme Worm&apos;s Eye View Terror</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/70f6c41e-9146-4060-b652-30cc3ac9f9bc</loc>
+    <lastmod>2025-12-26T21:33:57.947815+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766784837024-hqa7s738ntf.webp</image:loc>
+      <image:title>Goofy Face Pressed Against Scanner Glass</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/9fc786db-5a75-4322-a1c3-445233f4eaf5</loc>
+    <lastmod>2025-12-26T21:32:19.436554+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766784738764-pfatnjj4i9g.webp</image:loc>
+      <image:title>POV Chip Bag Hunger: Intense Snack Craving</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/bf3723be-45b1-4727-8788-346fd9dbc023</loc>
+    <lastmod>2025-12-26T21:31:13.026867+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766784671915-5jc5d7bfvp.webp</image:loc>
+      <image:title>Suspicious Peek Through Peephole, Funny Distortion</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/2bf69ba8-eb4a-45e2-958f-2567e35d6fbd</loc>
+    <lastmod>2025-12-26T21:29:00.012512+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766784539264-83feia9evq.webp</image:loc>
+      <image:title>Confident Man in Casual White Tee &amp; Khakis</image:title>
+      <image:caption>Use the uploaded image as the ONLY reference for the subject, clothing, and pose.
+
+REFERENCE LOCK: Recreate the exact person (tan skin, short dark hair, groomed beard), clothing (plain white crew-neck</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/4a404479-c0ca-4d16-a891-06961ec618fa</loc>
+    <lastmod>2025-12-26T21:25:05.737178+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766784305010-cco5f1cxest.webp</image:loc>
+      <image:title>Fashion Forward: Man in Beige &amp; White Style</image:title>
+      <image:caption>Use the uploaded image as the ONLY reference for the subject, clothing, and pose.
+REFERENCE LOCK: Recreate the exact person, curly hair, clothing (beige open shirt, beige t-shirt, brown wide-leg pants</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f8641e2e-c4a8-4774-8a4d-f9077f38328a</loc>
+    <lastmod>2025-12-26T18:55:23.027465+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766775322201-tme2uzsz6k.webp</image:loc>
+      <image:title>Moody Urban Night Portrait: Man &amp; Neon Sports Car</image:title>
+      <image:caption>Nighttime urban street portrait, stylish young man leaning casually against a white modified sports sedan, hands in hoodie pockets, calm confident expression. Car headlights on with blue neon underglo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/feb017ea-6b92-4ca3-a6d3-462b6ca846ac</loc>
+    <lastmod>2025-12-26T13:29:42.857752+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766755781994-3jzlx597z8f.webp</image:loc>
+      <image:title>AI CV Review: Professional Feedback for Your Resume</image:title>
+      <image:caption> 
+Analyze the attached CV and provide detailed feedback using handwritten
+style annotations, red pen markings, notes, and critical comments as if it were reviewed by a professional recruiter</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f332027f-212c-4a59-b9a7-c36ed36911e9</loc>
+    <lastmod>2025-12-26T11:06:28.186357+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766747187577-usok434icp.webp</image:loc>
+      <image:title>Candid Car Selfie: Hoodie &amp; Leather Jacket Vibes</image:title>
+      <image:caption>Same person as the reference image, exact identity, natural iPhone-style car selfie, sitting in the backseat, low slightly upward angle, bright sunlight entering from the side window, oversized charco</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ce2a21c8-a5f9-4524-a1d3-3f38f3ca6475</loc>
+    <lastmod>2025-12-26T10:51:03.166557+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766746262328-b0b33ug9hj.webp</image:loc>
+      <image:title>Shattered Glass Resilience: Powerful Afro Woman Portrait</image:title>
+      <image:caption>A powerful cinematic portrait of an older Black woman with natural afro hair, intense and fearless expression, seen through shattered glass fragments. Dramatic lighting with high contrast, sharp refle</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/fff1ecb3-906e-4ada-a851-1c79b276b7de</loc>
+    <lastmod>2025-12-26T10:18:23.346666+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766744302696-mwppeuruw1.webp</image:loc>
+      <image:title>Intense Archer Portrait: Wet Hood, Sharp Focus</image:title>
+      <image:caption>A man, likely in his early thirties with facial proportions, structure, and overall appearance inspired by the reference, captured in full sharp detail and natural skin texture,
+hyper-realistic, cinem</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/2fca400f-a3d3-41a8-97b5-517bb97f581c</loc>
+    <lastmod>2025-12-26T09:43:25.447983+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766742204770-wsr2yago0k.webp</image:loc>
+      <image:title>Futuristic Music Immersion: Man on Smartphone Poster</image:title>
+      <image:caption>A minimalist futuristic poster design featuring a young man standing on top of a modern smartphone. The phone lies flat on a neutral gray surface, displaying a music streaming app interface with vibra</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/57431f95-eaaa-4798-b08a-77e4c000aa3f</loc>
+    <lastmod>2025-12-26T09:41:51.850649+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766742110878-427t8uhnan8.webp</image:loc>
+      <image:title>Tribal Warrior&apos;s Fiery Ritual: Mystical Fantasy Portrait</image:title>
+      <image:caption>A powerful tribal warrior man kneeling on one knee, natural skin, wearing tattered ceremonial garments made of cloth and leather, adorned with layered bracelets and necklaces. He has white ritual body</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/458846f4-b6a7-4ceb-8b6d-5b200fbd7cac</loc>
+    <lastmod>2025-12-26T09:40:09.081903+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766742008492-w7b24z0n3rg.webp</image:loc>
+      <image:title>Luxury Holiday Library: Star on Grand Christmas Tree</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/86b2c169-936b-414e-9075-fb841ef6ce6c</loc>
+    <lastmod>2025-12-26T09:39:04.593668+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766741943751-ddqlb5myg7d.webp</image:loc>
+      <image:title>Lapland Aurora Cabin Cozy Cocoa Adventure</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/bc0bb1f7-01e9-458c-8c60-f9c2f9e80c30</loc>
+    <lastmod>2025-12-26T09:38:08.204309+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766741887470-fa2knfo792n.webp</image:loc>
+      <image:title>Contemplative Winter Reflection Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ca63c00c-13f1-4f17-aaa2-262c350b80ff</loc>
+    <lastmod>2025-12-26T09:37:16.618415+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766741835802-eusvyx5qepb.webp</image:loc>
+      <image:title>NYC Winter Romance: Snowy Street Fashion Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/3761b3aa-d171-445e-be78-63ef127d20c6</loc>
+    <lastmod>2025-12-26T09:36:27.407917+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766741786706-bwik7tcpeul.webp</image:loc>
+      <image:title>Enchanted Snow Globe Portrait: Magical Glow</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/02bf0794-5b5a-4fe1-8ced-aa4734a463f2</loc>
+    <lastmod>2025-12-26T09:31:24.606829+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766741483485-hn6dmqat2n6.webp</image:loc>
+      <image:title>Disaster Girl Meme Recreation: Fiery House, Creepy Smile</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/21234dc5-520e-4975-8c1b-2357678e5103</loc>
+    <lastmod>2025-12-26T09:28:07.346016+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766741286636-wj1f76z4ccc.webp</image:loc>
+      <image:title>Distracted Boyfriend Meme Recreation</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/7e047697-9f0f-4d63-b4eb-789eed11d208</loc>
+    <lastmod>2025-12-26T09:24:29.577215+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766741068968-8bdn9nfkn3t.webp</image:loc>
+      <image:title>Cyberpunk Man in Neon Mist Portrait</image:title>
+      <image:caption>A futuristic cyberpunk portrait of a young man standing in misty neon fog, wearing a transparent glossy raincoat over a dark outfit, soft blue and pink neon light glowing through the plastic fabric, r</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/a623bf44-302b-41a3-a5bf-bdfc56758868</loc>
+    <lastmod>2025-12-26T09:23:03.987269+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740983054-6sidhtvoap6.webp</image:loc>
+      <image:title>Man and Tom &amp; Jerry enjoy snowy city walk</image:title>
+      <image:caption>A smiling man wearing a dark winter coat, gray scarf, jeans, and brown boots walks down a snowy city street. Soft snow is falling, and tall buildings line both sides of the street with warm lights glo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/368d1af7-350a-46a9-b504-6cd517d84255</loc>
+    <lastmod>2025-12-26T09:21:25.650662+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740885056-x2a38dmx1dm.webp</image:loc>
+      <image:title>Modern Portrait: Man with Tiger Glasses Looks Up</image:title>
+      <image:caption>A stylized, dramatic top-down portrait of a young man with round glasses and dark tiger frames, standing alone against a smooth gradient background. He looks upward toward the camera with a slightly c</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/b0a67900-465c-49e4-9d7a-e1fa1e4499e1</loc>
+    <lastmod>2025-12-26T09:20:42.777794+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740842130-peiv33rv9f.webp</image:loc>
+      <image:title>Terrified Driver, Passed Out Santa, Crazy Reindeer!</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/2c7d9e4e-8e51-4153-a09b-5fddb6fac72f</loc>
+    <lastmod>2025-12-26T09:20:04.212106+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740803373-jltu69avdso.webp</image:loc>
+      <image:title>Santa&apos;s Naughty List: You&apos;re On It!</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/621c92e6-15f9-4229-9b52-4c4165fc71c1</loc>
+    <lastmod>2025-12-26T09:19:06.186405+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740745543-qx5rzlah7q.webp</image:loc>
+      <image:title>Miserable Elf, Grumpy Santa&apos;s Workshop Comedy</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/42d3ee63-f81d-4be2-847d-f437c7c5d32a</loc>
+    <lastmod>2025-12-26T09:17:05.177915+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740624564-l8mimbcv0am.webp</image:loc>
+      <image:title>Santa Stuck! Sooty Rescue Comedy Photo</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c432e27e-f1dd-4d08-9028-1a777de3356f</loc>
+    <lastmod>2025-12-26T09:16:10.018097+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740569320-b8tsbnigz9c.webp</image:loc>
+      <image:title>Awkward Mall Santa Photo Booth Fail</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/de3fecbd-57aa-4edb-a883-f5477314945f</loc>
+    <lastmod>2025-12-26T09:13:24.404374+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740403326-i6ghm0igyb.webp</image:loc>
+      <image:title>Rugged Alpine Style: Snowy Cabin Chic</image:title>
+      <image:caption>{
+  &quot;instruction&quot;: &quot;Create a movie-level ultra-realistic photo of a upload image of a man. The face matches the reference image 100.9999% from attached image.&quot;,
+  &quot;prompt&quot;: &quot;A male model in his late-2</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/580dd715-5b4b-459d-8291-f77a49ded84b</loc>
+    <lastmod>2025-12-26T09:12:31.230903+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740350394-acgsxez9u6b.webp</image:loc>
+      <image:title>Luxury Christmas Gala: Sophisticated Man in Burgundy</image:title>
+      <image:caption>{
+  &quot;instruction&quot;: &quot;Create a movie-level ultra-realistic photo of a upload image of a man. The face matches the reference image 100.9999% from attached image.&quot;,
+  &quot;prompt&quot;: &quot;A male model in his late-2</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/fa807af5-0dc0-4a8b-b15e-860f1ea07015</loc>
+    <lastmod>2025-12-26T09:09:31.833826+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740170872-d3ub7qbxslk.webp</image:loc>
+      <image:title>Sophisticated Man in Luxury Christmas Gift Room</image:title>
+      <image:caption>Create a movie-level ultra-realistic photo of a upload image of a man. The face matches the reference image 100.9999% from attached image.
+&quot;prompt&apos;: &quot;A male model in
+his late-20s, sharp jawline, inten</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f60d4cc7-d2c5-42af-9877-7115868d0191</loc>
+    <lastmod>2025-12-26T09:07:39.171557+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740058585-i5m81464e2p.webp</image:loc>
+      <image:title>Santorini Sun-Kissed Model: Moody Mediterranean Fashion Shoot</image:title>
+      <image:caption>Create a movie-level ultra-realistic photo of a upload image of young man. The face matches the reference image 100.9999%（
+&quot;text&apos;: &quot;A handsome young male model with sharp
+jawline standing barefoot on </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/197cec59-a885-4224-af06-763d6a9f4175</loc>
+    <lastmod>2025-12-26T09:06:46.666665+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766740005919-2a9yhbhdoz5.webp</image:loc>
+      <image:title>Photorealistic Social Profile Scene facebook</image:title>
+      <image:caption>Ultra-photorealistic concept scene. A real person matching the reference image exactly, no facial changes.
+The person is sitting comfortably on a floating modern chair shaped like an abstract blue geo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/d62afa36-40db-4323-ae58-86250db3064a</loc>
+    <lastmod>2025-12-26T09:05:34.656111+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766739933982-jicqun59pfi.webp</image:loc>
+      <image:title>Intense Gaze: Ultra-Realistic Fashion Portrait</image:title>
+      <image:caption>Create a movie-level ultra-realistic photo of a upload image of young man. The face matches the reference image 100.9999%1
+&quot;prompt&apos;:&quot;A handsome young man in his late 20s with sharp jawline and intense</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/364b6425-19bd-4692-9cd9-cad54ebdc165</loc>
+    <lastmod>2025-12-26T09:03:30.551809+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766739809922-npst46sfux.webp</image:loc>
+      <image:title>Playful Man&apos;s Portrait Collage: 9 Expressions</image:title>
+      <image:caption>Create a portrait style collage of 9 images in 1. Of the man&apos;s 100% original face from the image provided (maintain 100% of my original face features) by focusing on the details of the face, eyes, eye</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/8dcfebb2-f423-4a2e-9c9f-585d75e5368b</loc>
+    <lastmod>2025-12-26T09:03:01.689686+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766739781032-6rqq73dkxd3.webp</image:loc>
+      <image:title>9 Ultra-Realistic 8K Portraits: Same Man, Different Suits</image:title>
+      <image:caption>Create 9 ultra-realistic 8K portraits of the same man using the uploaded photo exactly (100% identical facial identity). Arrange them in a 3x3 grid (portrait ratio) with each image showing him in a di</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/045a5b4a-3e72-45a2-8fe1-532e13f3d2be</loc>
+    <lastmod>2025-12-26T09:01:53.95922+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766739713200-ns1ip0gjgph.webp</image:loc>
+      <image:title>Gym Mirror Selfie: Realistic Portrait</image:title>
+      <image:caption>A hyper-realistic indoor gym mirror portrait of the same young man seated on a workout bench, taking a mirror selfie.
+
+Identity lock:
+Use ONLY the user’s real reference identity.
+Take the exact facial</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/3cb4eded-0b72-4b04-aa52-9b3ae08e5f4c</loc>
+    <lastmod>2025-12-26T09:01:19.760804+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766739678985-4pt7sauig4j.webp</image:loc>
+      <image:title>Desert Dune Jump: Man Watches Tata Sierra Fly</image:title>
+      <image:caption>Ultra Realistic ultra Resolution cinematic portrait mode 9:16 8ka stylish
+young man [ keep it real face from uploaded image ] A
+hyper-realistic, high-action freeze-frame shot of a
+2 images refrance im</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/a26ae93d-59c3-46d9-b6ce-410c2fffbbd3</loc>
+    <lastmod>2025-12-26T08:58:52.684256+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766739531954-515c8iqjt4d.webp</image:loc>
+      <image:title>Futuristic Profile: Man on Floating Chair</image:title>
+      <image:caption>Ultra-photorealistic concept scene. A real person matching the reference image exactly, no facial changes.
+The person is sitting comfortably on a floating modern chair shaped like an abstract blue geo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/52173893-824a-4505-9553-59d1748d6fab</loc>
+    <lastmod>2025-12-25T17:51:05.374931+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766685064918-3alkhjeavw9.webp</image:loc>
+      <image:title>design flayer for 2christmas</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;poster_design_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;4:5&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1080,
+      &quot;</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/fdcbcef1-8d6a-4053-b1a9-f8593ca98294</loc>
+    <lastmod>2025-12-25T16:45:55.761767+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766681155337-s8ui7dvkrh.webp</image:loc>
+      <image:title>Sparkling Coral Heart: Enchant</image:title>
+      <image:caption>Coral heart, White and corals real HUMAN heart shoots with jewels sylver muted tones, wide view, IG fashion flowers photography style. sparkly, fairy pastel lights, sequin, intricate details, wide ang</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ba379556-c8f0-4aa5-852e-1933b4c41eef</loc>
+    <lastmod>2025-12-25T16:44:14.275245+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766681053793-gjq11ip3ux6.webp</image:loc>
+      <image:title>One cute racoon peeking from behind the wall</image:title>
+      <image:caption>One cute racoon peeking from behind the wall, big eyes, against a white background, in a colorful cartoon style, in front of the white wall, a vibrant and detailed digital illustration, in the style o</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/9bb3defe-54be-4c57-ad92-8f35d2d0e3cf</loc>
+    <lastmod>2025-12-25T16:42:07.891632+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680927446-zp91qj0dna.webp</image:loc>
+      <image:title>Beautiful Seamless Ramadan Pattern Background</image:title>
+      <image:caption>Seamless pattern for ramadan</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/bf98b94d-f1e1-49bd-a10a-09687cf7dd71</loc>
+    <lastmod>2025-12-25T16:41:18.685695+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680877910-806b6lnqinc.webp</image:loc>
+      <image:title>3D Color Beetle Blueprint on Vintage Paper</image:title>
+      <image:caption> Volkswagen beetle blueprint rendered in black and white line work, featuring the main body depicted in color with a 3D showcase effect. The design is presented on a old paper background with dimensio</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/1076eeff-85cb-41af-9342-8578e68a550a</loc>
+    <lastmod>2025-12-25T16:40:43.357483+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680842954-amiqt5g4ox.webp</image:loc>
+      <image:title>Neon Glass Icons: Music, Education, and Communication Set</image:title>
+      <image:caption> White and blue-purple gradient transparent glass, 3D emoticon, microphone icon, cartoon style, highlighted, transparent glass, isolated on black background, white at the bottom, clear details, strong</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/10e023cf-99bb-4b4b-9f79-eeab34f58c1c</loc>
+    <lastmod>2025-12-25T16:39:38.141765+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680777827-y7bvlsinubb.webp</image:loc>
+      <image:title>Fiery Orange Digital Icon with Minimalist &apos;F&apos;</image:title>
+      <image:caption>A mesmerizing digital icon glowing with futuristic allure, featuring a sleek, rounded square with a gradient background transitioning from deep black to a fiery orange-red, casting a radiant halo of l</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/eeb2b08f-bd76-4b25-8ed1-ea13c758df7e</loc>
+    <lastmod>2025-12-25T16:38:08.302756+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680687871-zziy0fg5dp.webp</image:loc>
+      <image:title>Iridescent Glass 3D Render with Studio Lighting</image:title>
+      <image:caption>retexture the image attached based on the JSON aesthetic below. keep the shape of the image exactly as it is.
+{
+&quot;style&quot;: &quot;photorealistic 3D render&quot;,
+&quot;material&quot;: &quot;glass with transparent and iridescent </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c7cb366e-a4dd-4f92-b5cc-41bad085b7c5</loc>
+    <lastmod>2025-12-25T16:37:20.065122+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680639725-dobhnyz9j8n.webp</image:loc>
+      <image:title>Sunset Reflection Surreal Portrait</image:title>
+      <image:caption>a realistic young woman holding a round mirror in front of her face, seen from the front, the mirror reflects a golden field of tall grass gently swaying in the wind under soft sunset light instead of</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/1c55fc74-b3f9-4970-a844-f7798839dea1</loc>
+    <lastmod>2025-12-25T16:37:03.615441+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680623278-b6bgr9cvz6.webp</image:loc>
+      <image:title>Chibi 3D Sticker Pack of Bearded Man with Expressions</image:title>
+      <image:caption>Convert the image (uploaded photo) into a 3d render modele set of 12 chibi sticker (4x4 grid) with outfit similar to this one, including expression of laughing, being angry, crying, sulking, thinking,</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/e99a15cf-3726-48a1-98c7-19e2d0bdff7b</loc>
+    <lastmod>2025-12-25T16:36:25.906097+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680585421-0dxhqxswb4fe.webp</image:loc>
+      <image:title>Jelly 3D App Icons with Soft Glow Effects</image:title>
+      <image:caption>{
+  &quot;style&quot;: &quot;Jelly 3D Icon&quot;,
+  &quot;object&quot;: &quot;User-uploaded logo or emoji (e.g. Netflix N, Ghost, Spotify icon, etc.)&quot;,
+  &quot;base&quot;: {
+    &quot;shape&quot;: &quot;Rounded square&quot;,
+    &quot;material&quot;: &quot;Soft translucent jelly-</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/e69f9c55-bd55-4afa-8461-14b0159b88bc</loc>
+    <lastmod>2025-12-25T16:34:43.662977+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680483377-u1zesmu2x5.webp</image:loc>
+      <image:title>Golden Ghee Moon: Luxurious Food Macro Shot</image:title>
+      <image:caption>Elegant food photography. A dark wooden spoon scooping ghee from a container. The ghee in the spoon is perfectly shaped into a glowing, golden crescent moon. Set against a dark, moody background with </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ee884d78-6b14-44de-a87f-78f3780641b8</loc>
+    <lastmod>2025-12-25T16:33:28.942249+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680408623-q8wjkqdue9j.webp</image:loc>
+      <image:title>Cheerful Fisherman Showcases Fresh Sea Bass Catch</image:title>
+      <image:caption>&quot;Commercial advertising poster, a cheerful, smiling 35-year-old Middle Eastern man with a short beard, dressed as a fisherman in a multi-pocketed khaki utility vest. He holds a fishing rod upright in </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c279eff8-9108-46a2-8e04-36333687a571</loc>
+    <lastmod>2025-12-25T16:33:12.681461+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680392375-lpb1haae3n.webp</image:loc>
+      <image:title>Charismatic Teacher Presents Empty Chalkboard Canvas</image:title>
+      <image:caption>Professional commercial photograph, medium shot of a charismatic 35-year-old male teacher, dressed in a smart tweed blazer and a light-colored shirt. He is enthusiastically gesturing with a classic wo</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/0f8357e7-8e94-4be6-8ad1-cb9a4c69aab7</loc>
+    <lastmod>2025-12-25T16:33:02.67751+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680382269-sirgqwoxe9q.webp</image:loc>
+      <image:title>Founder Cuts Ribbon at Golden Hour Building Opening Ceremony</image:title>
+      <image:caption>cinematic shot of a grand opening ceremony, featuring a distinguished male teacher as the founder. He is dressed in a sharp, modern dark suit, exuding success and pride. He is captured in the dynamic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/87fdf5da-2480-4acb-b184-18d29edb3ac0</loc>
+    <lastmod>2025-12-25T16:32:35.558484+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680355113-as0s4f6qp8w.webp</image:loc>
+      <image:title>Visionary Chemistry Expert Inspiring Green Futures</image:title>
+      <image:caption>inspirational portrait of a male environmental chemistry teacher, portrayed as a leading expert in sustainability. He looks directly at the camera with a warm, confident expression. He wears a smart-c</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/02067769-37e5-4904-ad3e-ee4bdf4c75d2</loc>
+    <lastmod>2025-12-25T16:32:02.62981+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680322331-yzpnw0hdtob.webp</image:loc>
+      <image:title>Confident Teacher Portrait: Modern Classroom Advertising Shot</image:title>
+      <image:caption>&quot;Professional advertisement portrait of a confident and friendly male teacher, standing in a classroom. He is wearing a stylish light gray textured blazer over a black collared shirt and a modern watc</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f8492fca-e38c-4a9f-aa77-5f4eac523f2e</loc>
+    <lastmod>2025-12-25T16:31:34.591213+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680294085-12p4fot2v95.webp</image:loc>
+      <image:title>Golden Chemistry: Master Alchemist in Dramatic Light</image:title>
+      <image:caption>&quot;Minimalist yet powerful portrait of an expert chemistry teacher emerging from complete darkness. He wears a simple, high-quality black garment. Only half of his face and shoulder are illuminated by a</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/2364608f-8f0c-491d-b94b-932eb6803e1f</loc>
+    <lastmod>2025-12-25T16:30:58.739104+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680258368-gfseewtt68a.webp</image:loc>
+      <image:title>London Silhouette: Sophisticated Teacher Double Exposure Portrait</image:title>
+      <image:caption>Creative double exposure portrait of a sophisticated male English teacher. His silhouette, seen in profile, is creatively filled with an atmospheric collage of iconic London landmarks, including the s</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/02182d90-148d-401c-a3f1-acc2842b47c4</loc>
+    <lastmod>2025-12-25T16:30:22.76335+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680222201-cgj5kwots6k.webp</image:loc>
+      <image:title>Stylized 3D Celebrity Caricature Portrait</image:title>
+      <image:caption>A highly stylized 3D caricature of [celebrity], with an oversized head, expressive facial features, and playful exaggeration. Rendered in a smooth, polished style with clean materials and soft ambient</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/4695076e-e3eb-452b-8b86-7beb6fb8e39d</loc>
+    <lastmod>2025-12-25T16:30:10.182682+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680209621-0xe0qyc5ulxo.webp</image:loc>
+      <image:title>Commander Portrait Inside ISS Cupola Over Earth</image:title>
+      <image:caption>photorealistic portrait of a male teacher as an experienced astronaut commander, captured inside the Cupola observatory module of the International Space Station (ISS). He looks directly at the camera</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/2ef1b9f3-eeac-43a8-858f-07c2ecf3ef79</loc>
+    <lastmod>2025-12-25T16:29:30.768522+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680170427-qummg2rpoys.webp</image:loc>
+      <image:title>Cinematic History Schedule: Ancient Wisdom for Modern Classes</image:title>
+      <image:caption>A cinematic poster design for a history teacher’s schedule. Elegant parchment background with ancient maps, compasses, and golden Roman-style borders. At the center, bold and clear typography listing </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/9b772a82-4a73-4215-a844-eafbc3325688</loc>
+    <lastmod>2025-12-25T16:28:32.794511+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680112305-alqb0lycywq.webp</image:loc>
+      <image:title>Alabama Basketball Success: Flat Lay Clipboard Poster</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;poster_design_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;4:5&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1080,
+      &quot;</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/e646838a-4cc2-4f56-922d-851ef9aee341</loc>
+    <lastmod>2025-12-25T16:26:49.517774+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680008618-vjp5i93cap.webp</image:loc>
+      <image:title>dynamic selfie-style shot of a futuristic female</image:title>
+      <image:caption>Generate a dynamic selfie-style shot of a futuristic female model sitting on a sleek red futuristic motorcycle. Camera angle is close, slightly from above, as if she is holding the camera herself with</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/232af382-74ef-4478-9696-0f6478771582</loc>
+    <lastmod>2025-12-25T16:25:01.892647+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766679901373-wgqjxk0tsjj.webp</image:loc>
+      <image:title>Sacred Selfie: Ihram at the Kaaba</image:title>
+      <image:caption>Ultra-realistic photo, (person or people in the image) holding the camera in selfie mode, standing very close in front of the Kaaba in Mecca. The Kaaba appears clearly in the background with its black</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/2292af6a-161d-40f0-ae2f-b4e00bd74daf</loc>
+    <lastmod>2025-12-25T16:23:44.516214+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766679823970-v3pko0xjcj.webp</image:loc>
+      <image:title>Tokyo Streetwear Drop: Neon Portrait Poster</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;poster_design_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;4:5&quot;,
+    &quot;resolution&quot;: { &quot;width&quot;: 1080, &quot;height&quot;: 135</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/3bec1ec1-e9b7-4ee6-8128-8160fd143d66</loc>
+    <lastmod>2025-12-25T16:22:46.91488+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766679766304-jly3dg00vyq.webp</image:loc>
+      <image:title>Cinematic Profile Portrait: Orange Glow &amp; Silver Shine</image:title>
+      <image:caption>Transform my photo into a cinematic, stylized portrait with bold lighting. Place me against a glowing orange gradient background that creates a radiant halo effect behind my head. Capture me in profil</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f82a19ce-13aa-4337-9dbc-3ef1fc3608d2</loc>
+    <lastmod>2025-12-25T16:22:01.721439+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766679721328-qxnaku8qeq.webp</image:loc>
+      <image:title>Saudi Man in Thobe Smiling with Smartphone from Above</image:title>
+      <image:caption>A realistic photo of a Saudi man wearing a traditional white thobe and headscarf (ghutra), smiling warmly while holding a smartphone toward the camera as if showing the screen, photographed from a hig</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/df4b8d02-e5f5-4b71-a4e4-c745e1fe2bc4</loc>
+    <lastmod>2025-12-25T16:20:54.82904+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766679654385-o1yxf1hnjp.webp</image:loc>
+      <image:title>High Fashion Editorial: London Week Poster</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;poster_design_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;4:5&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1080,
+      &quot;</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/82c089e2-d57a-4c45-b56f-c4709f3f8460</loc>
+    <lastmod>2025-12-25T16:19:29.016936+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766679568626-33p75uhy68s.webp</image:loc>
+      <image:title>Terror on Tracks: Train Challenge Nightmare</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;cinematic_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;16:9&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1920,
+      &quot;hei</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/80e2f1bb-0dbc-4bfb-aa44-be719613f3d1</loc>
+    <lastmod>2025-12-25T16:08:51.838401+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766678931531-bbsaaivlr8b.webp</image:loc>
+      <image:title>Photorealistic MacBook Screen Glow on Dark Bedroom Scene</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;screen_simulation_photorealism&quot;,
+    &quot;target_model&quot;: &quot;SDXL_1.0_Refiner&quot;,
+    &quot;aspect_ratio&quot;: &quot;3:4&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1152,
+      &quot;height</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/4f5a0ac4-7338-4bc3-a104-fed854b3526e</loc>
+    <lastmod>2025-12-25T16:07:33.823839+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766678852555-oj1danew07r.webp</image:loc>
+      <image:title>Exploded Anatomy Infographic: Lion, Alien, and Predator Systems</image:title>
+      <image:caption>{
+  &quot;variables&quot;: {
+    &quot;ORGANISM_NAME&quot;: &quot;الكائن هنا &quot;
+  },
+  &quot;promptDetails&quot;: {
+    &quot;description&quot;: &quot;Ultra-detailed anatomical exploded view (exploded-view) and layered biological infographic of {ORGAN</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/7b7baab9-8d32-4d98-9bf6-6548fc73aeb0</loc>
+    <lastmod>2025-12-25T16:06:11.627602+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766678771257-w72ybz1pto7.webp</image:loc>
+      <image:title>Salah&apos;s Epic Ascent to Glory in Fiery Cave</image:title>
+      <image:caption>Create an ultra-realistic, cinematic 64K resolution sports scene featuring Mohamed Salah, seen from behind in full body, climbing upward inside a gigantic ancient cave environment. Use a powerful low-</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/28d33c45-ba35-4848-b5c5-2f6064df7951</loc>
+    <lastmod>2025-12-25T16:05:29.412916+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766678728713-yy7gha31pum.webp</image:loc>
+      <image:title>Crisp Isometric Interior Design with Warm Lighting</image:title>
+      <image:caption>Isometric Interior Design + Lighting
+Create a high-quality 3D isometric interior model viewed from a clean, precise isometric angle (45-degree isometric perspective), with no perspective distortion.
+T</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/61d804d3-3188-4213-bb60-ea8b399472c1</loc>
+    <lastmod>2025-12-25T16:04:53.820993+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766678693513-s8o7qiokn4q.webp</image:loc>
+      <image:title>Heroic Football Archer: Cinematic Stadium Showdown</image:title>
+      <image:caption>A heroic cinematic sports poster featuring a professional football player in a dramatic mythological action pose.
+The athlete is captured mid-air, leaping forward with extreme power and motion, wearin</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/e588a1e1-3665-443c-83d4-816e08f750b6</loc>
+    <lastmod>2025-12-25T16:04:26.469373+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766678665681-oceggnny8dd.webp</image:loc>
+      <image:title>Cinematic Building Angles Contact Sheet 3X3</image:title>
+      <image:caption>Create a 3x3 cinematic contact sheet of the same residential building in the same environment, captured with nine different camera angles. Keep the same architecture, materials, colors, lighting, and </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/dd148800-ca66-4bd9-bd6b-e48fbdbc50aa</loc>
+    <lastmod>2025-12-25T16:03:51.333186+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766678630955-af4dktxiomn.webp</image:loc>
+      <image:title>Egyptian Football Star: Game Changer Poster Design</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;poster_design_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;3:4&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1152,
+      &quot;</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/3f7b8bcb-88a6-415d-8cb2-b013cad462b3</loc>
+    <lastmod>2025-12-25T15:58:25.311321+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766678304987-vn60426jxlq.webp</image:loc>
+      <image:title>Torchlit Shock in Flooded Ancient Temple Ruins</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;cinematic_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;16:9&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1920,
+      &quot;hei</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/76e76505-f4d3-431d-aa64-a8414886548b</loc>
+    <lastmod>2025-12-25T15:52:50.982297+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766677970237-d3bd9e6alm.webp</image:loc>
+      <image:title>Past vs Future: Cinematic Success Split Portrait</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;cinematic_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;16:9&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1920,
+      &quot;hei</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/942bd074-2c05-48ec-b82e-48da0e62f301</loc>
+    <lastmod>2025-12-25T15:44:52.16872+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766677491333-aay0sy7tko5.webp</image:loc>
+      <image:title>Shocked Face Wins $1,000,000 Tropical Mansion Giveaway!</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;screen_simulation_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;16:9&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1920,
+  </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ee54c867-eb0a-4c46-9edc-e4852a2a5052</loc>
+    <lastmod>2025-12-25T15:33:40.691295+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766676820331-xc9nhz1avc.webp</image:loc>
+      <image:title>Education Censored: Intense Conspiracy Thumbnail Design</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;poster_design_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;16:9&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1920,
+      </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f1d83811-2bc7-42ed-8df8-a95428fa3178</loc>
+    <lastmod>2025-12-25T15:22:51.602765+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766676171052-fxl5lbm881o.webp</image:loc>
+      <image:title>Thumbnail  youtube Shocked Survivor Reacts to Jungle Plane Crash Disaster</image:title>
+      <image:caption>{
+  &quot;task_configuration&quot;: {
+    &quot;task_type&quot;: &quot;cinematic_photorealism&quot;,
+    &quot;target_model&quot;: &quot;gemini-3-pro-image-preview&quot;,
+    &quot;aspect_ratio&quot;: &quot;16:9&quot;,
+    &quot;resolution&quot;: {
+      &quot;width&quot;: 1920,
+      &quot;hei</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/8b0cc2a4-acfc-4cd3-a2e0-89b23513945e</loc>
+    <lastmod>2025-12-25T14:30:02.669535+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766673002373-v18gcy25x3d.webp</image:loc>
+      <image:title>Umayyad Mosque Architectural Blueprint Infographic Analysis</image:title>
+      <image:caption>Create an advanced infographic image of &quot;اسم المكان المطلوب  &quot; by blending a high-resolution real photograph of the landmark with a blueprint-style technical overlay. Add precise white line-art diagra</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/aec8dd09-52d6-481a-9874-6fd95f40652b</loc>
+    <lastmod>2025-12-25T14:27:18.648114+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766672837851-bevhv61cqkc.png</image:loc>
+      <image:title>Hyperrealistic Cinematic Render of Modern Concrete Architecture</image:title>
+      <image:caption>Use the uploaded 3D model image as the primary reference. Create a hyper-realistic, cinematic, ray-traced 3D render that looks like a frame from a high-budget Hollywood feature film. Preserve perfect </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c15de4c8-00f9-4d4a-8434-2018466d2509</loc>
+    <lastmod>2025-12-24T23:43:55.931503+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766619835234-c4a04xic9x.png</image:loc>
+      <image:title>Awkward Family Portrait with Matching Llama Sweaters</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/400cd542-dd19-45cd-b17f-c9b719f912fe</loc>
+    <lastmod>2025-12-24T23:41:46.380978+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766619705393-b5x5o2i4wsq.png</image:loc>
+      <image:title>Bored Alien Abduction: Tea Time Interrupted</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/630c5f26-ab48-42c4-9710-be6fdd3a9959</loc>
+    <lastmod>2025-12-24T23:39:36.417481+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766619575696-68k2lke0sag.png</image:loc>
+      <image:title>Cat Squishing Face: Cozy Home Chaos</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/43be4ce6-edc9-4f77-a64f-a0053b3cc035</loc>
+    <lastmod>2025-12-24T23:37:10.548611+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766619429609-qe3o386p0vg.png</image:loc>
+      <image:title>Corporate Chicken: Serious Strategy in Yellow Feathers</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/6f425984-0436-4675-a636-b66ba1b008ee</loc>
+    <lastmod>2025-12-24T23:35:10.987017+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766619309737-krb9serb4b.png</image:loc>
+      <image:title>Defeated Parent&apos;s Messy Makeover Masterpiece</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/bc4cec08-6c51-4eaf-8814-1d8705192599</loc>
+    <lastmod>2025-12-24T23:31:21.016866+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766619080034-6r3t7lr2bxw.png</image:loc>
+      <image:title>Cybernetic Fusion: Dual Reality Sci-Fi Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical on the human side. Do NOT alter or beautify the face. Create a</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/62d9c608-b131-425b-ba45-e76d137e5cc2</loc>
+    <lastmod>2025-12-24T23:28:03.991206+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766618883212-q3e6cvwcbee.png</image:loc>
+      <image:title>Shattered Reflection: Fragmented Identity in Broken Glass</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical within the reflections. Do NOT alter or beautify the face. Cre</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/5a0c91a9-4ba8-4382-a7d2-e30be230a20a</loc>
+    <lastmod>2025-12-24T23:25:58.928574+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766618757788-r8wh9ko9reg.png</image:loc>
+      <image:title>Hyper-Realistic Face in 17th Century Dutch Oil Painting</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c29ded4d-0431-4759-b44e-98097e2f5582</loc>
+    <lastmod>2025-12-24T23:22:27.340785+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766618546983-dkndrvfaiag.png</image:loc>
+      <image:title>Parisian Chic: Vintage Café Portrait with Tweed</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, makeup style, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ul</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/9cc0c5e1-b791-47a9-b5f2-811b2dd3ea73</loc>
+    <lastmod>2025-12-24T23:16:38.771817+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766618197931-w7cqmj8yn9o.png</image:loc>
+      <image:title>Woman wearing a luxurious, soft camel-colored cashmere</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/bb4655c3-905b-42ad-9962-9ba6389aecfe</loc>
+    <lastmod>2025-12-24T23:12:02.705298+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766617921909-0ln5wcmyh6or.png</image:loc>
+      <image:title>Emerald Glamour: Alluring Night Portrait in Sequins</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, makeup style, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ul</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/94af20cc-f5fa-409a-82f8-b374c421f57c</loc>
+    <lastmod>2025-12-24T23:10:10.42109+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766617809683-742jk9nqvgd.png</image:loc>
+      <image:title>Golden Hour Bohemian Dream Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f41ba749-c1cc-4ec0-825b-930f6adb8385</loc>
+    <lastmod>2025-12-24T23:09:00.610644+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766617739769-h4nqceb51s.png</image:loc>
+      <image:title>Sculptural Black Wool Coat: Ultra Realistic Editorial Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ef38a7a4-96fb-4c77-a606-c7d6e5837387</loc>
+    <lastmod>2025-12-24T23:06:26.973098+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766617586195-0akhu5z6mpoc.png</image:loc>
+      <image:title>Amalfi Sunlight: Linen Suit Luxury Portrait</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/0fa7a915-3c3f-43b3-a6df-5dc20326cd66</loc>
+    <lastmod>2025-12-24T23:05:27.174069+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766617526447-r9yqqnqsyq.png</image:loc>
+      <image:title>GTA Style Shawarma Threat on Sunny Los Santos Beach</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/b7f715a5-1af5-44c5-b190-585dbd75654b</loc>
+    <lastmod>2025-12-24T23:03:56.903494+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766617435911-i9d16bb262p.png</image:loc>
+      <image:title>Exhausted Father Surrounded by Chaotic Minions Crowd</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/676e0c4b-ee47-4859-8eef-5252a2d3809b</loc>
+    <lastmod>2025-12-24T23:02:04.30508+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766617323639-mdxl0k57zwd.png</image:loc>
+      <image:title>Office Chaos: Jim Halpert&apos;s Perfect Fourth Wall Break</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/83b86279-ffca-439d-99e5-f80ade0366c8</loc>
+    <lastmod>2025-12-24T23:00:58.791243+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766617257872-f17mwsp9kfg.png</image:loc>
+      <image:title>Chef&apos;s Panic: Rat Takes Control in Steamy Kitchen</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/f4d35ff0-c9f6-40c1-bdc4-b5020d5b0559</loc>
+    <lastmod>2025-12-24T22:57:41.396917+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766617060755-7x5gfc84dqr.png</image:loc>
+      <image:title>Spider-Man Pointing Meme Recreated on City Street</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/cc11d675-7c61-4888-a01c-c9225cbc97c3</loc>
+    <lastmod>2025-12-24T22:56:20.791486+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766616979827-bzhpn4rdrnm.png</image:loc>
+      <image:title>Go-Kart Panic: Blue Shell Doom Imminent</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/38a920c6-0360-4303-a9ca-86f6a8f28653</loc>
+    <lastmod>2025-12-24T22:55:31.460206+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766616930677-dt8jkainveo.png</image:loc>
+      <image:title>Bored Krusty Krab Employee Meets Manic SpongeBob</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/bcedd0ee-7e40-4559-98ca-f12f5f90f5b5</loc>
+    <lastmod>2025-12-24T22:53:52.448121+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766616831280-w628htxddvf.png</image:loc>
+      <image:title>Deadpool Fan Photo Goes Terribly Awkward in Park</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/d441268d-92db-487b-a187-b243c7210305</loc>
+    <lastmod>2025-12-24T22:50:59.026+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766616658157-htgt75liyjn.png</image:loc>
+      <image:title>Terrifying Chase Down Spooky Victorian Hallway</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/ca01c5b3-83af-4c78-9374-260e495fe1b1</loc>
+    <lastmod>2025-12-24T22:49:20.44583+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766616559549-0zo110xn0u9.png</image:loc>
+      <image:title>Kitchen Chaos: Man Flees Tom and Jerry Mayhem</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/aab9aabf-1933-4b21-9aa2-c29eea936f13</loc>
+    <lastmod>2025-12-24T22:46:32.705979+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766616391829-rmjwtfhm0pn.png</image:loc>
+      <image:title>Disgusted Man&apos;s Mud Bath with Relaxing Shrek</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/b96e55e6-8f17-4a6a-bc0b-c8ff76f1d575</loc>
+    <lastmod>2025-12-24T22:45:11.442422+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766616310358-phq8ucxrlwe.png</image:loc>
+      <image:title>Giant Face Terrifies Tiny Toy Story Friends on Floor</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/bbd96651-13a9-4b52-8399-46ae37c826cb</loc>
+    <lastmod>2025-12-24T22:42:59.869168+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766616179113-6tast81jer.png</image:loc>
+      <image:title>This Is Fine: Man Smiles Amidst Kitchen Inferno</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/23e9314c-5dfd-4447-a50d-7aad84411b65</loc>
+    <lastmod>2025-12-24T22:37:51.35269+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766615870679-ce6b5keolzt.png</image:loc>
+      <image:title>Real Face in Simpsons Chaos: Annoyed on the Orange Couch</image:title>
+      <image:caption>Use the uploaded image as the ONLY face reference.
+FACE LOCK: keep the face, hairline, proportions, and overall appearance 100% identical. Do NOT alter or beautify the face. Create an ultra realistic </image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/243d1072-0e1a-4d13-b41b-eac2ff2da0fc</loc>
+    <lastmod>2025-12-24T01:06:23.743499+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766538382962-vcp77mzzuud.jfif</image:loc>
+      <image:title>AI Generated Image</image:title>
+      <image:caption>{
+
+&quot;subject&quot;: {
+
+&quot;description&quot;: &quot;A hyper-realistic optical illusion photograph. A young Caucasian woman appears to be stepping out of a smartphone screen held in a hand. The screen displays the camera</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://artistudio.fun/image/c4bb1be5-6dc5-4031-b70e-c587e9c3ee5a</loc>
+    <lastmod>2025-12-24T00:57:43.875608+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766537863085-0mznjlo0p84.jpg</image:loc>
+      <image:title>AI Generated Image</image:title>
+      <image:caption>Edit the provided image to render the Arabic calligraphy of &apos;محمد خضر&apos; in a sharp, aggressive, yet fluid style. Ensure the letters are intertwined with elongated swooshes and pointed tips. The text sh</image:caption>
+    </image:image>
+  </url>
+</urlset>

@@ -1,0 +1,26 @@
+# ═══════════════════════════════════════════════════════════════
+# 🤖 Arti Studio - SEO Pre-render Worker
+# ═══════════════════════════════════════════════════════════════
+
+name = "arti-seo-prerender"
+main = "src/seo-prerender.ts"
+compatibility_date = "2024-01-01"
+
+# ═══════════════════════════════════════════════════════════════
+# Route Configuration - Deploy on your domain
+# ═══════════════════════════════════════════════════════════════
+# Uncomment and configure after adding your domain to Cloudflare
+# 
+# routes = [
+#   { pattern = "artistudio.fun/*", zone_name = "artistudio.fun" }
+# ]
+
+[vars]
+SITE_ORIGIN = "https://artistudio.fun"
+
+# ═══════════════════════════════════════════════════════════════
+# Secrets (set via `wrangler secret put`)
+# ═══════════════════════════════════════════════════════════════
+# Run these commands:
+# wrangler secret put SUPABASE_URL
+# wrangler secret put SUPABASE_ANON_KEY
