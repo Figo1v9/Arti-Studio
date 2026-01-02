@@ -35,10 +35,14 @@ export default defineConfig(({ mode }) => ({
             return 'vendor-animation';
           }
 
-          // Charts (Recharts is HUGE - 367kb)
-          if (id.includes('node_modules/recharts/') ||
-            id.includes('node_modules/d3-') ||
-            id.includes('node_modules/victory-')) {
+          // Charts (Recharts + ALL d3 dependencies in ONE chunk)
+          // This prevents circular dependency issues
+          if (id.includes('node_modules/recharts') ||
+            id.includes('node_modules/d3') ||
+            id.includes('node_modules/internmap') ||
+            id.includes('node_modules/delaunator') ||
+            id.includes('node_modules/robust-predicates') ||
+            id.includes('node_modules/victory')) {
             return 'vendor-charts';
           }
 
@@ -87,18 +91,32 @@ export default defineConfig(({ mode }) => ({
     // Increase chunk size warning limit
     chunkSizeWarningLimit: 600,
   },
+  // Fix for Recharts/D3 circular dependency issue
+  optimizeDeps: {
+    include: [
+      'recharts',
+      'd3-scale',
+      'd3-shape',
+      'd3-array',
+      'd3-interpolate',
+      'd3-color',
+      'd3-format',
+      'd3-time',
+      'd3-time-format',
+    ],
+  },
   plugins: [
     react(),
     mode === "development" && componentTagger(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "robots.txt"], // simplified
+      includeAssets: ["favicon.ico", "robots.txt"],
       manifest: {
-        name: "Prompt Life",
-        short_name: "Prompt Life",
-        description: "The AI Prompt Engineering Platform",
-        theme_color: "#ffffff",
-        background_color: "#ffffff",
+        name: "Arti Studio",
+        short_name: "Arti Studio",
+        description: "AI Prompt Inspiration Platform",
+        theme_color: "#8B5CF6",
+        background_color: "#0a0a0a",
         display: "standalone",
         icons: [
           {
@@ -159,7 +177,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     headers: {
       "Cache-Control": "no-store",
-      "Cross-Origin-Embedder-Policy": "unsafe-none", // Allow popups to work easier in dev
+      "Cross-Origin-Embedder-Policy": "unsafe-none",
       "Cross-Origin-Opener-Policy": "unsafe-none",
     },
   },
