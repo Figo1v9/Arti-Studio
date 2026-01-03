@@ -125,6 +125,8 @@ export function HeroSection() {
                     <img
                         src="/arti_studio.png"
                         alt="Arti Studio"
+                        width="280"
+                        height="80"
                         className="h-12 md:h-16 lg:h-20 w-auto mx-auto opacity-0"
                         ref={(el) => {
                             if (el) {
