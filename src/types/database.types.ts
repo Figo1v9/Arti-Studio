@@ -643,6 +643,23 @@ export type Database = {
                     category: string;
                 }[];
             };
+
+            // Profile Service
+            admin_update_profile: {
+                Args: {
+                    p_admin_id: string;
+                    p_target_user_id: string;
+                    p_updates: Json; // Using Json to be flexible
+                };
+                Returns: { success: boolean; data?: Json; error?: string };
+            };
+            update_own_profile: {
+                Args: {
+                    p_user_id: string;
+                    p_updates: Json;
+                };
+                Returns: { success: boolean; data?: Json; error?: string };
+            };
         };
         Enums: {
             [_ in never]: never;
