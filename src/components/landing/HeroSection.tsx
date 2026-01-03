@@ -88,6 +88,10 @@ export function HeroSection() {
                     <img
                         src="https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767356091423-b6kmn81647.webp"
                         alt="AI Generated Art"
+                        width="256"
+                        height="320"
+                        loading="eager"
+                        fetchPriority="high"
                         className="w-44 h-60 lg:w-48 lg:h-64 xl:w-56 xl:h-72 2xl:w-64 2xl:h-80 object-cover rounded-2xl shadow-2xl shadow-black/50 transition-all duration-700 group-hover:scale-[1.02] group-hover:shadow-3xl"
                     />
                 </div>
@@ -105,6 +109,10 @@ export function HeroSection() {
                     <img
                         src="https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680008618-vjp5i93cap.webp"
                         alt="AI Generated Art"
+                        width="320"
+                        height="420"
+                        loading="eager"
+                        fetchPriority="high"
                         className="w-56 h-72 lg:w-64 lg:h-80 xl:w-72 xl:h-96 2xl:w-80 2xl:h-[420px] object-cover rounded-2xl shadow-2xl shadow-black/50 transition-all duration-700 group-hover:scale-[1.02] group-hover:shadow-3xl"
                     />
                 </div>
