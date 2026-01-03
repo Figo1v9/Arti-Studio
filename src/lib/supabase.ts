@@ -126,12 +126,15 @@ export const adminUpdateProfile = async (
 
     // 2. Try RPC FIRST
     // Determine the effective Admin ID.
-    // As a prioritized fallback for Local Admins, we use the "manual" ID.
-    let effectiveAdminId = adminId || currentFirebaseUid;
+    let effectiveAdminId: string | null = null;
 
-    if (!effectiveAdminId && isLocalAdmin) {
+    // 🚨 PRIORITY FIX: If Local Admin, ALWAYS use the Manual Admin ID.
+    // This overrides the Firebase User ID (which might be a regular user without permissions).
+    if (isLocalAdmin) {
         effectiveAdminId = 'admin-manual-id';
-        console.log('[Supabase] Using Manual Admin ID for Local Admin operations.');
+        console.log('[Supabase] Enforcing Manual Admin ID for Local Admin session.');
+    } else {
+        effectiveAdminId = adminId || currentFirebaseUid;
     }
 
     if (effectiveAdminId) {
