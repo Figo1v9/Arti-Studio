@@ -11,6 +11,7 @@ import { EmptyState } from '@/components/ui/empty-state';
 import { Button } from '@/components/ui/button';
 import { GalleryImage } from '@/types/gallery';
 import { useIsMobile } from '@/hooks/useIsMobile';
+import { useModalHistory } from '@/hooks/useModalHistory';
 
 export default function FavoritesPage() {
     const navigate = useNavigate();
@@ -18,6 +19,13 @@ export default function FavoritesPage() {
     const { favorites, isLoading } = useFavorites();
     const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
     const isMobile = useIsMobile();
+
+    // Modal history for back button support
+    const { openWithHistory } = useModalHistory(
+        selectedImage !== null,
+        () => setSelectedImage(null),
+        'favorites-modal'
+    );
 
     // Get similar images from favorites
     const getSimilarImages = (image: GalleryImage) => {
@@ -102,7 +110,10 @@ export default function FavoritesPage() {
                     ) : (
                         <GalleryGrid
                             images={favorites}
-                            onImageClick={setSelectedImage}
+                            onImageClick={(image) => {
+                                setSelectedImage(image);
+                                openWithHistory(image.id);
+                            }}
                         />
                     )}
                 </main>
@@ -114,14 +125,20 @@ export default function FavoritesPage() {
                             image={selectedImage}
                             onClose={() => setSelectedImage(null)}
                             similarImages={getSimilarImages(selectedImage)}
-                            onSimilarClick={setSelectedImage}
+                            onSimilarClick={(image) => {
+                                setSelectedImage(image);
+                                openWithHistory(image.id);
+                            }}
                         />
                     ) : (
                         <ImageModal
                             image={selectedImage}
                             onClose={() => setSelectedImage(null)}
                             similarImages={getSimilarImages(selectedImage)}
-                            onSimilarClick={setSelectedImage}
+                            onSimilarClick={(image) => {
+                                setSelectedImage(image);
+                                openWithHistory(image.id);
+                            }}
                         />
                     )
                 )}

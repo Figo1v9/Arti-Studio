@@ -4,6 +4,7 @@ import { GalleryGrid } from "@/components/gallery/GalleryGrid";
 import { Helmet } from "react-helmet-async";
 import { Flame, TrendingUp, Eye, Copy } from "lucide-react";
 import { useGallery, useSimilarImages } from "@/hooks/useGallery";
+import { useModalHistory } from "@/hooks/useModalHistory";
 import { GalleryImage } from "@/types/gallery";
 import { ImageModal } from "@/components/gallery/ImageModal";
 import { MobileImageModal } from "@/components/mobile/MobileImageModal";
@@ -14,6 +15,13 @@ import { trackInteraction } from "@/services/recommendations.service";
 export default function TrendsPage() {
   const isMobile = useIsMobile();
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+
+  // Modal history for back button support
+  const { openWithHistory } = useModalHistory(
+    selectedImage !== null,
+    () => setSelectedImage(null),
+    'trends-modal'
+  );
 
   // Fetch gallery images (for local fallback)
   const { data: galleryImages = [], isLoading: isGalleryLoading } = useGallery();
@@ -51,10 +59,12 @@ export default function TrendsPage() {
   const handleImageClick = (image: GalleryImage) => {
     trackInteraction(image, 'view');
     setSelectedImage(image);
+    openWithHistory(image.id);
   };
 
   const handleSimilarClick = (image: GalleryImage) => {
     setSelectedImage(image);
+    openWithHistory(image.id);
   };
 
   // Calculate total stats for display

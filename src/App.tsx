@@ -17,11 +17,13 @@ import { useDevToolsProtection } from "@/hooks/useDevToolsProtection";
 /**
  * StaticFileRedirect - Forces a hard browser redirect to static files
  * This prevents React Router from intercepting requests to files like sitemap.xml
+ * Uses replace() instead of href to avoid infinite loops in history
  */
 function StaticFileRedirect({ file }: { file: string }) {
   useEffect(() => {
     // Force a hard redirect to the actual static file
-    window.location.href = `/${file}`;
+    // Using replace to avoid adding to history stack and preventing loops
+    window.location.replace(`/${file}`);
   }, [file]);
 
   return (
@@ -30,6 +32,17 @@ function StaticFileRedirect({ file }: { file: string }) {
     </div>
   );
 }
+
+/**
+ * Reserved paths that should NOT be treated as usernames
+ * This is used for validation in other parts of the app
+ */
+export const RESERVED_PATHS = new Set([
+  'sitemap.xml', 'robots.txt', 'ads.txt', 'manifest.json', 'favicon.ico', 'sw.js',
+  'explore', 'following', 'category', 'image', 'trends', 'favorites', 'search',
+  'tag', 'profile', 'user', 'login', 'register', 'forgot-password', 'auth',
+  'privacy', 'terms', 'about', 'contact', 'admin-mk-dashboard',
+]);
 
 
 // Lazy Loaded Pages
@@ -166,6 +179,17 @@ function AnimatedRoutes() {
       }
     >
       <Routes>
+        {/* ============================================
+         * STATIC FILES - MUST BE FIRST!
+         * These routes MUST come before any dynamic routes
+         * to prevent React Router from matching them as usernames
+         * ============================================ */}
+        <Route path="/sitemap.xml" element={<StaticFileRedirect file="sitemap.xml" />} />
+        <Route path="/robots.txt" element={<StaticFileRedirect file="robots.txt" />} />
+        <Route path="/ads.txt" element={<StaticFileRedirect file="ads.txt" />} />
+        <Route path="/manifest.json" element={<StaticFileRedirect file="manifest.json" />} />
+        <Route path="/favicon.ico" element={<StaticFileRedirect file="favicon.ico" />} />
+
         {/* Landing Page (No Layout) */}
         <Route path="/" element={<LandingPage />} />
 
@@ -183,11 +207,7 @@ function AnimatedRoutes() {
           <Route path="/user/:username" element={<ProfilePage />} />
           <Route path="/user/:username/collection/:slug" element={<CollectionPage />} />
 
-          {/* Static files - force hard redirect to actual files */}
-          <Route path="/sitemap.xml" element={<StaticFileRedirect file="sitemap.xml" />} />
-          <Route path="/robots.txt" element={<StaticFileRedirect file="robots.txt" />} />
-          <Route path="/ads.txt" element={<StaticFileRedirect file="ads.txt" />} />
-
+          {/* Dynamic username route - MUST BE LAST in this group */}
           <Route path="/:username" element={<ProfilePage />} />
         </Route>
 

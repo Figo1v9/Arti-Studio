@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { getAvatarUrl } from '@/lib/avatar';
+import { useModalHistory } from '@/hooks/useModalHistory';
 
 // Lazy load modals
 const ImageModal = lazy(() => import('@/components/gallery/ImageModal').then(module => ({ default: module.ImageModal })));
@@ -146,6 +147,13 @@ export default function FollowingPage() {
     const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
     const observerTarget = useRef<HTMLDivElement>(null);
 
+    // Modal history for back button support
+    const { openWithHistory } = useModalHistory(
+        selectedImage !== null,
+        () => setSelectedImage(null),
+        'following-modal'
+    );
+
     // Redirect to login if not authenticated
     useEffect(() => {
         if (!authLoading && !user) {
@@ -216,6 +224,7 @@ export default function FollowingPage() {
 
     const handleImageClick = (image: GalleryImage) => {
         setSelectedImage(image);
+        openWithHistory(image.id);
     };
 
     const isLoading = authLoading || loadingUsers;

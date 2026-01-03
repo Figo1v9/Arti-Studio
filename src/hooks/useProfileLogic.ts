@@ -10,6 +10,7 @@ import {
     useProfileActions,
     useProfileCreations
 } from './profile';
+import { useModalHistory } from '@/hooks/useModalHistory';
 
 export const useProfileLogic = () => {
     const navigate = useNavigate();
@@ -72,6 +73,13 @@ export const useProfileLogic = () => {
     const deepLinkImageId = searchParams.get('imageId');
     const { data: similarImages = [] } = useSimilarImages(selectedImage);
 
+    // Modal history for back button support
+    const { openWithHistory } = useModalHistory(
+        selectedImage !== null,
+        () => setSelectedImage(null),
+        'profile-modal'
+    );
+
     // Deep Linking Effect
     useEffect(() => {
         if (deepLinkImageId) {
@@ -96,6 +104,9 @@ export const useProfileLogic = () => {
     // Handlers
     const onImageSelect = React.useCallback((image: GalleryImage | null) => {
         setSelectedImage(image);
+        if (image) {
+            openWithHistory(image.id);
+        }
         const params = new URLSearchParams(searchParams);
         if (image) {
             params.set('imageId', image.id);
@@ -103,7 +114,7 @@ export const useProfileLogic = () => {
             params.delete('imageId');
         }
         navigate({ search: params.toString() }, { replace: true });
-    }, [navigate, searchParams]);
+    }, [navigate, searchParams, openWithHistory]);
 
     const onEditStart = () => {
         initEditFields();

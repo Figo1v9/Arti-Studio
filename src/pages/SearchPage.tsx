@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { FollowButton } from '@/components/profile/FollowButton';
 import { FollowService } from '@/services/follow.service';
+import { useModalHistory } from '@/hooks/useModalHistory';
 
 // Lazy load modals
 const ImageModal = lazy(() => import('@/components/gallery/ImageModal').then(module => ({ default: module.ImageModal })));
@@ -66,6 +67,13 @@ export default function SearchPage() {
     const categoryFilter = searchParams.get('category') as Category | null; // Keep for fallback or filtering
     const [localQuery, setLocalQuery] = useState(query);
     const [followingIds, setFollowingIds] = useState<Set<string>>(new Set());
+
+    // Modal history for back button support
+    const { openWithHistory } = useModalHistory(
+        selectedImage !== null,
+        () => setSelectedImage(null),
+        'search-modal'
+    );
 
     useEffect(() => {
         if (user) {
@@ -407,7 +415,10 @@ export default function SearchPage() {
 
                                         <GalleryGrid
                                             images={images}
-                                            onImageClick={setSelectedImage}
+                                            onImageClick={(image) => {
+                                                setSelectedImage(image);
+                                                openWithHistory(image.id);
+                                            }}
                                             isLoading={false}
                                             showEmptyState={false}
                                         />
@@ -421,9 +432,25 @@ export default function SearchPage() {
 
             <Suspense fallback={null}>
                 {isMobile ? (
-                    <MobileImageModal image={selectedImage} onClose={() => setSelectedImage(null)} similarImages={similarImages} onSimilarClick={setSelectedImage} />
+                    <MobileImageModal
+                        image={selectedImage}
+                        onClose={() => setSelectedImage(null)}
+                        similarImages={similarImages}
+                        onSimilarClick={(image) => {
+                            setSelectedImage(image);
+                            openWithHistory(image.id);
+                        }}
+                    />
                 ) : (
-                    <ImageModal image={selectedImage} onClose={() => setSelectedImage(null)} similarImages={similarImages} onSimilarClick={setSelectedImage} />
+                    <ImageModal
+                        image={selectedImage}
+                        onClose={() => setSelectedImage(null)}
+                        similarImages={similarImages}
+                        onSimilarClick={(image) => {
+                            setSelectedImage(image);
+                            openWithHistory(image.id);
+                        }}
+                    />
                 )}
             </Suspense>
         </>

@@ -49,6 +49,7 @@ import { MobileUploadSheet } from '@/components/mobile/MobileUploadSheet';
 import { toast } from 'sonner';
 import { Helmet } from 'react-helmet-async';
 import type { GalleryImage } from '@/types/gallery';
+import { useModalHistory } from '@/hooks/useModalHistory';
 
 export default function CollectionPage() {
     const { username, slug } = useParams<{ username: string; slug: string }>();
@@ -64,6 +65,13 @@ export default function CollectionPage() {
     const [showDeleteDialog, setShowDeleteDialog] = useState(false);
     const [showUploadModal, setShowUploadModal] = useState(false);
     const [deleting, setDeleting] = useState(false);
+
+    // Modal history for back button support
+    const { openWithHistory } = useModalHistory(
+        selectedImage !== null,
+        () => setSelectedImage(null),
+        'collection-modal'
+    );
 
     // Check if current user is the owner
     const isOwner = user?.uid === collection?.user_id;
@@ -350,7 +358,10 @@ export default function CollectionPage() {
                     ) : (
                         <GalleryGrid
                             images={galleryImages}
-                            onImageClick={setSelectedImage}
+                            onImageClick={(image) => {
+                                setSelectedImage(image);
+                                openWithHistory(image.id);
+                            }}
                         />
                     )}
                 </div>
@@ -362,14 +373,20 @@ export default function CollectionPage() {
                             image={selectedImage}
                             onClose={() => setSelectedImage(null)}
                             similarImages={galleryImages.filter(img => img.id !== selectedImage.id)}
-                            onSimilarClick={setSelectedImage}
+                            onSimilarClick={(image) => {
+                                setSelectedImage(image);
+                                openWithHistory(image.id);
+                            }}
                         />
                     ) : (
                         <ImageModal
                             image={selectedImage}
                             onClose={() => setSelectedImage(null)}
                             similarImages={galleryImages.filter(img => img.id !== selectedImage.id)}
-                            onSimilarClick={setSelectedImage}
+                            onSimilarClick={(image) => {
+                                setSelectedImage(image);
+                                openWithHistory(image.id);
+                            }}
                         />
                     )
                 )}

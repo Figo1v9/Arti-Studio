@@ -8,6 +8,7 @@ import { GalleryImage } from '@/types/gallery';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useGallery, useSimilarImages } from '@/hooks/useGallery';
+import { useModalHistory } from '@/hooks/useModalHistory';
 import { Button } from '@/components/ui/button';
 
 // Lazy load modals
@@ -19,6 +20,13 @@ export default function TagPage() {
     const navigate = useNavigate();
     const isMobile = useIsMobile();
     const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+
+    // Modal history for back button support
+    const { openWithHistory } = useModalHistory(
+        selectedImage !== null,
+        () => setSelectedImage(null),
+        'tag-modal'
+    );
 
     // Decode URL param
     const decodedTag = tagName ? decodeURIComponent(tagName).toLowerCase() : '';
@@ -170,7 +178,10 @@ export default function TagPage() {
                 {/* Gallery Grid */}
                 <GalleryGrid
                     images={taggedImages}
-                    onImageClick={setSelectedImage}
+                    onImageClick={(image) => {
+                        setSelectedImage(image);
+                        openWithHistory(image.id);
+                    }}
                     isLoading={isLoading}
                 />
 
@@ -205,14 +216,20 @@ export default function TagPage() {
                         image={selectedImage}
                         onClose={() => setSelectedImage(null)}
                         similarImages={similarImages}
-                        onSimilarClick={setSelectedImage}
+                        onSimilarClick={(image) => {
+                            setSelectedImage(image);
+                            openWithHistory(image.id);
+                        }}
                     />
                 ) : (
                     <ImageModal
                         image={selectedImage}
                         onClose={() => setSelectedImage(null)}
                         similarImages={similarImages}
-                        onSimilarClick={setSelectedImage}
+                        onSimilarClick={(image) => {
+                            setSelectedImage(image);
+                            openWithHistory(image.id);
+                        }}
                     />
                 )}
             </Suspense>

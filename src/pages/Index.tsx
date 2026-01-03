@@ -6,6 +6,7 @@ import { useContentProtection } from '@/hooks/useContentProtection';
 import { useSearch } from '@/hooks/useSearch';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useSimilarImages, useInfiniteGallery, useImage } from '@/hooks/useGallery';
+import { useModalHistory } from '@/hooks/useModalHistory';
 import { useCategories } from '@/hooks/useCategories';
 import { useRecommendations, useMixedFeed, useTrackInteraction } from '@/hooks/useRecommendations';
 import { GalleryImage, Category } from '@/types/gallery';
@@ -28,6 +29,13 @@ export default function Index() {
 
   // Content protection
   useContentProtection();
+
+  // Modal history for back button support
+  const { openWithHistory } = useModalHistory(
+    selectedImage !== null,
+    () => setSelectedImage(null),
+    'image-modal'
+  );
 
   // Get route params
   const { category: routeCategory } = useParams<{ category: string }>();
@@ -127,12 +135,14 @@ export default function Index() {
   const handleImageClick = useMemo(() => (image: GalleryImage) => {
     trackView(image);
     setSelectedImage(image);
+    // Push history state so back button closes modal
+    openWithHistory(image.id);
     // Add imageId to URL
     setSearchParams(prev => {
       prev.set('imageId', image.id);
       return prev;
     }, { replace: true });
-  }, [trackView, setSearchParams]);
+  }, [trackView, setSearchParams, openWithHistory]);
 
   // Search functionality hooks
   // Search hooks moved up
@@ -229,20 +239,22 @@ export default function Index() {
   const handleSimilarClick = useMemo(() => (image: GalleryImage) => {
     trackView(image);
     setSelectedImage(image);
+    openWithHistory(image.id);
     setSearchParams(prev => {
       prev.set('imageId', image.id);
       return prev;
     }, { replace: true });
-  }, [trackView, setSearchParams]);
+  }, [trackView, setSearchParams, openWithHistory]);
 
   const handleSearchImageSelect = useMemo(() => (image: GalleryImage) => {
     trackView(image);
     setSelectedImage(image);
+    openWithHistory(image.id);
     setSearchParams(prev => {
       prev.set('imageId', image.id);
       return prev;
     }, { replace: true });
-  }, [trackView, setSearchParams]);
+  }, [trackView, setSearchParams, openWithHistory]);
 
   // Unified Render - Prevents layout thrashing/flickering
   return (
