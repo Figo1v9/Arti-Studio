@@ -167,18 +167,22 @@ export function LandingHeader() {
                                             {navLinks.map((link, index) => {
                                                 const Icon = link.icon;
                                                 return (
-                                                    <motion.button
+                                                    <motion.div
                                                         key={link.href}
                                                         initial={{ opacity: 0, x: 20 }}
                                                         animate={{ opacity: 1, x: 0 }}
                                                         transition={{ delay: index * 0.05 }}
-                                                        onClick={() => handleNavigation(link.href)}
-                                                        className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-slate-200 hover:bg-white/5 transition-colors"
                                                     >
-                                                        <Icon className="w-5 h-5 text-slate-400" />
-                                                        <span className="font-medium">{link.label}</span>
-                                                        <ChevronRight className="w-4 h-4 text-slate-500 ml-auto" />
-                                                    </motion.button>
+                                                        <Link
+                                                            to={link.href}
+                                                            onClick={() => setIsMobileMenuOpen(false)}
+                                                            className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-slate-200 hover:bg-white/5 transition-colors"
+                                                        >
+                                                            <Icon className="w-5 h-5 text-slate-400" />
+                                                            <span className="font-medium">{link.label}</span>
+                                                            <ChevronRight className="w-4 h-4 text-slate-500 ml-auto" />
+                                                        </Link>
+                                                    </motion.div>
                                                 );
                                             })}
                                         </div>
@@ -191,18 +195,22 @@ export function LandingHeader() {
                                             {legalLinks.map((link, index) => {
                                                 const Icon = link.icon;
                                                 return (
-                                                    <motion.button
+                                                    <motion.div
                                                         key={link.href}
                                                         initial={{ opacity: 0, x: 20 }}
                                                         animate={{ opacity: 1, x: 0 }}
                                                         transition={{ delay: (navLinks.length + index) * 0.05 }}
-                                                        onClick={() => handleNavigation(link.href)}
-                                                        className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-slate-300 hover:bg-white/5 transition-colors"
                                                     >
-                                                        <Icon className="w-5 h-5 text-slate-500" />
-                                                        <span>{link.label}</span>
-                                                        <ChevronRight className="w-4 h-4 text-slate-500 ml-auto" />
-                                                    </motion.button>
+                                                        <Link
+                                                            to={link.href}
+                                                            onClick={() => setIsMobileMenuOpen(false)}
+                                                            className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-slate-300 hover:bg-white/5 transition-colors"
+                                                        >
+                                                            <Icon className="w-5 h-5 text-slate-500" />
+                                                            <span>{link.label}</span>
+                                                            <ChevronRight className="w-4 h-4 text-slate-500 ml-auto" />
+                                                        </Link>
+                                                    </motion.div>
                                                 );
                                             })}
                                         </div>
@@ -210,17 +218,21 @@ export function LandingHeader() {
 
                                     {/* Explore Link */}
                                     <div className="px-4">
-                                        <motion.button
+                                        <motion.div
                                             initial={{ opacity: 0, x: 20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: 0.2 }}
-                                            onClick={() => handleNavigation('/explore')}
-                                            className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-violet-400 bg-violet-500/10 hover:bg-violet-500/20 transition-colors"
                                         >
-                                            <Sparkles className="w-5 h-5" />
-                                            <span className="font-medium">Explore Gallery</span>
-                                            <ChevronRight className="w-4 h-4 text-violet-400 ml-auto" />
-                                        </motion.button>
+                                            <Link
+                                                to="/explore"
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left text-violet-400 bg-violet-500/10 hover:bg-violet-500/20 transition-colors"
+                                            >
+                                                <Sparkles className="w-5 h-5" />
+                                                <span className="font-medium">Explore Gallery</span>
+                                                <ChevronRight className="w-4 h-4 text-violet-400 ml-auto" />
+                                            </Link>
+                                        </motion.div>
                                     </div>
                                 </div>
 
