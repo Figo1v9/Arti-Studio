@@ -439,9 +439,10 @@ export function CookieConsentBanner() {
                                     We use cookies to enhance your browsing experience.{' '}
                                     <Link
                                         to="/privacy"
+                                        aria-label="Read our Privacy Policy"
                                         className="text-violet-400 hover:text-violet-300 underline underline-offset-2 decoration-violet-400/30 hover:decoration-violet-300/50 transition-all"
                                     >
-                                        Learn more
+                                        Read our Privacy Policy
                                     </Link>
                                 </p>
                             </div>

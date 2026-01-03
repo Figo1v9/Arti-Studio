@@ -56,6 +56,8 @@ export function LandingHeader() {
                             <motion.img
                                 src="/arti_studio.png"
                                 alt="Arti Studio"
+                                width="112"
+                                height="32"
                                 className="h-7 sm:h-8 w-auto"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ type: "spring", stiffness: 400 }}
@@ -153,6 +155,7 @@ export function LandingHeader() {
                                     <button
                                         onClick={() => setIsMobileMenuOpen(false)}
                                         className="p-2 text-slate-400 hover:text-white transition-colors"
+                                        aria-label="Close menu"
                                     >
                                         <X className="w-5 h-5" />
                                     </button>
