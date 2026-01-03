@@ -1,43 +1,7 @@
 {
     "rewrites": [
         {
-            "source": "/sitemap.xml",
-            "destination": "/sitemap.xml"
-        },
-        {
-            "source": "/robots.txt",
-            "destination": "/robots.txt"
-        },
-        {
-            "source": "/ads.txt",
-            "destination": "/ads.txt"
-        },
-        {
-            "source": "/manifest.json",
-            "destination": "/manifest.json"
-        },
-        {
-            "source": "/manifest.webmanifest",
-            "destination": "/manifest.webmanifest"
-        },
-        {
-            "source": "/favicon.ico",
-            "destination": "/favicon.ico"
-        },
-        {
-            "source": "/sw.js",
-            "destination": "/sw.js"
-        },
-        {
-            "source": "/registerSW.js",
-            "destination": "/registerSW.js"
-        },
-        {
-            "source": "/workbox-:hash.js",
-            "destination": "/workbox-:hash.js"
-        },
-        {
-            "source": "/((?!assets/).*)",
+            "source": "/((?!api/|assets/|.*\\.(?:webmanifest|\\w{2,4})$).*)",
             "destination": "/index.html"
         }
     ],

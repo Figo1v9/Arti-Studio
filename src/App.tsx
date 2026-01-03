@@ -185,7 +185,8 @@ function AnimatedRoutes() {
           <Route path="/user/:username/collection/:slug" element={<CollectionPage />} />
 
           {/* Dynamic username route - MUST BE LAST in this group */}
-          <Route path="/:username" element={<ProfilePage />} />
+          {/* Dynamic username route - MUST BE LAST in this group */}
+          <Route path="/:username" element={<UserProfileRoute />} />
         </Route>
 
         {/* Auth Routes with Shared Layout Animations */}
@@ -270,6 +271,24 @@ function AppWithAnalytics({ children }: { children: React.ReactNode }) {
 
   return <>{children}</>;
 }
+
+// Route Guard to prevent invalid usernames (like sitemap.xml) from hitting ProfilePage
+const UserProfileRoute = () => {
+  const { username } = useParams<{ username: string }>();
+
+  // 1. Check if it's a reserved path
+  if (username && (RESERVED_PATHS.has(username.toLowerCase()) || /\.\w{2,4}$/.test(username))) {
+    return <NotFound />;
+  }
+
+  // 2. Check if it looks like a file (has extension) - Logic: ends with .extension (2-4 chars or webmanifest)
+  // This catches sitemap.xml, image.jpg etc. if they slip through Vercel
+  if (username && /\.(?:webmanifest|\w{2,4})$/.test(username)) {
+    return <NotFound />;
+  }
+
+  return <ProfilePage />;
+};
 
 const App = () => (
   <HelmetProvider>
