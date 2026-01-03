@@ -100,7 +100,7 @@ export const adminUpdateProfile = async (
     targetUserId: string,
     updates: ProfileUpdates
 ): Promise<RpcResult> => {
-    // Check for local admin session first
+    // 1. Check for local admin session
     const adminSession = localStorage.getItem('admin_session');
     const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
     const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
@@ -123,17 +123,57 @@ export const adminUpdateProfile = async (
         }
     }
 
-    // If local admin, perform direct update (bypasses RPC)
+    // 2. Try RPC FIRST if authenticated (Best for Firebase Admins)
+    // This uses SECURITY DEFINER privileges on the server
+    if (currentFirebaseUid) {
+        try {
+            const { data, error } = await supabase.rpc('admin_update_profile', {
+                p_admin_id: currentFirebaseUid,
+                p_target_user_id: targetUserId,
+                p_updates: updates as unknown as Record<string, unknown>
+            });
+
+            // If successful, we are done
+            if (!error) {
+                return data as unknown as RpcResult;
+            }
+
+            // If RPC failed but we are a Local Admin, we might try the fallback
+            // (Only if the error suggests authorization failure, but let's try fallback regardless if Local Admin)
+            if (!isLocalAdmin) {
+                console.error('RPC admin_update_profile error:', error);
+                return { success: false, error: error.message };
+            }
+
+            console.warn('RPC failed, falling back to Local Admin Direct Update:', error.message);
+        } catch (err) {
+            console.error('RPC call failed:', err);
+            // Continue to fallback if local admin...
+        }
+    }
+
+    // 3. Fallback: Local Admin Direct Update
+    // This runs as 'anon' role (standard client key), so it relies on specific RLS policies
     if (isLocalAdmin) {
         try {
-            const { error } = await supabase
+            const { data, error } = await supabase
                 .from('profiles')
                 .update(updates)
-                .eq('id', targetUserId);
+                .eq('id', targetUserId)
+                .select(); // CRITICAL: Select to verify update happened
 
             if (error) {
                 console.error('Direct admin update error:', error);
                 return { success: false, error: error.message };
+            }
+
+            // Check if any rows were actually touched
+            if (!data || data.length === 0) {
+                console.error('Direct update returned 0 rows. RLS likely blocked it.');
+                return {
+                    success: false,
+                    error: 'Update failed. Database permissions (RLS) prevented this change.'
+                };
             }
 
             return { success: true, data: updates };
@@ -144,29 +184,7 @@ export const adminUpdateProfile = async (
         }
     }
 
-    // Fallback to RPC for Firebase-authenticated admins
-    if (!currentFirebaseUid) {
-        return { success: false, error: 'Not authenticated' };
-    }
-
-    try {
-        const { data, error } = await supabase.rpc('admin_update_profile', {
-            p_admin_id: currentFirebaseUid,
-            p_target_user_id: targetUserId,
-            p_updates: updates as unknown as Record<string, unknown>
-        });
-
-        if (error) {
-            console.error('RPC admin_update_profile error:', error);
-            return { success: false, error: error.message };
-        }
-
-        return data as unknown as RpcResult;
-    } catch (err) {
-        const error = err instanceof Error ? err.message : 'Unknown error';
-        console.error('RPC call failed:', err);
-        return { success: false, error };
-    }
+    return { success: false, error: 'Not authorized' };
 };
 
 // Legacy export for backward compatibility
