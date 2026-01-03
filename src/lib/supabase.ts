@@ -97,6 +97,7 @@ export const updateOwnProfile = async (
  * Supports both Firebase-authenticated admins and local admin sessions
  */
 export const adminUpdateProfile = async (
+    adminId: string | null,
     targetUserId: string,
     updates: ProfileUpdates
 ): Promise<RpcResult> => {
@@ -123,34 +124,43 @@ export const adminUpdateProfile = async (
         }
     }
 
-    // 2. Try RPC FIRST if authenticated (Best for Firebase Admins)
-    // This uses SECURITY DEFINER privileges on the server
-    if (currentFirebaseUid) {
+    // 2. Try RPC FIRST
+    // Determine the effective Admin ID.
+    // As a prioritized fallback for Local Admins, we use the "manual" ID.
+    let effectiveAdminId = adminId || currentFirebaseUid;
+
+    if (!effectiveAdminId && isLocalAdmin) {
+        effectiveAdminId = 'admin-manual-id';
+        console.log('[Supabase] Using Manual Admin ID for Local Admin operations.');
+    }
+
+    if (effectiveAdminId) {
         try {
+            console.log(`[Supabase] Rpc admin_update_profile as ${effectiveAdminId}`);
             const { data, error } = await supabase.rpc('admin_update_profile', {
-                p_admin_id: currentFirebaseUid,
+                p_admin_id: effectiveAdminId,
                 p_target_user_id: targetUserId,
                 p_updates: updates as unknown as Record<string, unknown>
             });
 
             // If successful, we are done
             if (!error) {
-                return data as unknown as RpcResult;
+                const result = data as unknown as RpcResult;
+                if (result.success) return result;
+                // If failed logically (e.g. Unauthorized), we might fall through if it's weird, 
+                // but usually the RPC handles the check.
+                console.warn('[Supabase] RPC logical error:', result);
+                if (!isLocalAdmin) return result;
+            } else {
+                console.error('[Supabase] RPC system error:', error);
+                if (!isLocalAdmin) return { success: false, error: error.message };
             }
-
-            // If RPC failed but we are a Local Admin, we might try the fallback
-            // (Only if the error suggests authorization failure, but let's try fallback regardless if Local Admin)
-            if (!isLocalAdmin) {
-                console.error('RPC admin_update_profile error:', error);
-                return { success: false, error: error.message };
-            }
-
-            console.warn('RPC failed, falling back to Local Admin Direct Update:', error.message);
         } catch (err) {
-            console.error('RPC call failed:', err);
-            // Continue to fallback if local admin...
+            console.error('[Supabase] RPC exception:', err);
         }
     }
+
+
 
     // 3. Fallback: Local Admin Direct Update
     // This runs as 'anon' role (standard client key), so it relies on specific RLS policies

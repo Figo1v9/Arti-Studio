@@ -7,7 +7,7 @@ import {
     Calendar,
     Mail,
     Shield,
-    User,
+    User, // Keep User for lucide, though we might not use it directly if we use UserCheck
     CheckCircle,
     Ban,
     Heart,
@@ -31,6 +31,7 @@ import {
 import { adminUpdateProfile } from '@/lib/supabase';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
+import { useAuth } from '@/components/auth';
 
 /**
  * Extended user type that may include stats from the admin users table
@@ -52,6 +53,8 @@ interface UserDetailsModalProps {
 }
 
 export function UserDetailsModal({ user, open, onClose, onDelete }: UserDetailsModalProps) {
+    const { user: currentUser } = useAuth();
+
     // Only fetch favorites if stats are not already provided
     const hasStats = !!user?.stats;
 
@@ -203,9 +206,9 @@ export function UserDetailsModal({ user, open, onClose, onDelete }: UserDetailsM
                                 value={verificationTier}
                                 onValueChange={async (value) => {
                                     setVerificationTier(value);
-                                    const result = await adminUpdateProfile(user.id, { verification_tier: value });
+                                    const result = await adminUpdateProfile(currentUser?.uid || null, user.id, { verification_tier: value });
                                     if (!result.success) {
-                                        toast.error('Failed to update');
+                                        toast.error(result.error || 'Failed to update');
                                         setVerificationTier(user.verification_tier || 'none');
                                     } else {
                                         toast.success('Badge updated');
@@ -251,9 +254,9 @@ export function UserDetailsModal({ user, open, onClose, onDelete }: UserDetailsM
                                     checked={isPremium}
                                     onCheckedChange={async (checked) => {
                                         setIsPremium(checked);
-                                        const result = await adminUpdateProfile(user.id, { is_premium: checked });
+                                        const result = await adminUpdateProfile(currentUser?.uid || null, user.id, { is_premium: checked });
                                         if (!result.success) {
-                                            toast.error(`Failed: ${result.error}`);
+                                            toast.error(result.error || 'Failed to update');
                                             setIsPremium(user.is_premium || false);
                                         } else {
                                             toast.success('Premium updated');
