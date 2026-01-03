@@ -51,13 +51,13 @@ export function Footer() {
                         </p>
                         {/* Social Links */}
                         <div className="flex gap-3 pt-2">
-                            <Button size="icon" variant="ghost" className="rounded-full w-9 h-9 hover:bg-white/10 hover:text-white text-slate-400">
+                            <Button size="icon" variant="ghost" className="rounded-full w-9 h-9 hover:bg-white/10 hover:text-white text-slate-400" aria-label="Follow us on Twitter">
                                 <Twitter className="w-4 h-4" />
                             </Button>
-                            <Button size="icon" variant="ghost" className="rounded-full w-9 h-9 hover:bg-white/10 hover:text-white text-slate-400">
+                            <Button size="icon" variant="ghost" className="rounded-full w-9 h-9 hover:bg-white/10 hover:text-white text-slate-400" aria-label="Follow us on Instagram">
                                 <Instagram className="w-4 h-4" />
                             </Button>
-                            <Button size="icon" variant="ghost" className="rounded-full w-9 h-9 hover:bg-white/10 hover:text-white text-slate-400">
+                            <Button size="icon" variant="ghost" className="rounded-full w-9 h-9 hover:bg-white/10 hover:text-white text-slate-400" aria-label="View our Github">
                                 <Github className="w-4 h-4" />
                             </Button>
                         </div>
