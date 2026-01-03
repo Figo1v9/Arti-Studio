@@ -19,30 +19,30 @@ export default function LandingPage() {
 
     // Example placeholders - replace with curated best-of-platform images
     const photoImages = [
+        "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&q=80",
         "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&q=80",
-        "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=800&q=80",
-        "https://images.unsplash.com/photo-1560252119-01b7a07779fb?w=800&q=80",
+        "https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=800&q=80",
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80",
         "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
         "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=800&q=80"
     ];
 
     const aiImages = [
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80",
-        "https://images.unsplash.com/photo-1614728853913-1e2211f9ca6d?w=800&q=80",
-        "https://images.unsplash.com/photo-1614726365723-49faaa564619?w=800&q=80",
-        "https://images.unsplash.com/photo-1614730375494-a957831d1f0c?w=800&q=80",
-        "https://images.unsplash.com/photo-1618172193763-c511deb635ca?w=800&q=80"
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80", // AI brain
+        "https://images.unsplash.com/photo-1686191129966-4d343466db9d?w=800&q=80", // Abstract 3D
+        "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80", // Cyberpunk
+        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80", // Liquid
+        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80", // Gradient
+        "https://images.unsplash.com/photo-1614728446136-69735186b4d9?w=800&q=80"  // Abstract
     ];
 
     const artImages = [
-        "https://images.unsplash.com/photo-1549490349-8643362247b5?w=800&q=80",
+        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=800&q=80",
         "https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80",
         "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800&q=80",
-        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=800&q=80",
         "https://images.unsplash.com/photo-1569982175971-d92b01cf8694?w=800&q=80",
-        "https://images.unsplash.com/photo-1579783902614-a3fb39279c15?w=800&q=80"
+        "https://images.unsplash.com/photo-1549490349-8643362247b5?w=800&q=80",
+        "https://images.unsplash.com/photo-1578301978018-77f2892d9612?w=800&q=80"
     ];
 
     return (
