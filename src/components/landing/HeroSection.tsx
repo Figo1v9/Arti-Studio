@@ -36,9 +36,9 @@ export function HeroSection() {
             y: 0,
             opacity: 1,
             filter: "blur(0px)",
-            duration: 1.8,
+            duration: 0.8,
             ease: 'power4.out',
-            delay: 0.1
+            delay: 0
         })
             .to(subtextRef.current, {
                 y: 0,
