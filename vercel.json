@@ -1,76 +1,135 @@
 {
-    "cleanUrls": false,
-    "trailingSlash": false,
-    "routes": [
+    "rewrites": [
         {
-            "src": "/sitemap.xml",
-            "dest": "/sitemap.xml",
-            "headers": {
-                "Cache-Control": "public, max-age=3600, must-revalidate",
-                "Content-Type": "application/xml; charset=utf-8"
-            }
+            "source": "/sitemap.xml",
+            "destination": "/sitemap.xml"
         },
         {
-            "src": "/robots.txt",
-            "dest": "/robots.txt",
-            "headers": {
-                "Cache-Control": "public, max-age=3600, must-revalidate",
-                "Content-Type": "text/plain; charset=utf-8"
-            }
+            "source": "/robots.txt",
+            "destination": "/robots.txt"
         },
         {
-            "src": "/ads.txt",
-            "dest": "/ads.txt",
-            "headers": {
-                "Cache-Control": "public, max-age=86400, must-revalidate"
-            }
+            "source": "/ads.txt",
+            "destination": "/ads.txt"
         },
         {
-            "src": "/manifest.json",
-            "dest": "/manifest.json",
-            "headers": {
-                "Cache-Control": "public, max-age=86400, must-revalidate"
-            }
+            "source": "/manifest.json",
+            "destination": "/manifest.json"
         },
         {
-            "src": "/manifest.webmanifest",
-            "dest": "/manifest.webmanifest",
-            "headers": {
-                "Cache-Control": "public, max-age=86400, must-revalidate"
-            }
+            "source": "/manifest.webmanifest",
+            "destination": "/manifest.webmanifest"
         },
         {
-            "src": "/favicon.ico",
-            "dest": "/favicon.ico"
+            "source": "/favicon.ico",
+            "destination": "/favicon.ico"
         },
         {
-            "src": "/sw.js",
-            "dest": "/sw.js",
-            "headers": {
-                "Cache-Control": "public, max-age=0, must-revalidate"
-            }
+            "source": "/sw.js",
+            "destination": "/sw.js"
         },
         {
-            "src": "/assets/(.*)",
-            "dest": "/assets/$1",
-            "headers": {
-                "Cache-Control": "public, max-age=31536000, immutable"
-            }
+            "source": "/registerSW.js",
+            "destination": "/registerSW.js"
         },
         {
-            "src": "/registerSW.js",
-            "dest": "/registerSW.js"
+            "source": "/workbox-:hash.js",
+            "destination": "/workbox-:hash.js"
         },
         {
-            "src": "/workbox-(.+)\\.js",
-            "dest": "/workbox-$1.js"
+            "source": "/((?!assets/).*)",
+            "destination": "/index.html"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "no-cache, no-store, must-revalidate"
+                }
+            ]
         },
         {
-            "src": "/(.*)",
-            "dest": "/index.html",
-            "headers": {
-                "Cache-Control": "no-cache, no-store, must-revalidate"
-            }
+            "source": "/index.html",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "no-cache, no-store, must-revalidate"
+                }
+            ]
+        },
+        {
+            "source": "/sitemap.xml",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=3600, must-revalidate"
+                },
+                {
+                    "key": "Content-Type",
+                    "value": "application/xml; charset=utf-8"
+                }
+            ]
+        },
+        {
+            "source": "/robots.txt",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=3600, must-revalidate"
+                },
+                {
+                    "key": "Content-Type",
+                    "value": "text/plain; charset=utf-8"
+                }
+            ]
+        },
+        {
+            "source": "/ads.txt",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=86400, must-revalidate"
+                }
+            ]
+        },
+        {
+            "source": "/manifest.json",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=86400, must-revalidate"
+                }
+            ]
+        },
+        {
+            "source": "/manifest.webmanifest",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=86400, must-revalidate"
+                }
+            ]
+        },
+        {
+            "source": "/assets/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
+        },
+        {
+            "source": "/sw.js",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=0, must-revalidate"
+                }
+            ]
         }
     ]
 }
