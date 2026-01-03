@@ -143,20 +143,6 @@ export default defineConfig(({ mode }) => ({
               },
             },
           },
-          {
-            urlPattern: ({ url }) => url.pathname.startsWith("/api"),
-            handler: "StaleWhileRevalidate",
-            options: {
-              cacheName: "api-cache",
-              expiration: {
-                maxEntries: 100,
-                maxAgeSeconds: 5 * 60, // 5 minutes
-              },
-              cacheableResponse: {
-                statuses: [0, 200],
-              },
-            },
-          },
         ],
       },
     }),

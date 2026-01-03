@@ -80,9 +80,14 @@ const EmbeddingsCleanup = lazy(() => import("./pages/admin/EmbeddingsCleanup"));
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 1000 * 60 * 5, // 5 minutes - data considered fresh
-      gcTime: 1000 * 60 * 30, // 30 minutes - keep in cache (formerly cacheTime)
-      refetchOnWindowFocus: false, // Prevent refetch on tab switch
+      // Smart Caching Strategy:
+      // 1. Show cached data immediately (Instant feel)
+      // 2. But assume it might be stale (staleTime: 0)
+      // 3. Check for updates in background (refetchOnMount/WindowFocus)
+      staleTime: 0, // Always consider data stale to trigger background refresh
+      gcTime: 1000 * 60 * 30, // 30 minutes - keep in cache for navigation speed
+      refetchOnWindowFocus: true, // Update data when user returns to tab
+      refetchOnMount: true, // Ensure fresh data on component mount
       refetchOnReconnect: 'always', // Refetch when network reconnects
       retry: (failureCount, error: unknown) => {
         // Don't retry on 4xx errors (client errors)
