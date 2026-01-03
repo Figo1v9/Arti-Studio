@@ -86,7 +86,7 @@ export function HeroSection() {
             >
                 <div className="relative group">
                     <img
-                        src="https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1767356091423-b6kmn81647.webp"
+                        src="/assets/landing/hero-left.webp"
                         alt="AI Generated Art"
                         width="256"
                         height="320"
@@ -107,7 +107,7 @@ export function HeroSection() {
             >
                 <div className="relative group">
                     <img
-                        src="https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev/gallery/1766680008618-vjp5i93cap.webp"
+                        src="/assets/landing/hero-right.webp"
                         alt="AI Generated Art"
                         width="320"
                         height="420"
