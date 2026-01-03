@@ -114,6 +114,8 @@ export function CategoryReveal({ title, subtitle, description, images, categoryI
                         <img
                             src={src}
                             alt={`Gallery ${i}`}
+                            width="800"
+                            height="800"
                             className="w-full h-full object-cover"
                         />
                     </div>
