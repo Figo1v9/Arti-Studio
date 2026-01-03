@@ -3,7 +3,7 @@ import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useParams } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AuthProvider, useAuth } from "@/components/auth";
 import { LoginPage, RegisterPage, AuthCallback, ForgotPasswordPage, AuthAnimationWrapper } from "@/components/auth";
