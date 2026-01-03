@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Compass, Image, Heart, User, Search, Flame, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -82,7 +82,7 @@ export function BottomNav({ onSearchClick }: BottomNavProps) {
           const isActive = activeTab === item.id && !item.isSearch;
           const Icon = item.icon;
 
-          // Search button (center, elevated)
+          // Search button (center, elevated) - Keeps as button
           if (item.isSearch) {
             return (
               <motion.button
@@ -90,6 +90,7 @@ export function BottomNav({ onSearchClick }: BottomNavProps) {
                 whileTap={{ scale: 0.9 }}
                 onClick={() => handleClick(item)}
                 className="relative -mt-6 z-10"
+                aria-label="Search"
               >
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 flex items-center justify-center shadow-lg shadow-purple-500/40">
                   <Icon className="w-6 h-6 text-white" />
@@ -101,50 +102,78 @@ export function BottomNav({ onSearchClick }: BottomNavProps) {
             );
           }
 
-          // Regular tab items
+          // Dynamic path logic for Profile
+          let itemPath = item.path || '#';
+          if (item.id === 'profile' && profile?.username) {
+            itemPath = `/${profile.username}`;
+          }
+
+          // Regular tab items -> Converted to Link for SEO
           return (
-            <motion.button
+            <Link
               key={item.id}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => handleClick(item)}
+              to={itemPath}
+              onClick={(e) => {
+                // If it requires auth and we are not logged in, we might want to let the Global Auth Guard handle it,
+                // or intercept here. For SEO, a link to /favorites is fine.
+                // We keep the vibration and state update.
+                if (item.requiresAuth && !user) {
+                  e.preventDefault();
+                  toast.info('Please sign in first');
+                  navigate('/login');
+                  return;
+                }
+
+                // Allow default navigation, just trigger side effects
+                if ('vibrate' in navigator) navigator.vibrate(10);
+                setActiveTab(item.id);
+              }}
               className="relative flex flex-col items-center gap-1 py-2 px-4 min-w-[60px]"
             >
-              {/* Active indicator pill */}
-              {isActive && (
-                <motion.div
-                  layoutId="activeTab"
-                  className="absolute -top-1 w-8 h-1 rounded-full bg-gradient-to-r from-violet-500 to-purple-500"
-                  transition={{ type: 'spring', stiffness: 500, damping: 35 }}
-                />
-              )}
-
-              {/* Icon */}
+              {/* Clickable area for Framer Motion tap effect can be wrapped or applied to inner div if needed, 
+                   but Link + standard CSS active states are usually enough. 
+                   We'll wrap content in a motion.div to keep the animations. */}
               <motion.div
-                animate={{
-                  scale: isActive ? 1.1 : 1,
-                  y: isActive ? -2 : 0
-                }}
-                transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                whileTap={{ scale: 0.9 }}
+                className="flex flex-col items-center gap-1"
               >
-                <Icon
+                {/* Active indicator pill */}
+                {isActive && (
+                  <motion.div
+                    layoutId="activeTab"
+                    className="absolute -top-1 w-8 h-1 rounded-full bg-gradient-to-r from-violet-500 to-purple-500"
+                    transition={{ type: 'spring', stiffness: 500, damping: 35 }}
+                  />
+                )}
+
+                {/* Icon */}
+                <motion.div
+                  animate={{
+                    scale: isActive ? 1.1 : 1,
+                    y: isActive ? -2 : 0
+                  }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                >
+                  <Icon
+                    className={cn(
+                      'w-6 h-6 transition-colors duration-200',
+                      isActive ? 'text-white' : 'text-muted-foreground'
+                    )}
+                    strokeWidth={isActive ? 2.5 : 2}
+                  />
+                </motion.div>
+
+                {/* Label */}
+                <span
                   className={cn(
-                    'w-6 h-6 transition-colors duration-200',
+                    'text-[10px] font-medium transition-colors duration-200',
                     isActive ? 'text-white' : 'text-muted-foreground'
                   )}
-                  strokeWidth={isActive ? 2.5 : 2}
-                />
+                >
+                  {item.label}
+                </span>
               </motion.div>
-
-              {/* Label */}
-              <span
-                className={cn(
-                  'text-[10px] font-medium transition-colors duration-200',
-                  isActive ? 'text-white' : 'text-muted-foreground'
-                )}
-              >
-                {item.label}
-              </span>
-            </motion.button>
+            </Link>
           );
         })}
       </div>
