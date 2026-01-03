@@ -1,6 +1,18 @@
 {
     "rewrites": [
         {
+            "source": "/sitemap.xml",
+            "destination": "/sitemap.xml"
+        },
+        {
+            "source": "/robots.txt",
+            "destination": "/robots.txt"
+        },
+        {
+            "source": "/ads.txt",
+            "destination": "/ads.txt"
+        },
+        {
             "source": "/((?!api/|assets/|.*\\.(?:webmanifest|\\w{2,4})$).*)",
             "destination": "/index.html"
         }
