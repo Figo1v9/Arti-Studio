@@ -92,6 +92,7 @@ export function UserDetailsModal({ user, open, onClose, onDelete }: UserDetailsM
     return (
         <Dialog open={open} onOpenChange={onClose}>
             <DialogContent className="sm:max-w-[600px] bg-[#0a0a0f] border-white/10 text-white p-0 gap-0 overflow-hidden">
+                <DialogTitle className="sr-only">User Details: {user.full_name}</DialogTitle>
                 {/* Header Banner */}
                 <div className="relative h-20 bg-gradient-to-r from-violet-600/30 via-purple-600/20 to-fuchsia-600/30">
                     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iLjAzIiBjeD0iMjAiIGN5PSIyMCIgcj0iMiIvPjwvZz48L3N2Zz4=')] opacity-50" />
