@@ -113,14 +113,14 @@ async function generateSitemap() {
         console.log('📦 Fetching categories...');
         const { data: categories, error: catError } = await supabase
             .from('categories')
-            .select('id, name');
+            .select('id, label');
 
         if (catError) {
             console.error('❌ Error fetching categories:', catError.message);
         } else if (categories) {
             console.log(`   Found ${categories.length} categories`);
             categories.forEach(cat => {
-                const categorySlug = encodeUrl(cat.id || cat.name);
+                const categorySlug = encodeUrl(cat.id || cat.label);
                 xml += `  <url>
     <loc>${DOMAIN}/category/${categorySlug}</loc>
     <lastmod>${date}</lastmod>
@@ -181,7 +181,7 @@ async function generateSitemap() {
         console.log('👤 Fetching public profiles...');
         const { data: profiles, error: profError } = await supabase
             .from('profiles')
-            .select('username, updated_at')
+            .select('username, created_at')
             .not('username', 'is', null)
             .limit(1000);
 
@@ -194,7 +194,7 @@ async function generateSitemap() {
                 if (profile.username) {
                     xml += `  <url>
     <loc>${DOMAIN}/user/${encodeUrl(profile.username)}</loc>
-    <lastmod>${profile.updated_at || date}</lastmod>
+    <lastmod>${profile.created_at || date}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
