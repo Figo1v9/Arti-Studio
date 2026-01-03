@@ -15,20 +15,39 @@ import { initGA, trackPageView } from "@/lib/analytics";
 import { useDevToolsProtection } from "@/hooks/useDevToolsProtection";
 
 /**
- * StaticFileRedirect - Forces a hard browser redirect to static files
- * This prevents React Router from intercepting requests to files like sitemap.xml
- * Uses replace() instead of href to avoid infinite loops in history
+ * StaticFileRedirect - Forces navigation to static files
+ * When navigating client-side to static files like sitemap.xml,
+ * we need to force a full page reload to bypass React Router
+ * 
+ * Solution: We add a cache-busting parameter on the first redirect,
+ * then on server-side (Vercel), the rewrite handles it correctly.
  */
 function StaticFileRedirect({ file }: { file: string }) {
   useEffect(() => {
-    // Force a hard redirect to the actual static file
-    // Using replace to avoid adding to history stack and preventing loops
-    window.location.replace(`/${file}`);
+    // Check if we already have the redirect marker
+    const url = new URL(window.location.href);
+    const hasRedirectMarker = url.searchParams.has('_static');
+
+    if (!hasRedirectMarker) {
+      // First time: add marker and force reload
+      // This ensures we don't loop infinitely
+      url.searchParams.set('_static', '1');
+      window.location.replace(url.toString());
+    } else {
+      // We're in a loop, just navigate to the raw file
+      // This shouldn't happen if Vercel rewrites work correctly
+      // But as a fallback, open in new tab
+      window.open(`/${file}`, '_self');
+    }
   }, [file]);
 
+  // This should rarely be visible as redirect happens immediately
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-violet-500" />
+      <div className="flex flex-col items-center gap-4">
+        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-violet-500" />
+        <p className="text-sm text-muted-foreground">Loading {file}...</p>
+      </div>
     </div>
   );
 }
