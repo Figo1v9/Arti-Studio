@@ -260,7 +260,8 @@ export function CookieConsentBanner() {
                 setIsVisible(true);
             }
         } else {
-            setTimeout(() => setIsVisible(true), 800);
+            // Show after 5 seconds of usage
+            setTimeout(() => setIsVisible(true), 5000);
         }
     }, []);
 
@@ -379,8 +380,8 @@ export function CookieConsentBanner() {
                         stiffness: 350
                     }}
                     className={cn(
-                        "relative w-full max-w-xl pointer-events-auto",
-                        "rounded-[28px] overflow-hidden"
+                        "relative w-full max-w-md pointer-events-auto",
+                        "rounded-[24px] overflow-hidden"
                     )}
                 >
                     {/* Multi-layer glass background */}
@@ -401,9 +402,9 @@ export function CookieConsentBanner() {
                     <FloatingParticles />
 
                     {/* Content */}
-                    <div className="relative p-6 sm:p-8">
+                    <div className="relative p-5">
                         {/* Header */}
-                        <div className="flex items-start gap-4 mb-6">
+                        <div className="flex items-start gap-3 mb-4">
                             {/* Cookie Icon with Animation */}
                             <motion.div
                                 animate={{
@@ -417,32 +418,32 @@ export function CookieConsentBanner() {
                                 }}
                                 className="relative flex-shrink-0"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-600 rounded-2xl blur-lg opacity-60" />
-                                <div className="relative w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 flex items-center justify-center shadow-xl shadow-orange-500/25">
-                                    <Cookie className="w-7 h-7 text-white drop-shadow-sm" />
+                                <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-600 rounded-xl blur-lg opacity-60" />
+                                <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 flex items-center justify-center shadow-xl shadow-orange-500/25">
+                                    <Cookie className="w-5 h-5 text-white drop-shadow-sm" />
                                 </div>
                             </motion.div>
 
                             <div className="flex-1">
-                                <div className="flex items-center gap-2 mb-2">
-                                    <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                                <div className="flex items-center gap-2 mb-1">
+                                    <h2 className="text-lg font-bold text-white tracking-tight">
                                         Cookie Preferences
                                     </h2>
                                     <motion.div
                                         animate={{ rotate: [0, 15, -15, 0] }}
                                         transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                                     >
-                                        <Sparkles className="w-5 h-5 text-amber-400" />
+                                        <Sparkles className="w-4 h-4 text-amber-400" />
                                     </motion.div>
                                 </div>
-                                <p className="text-sm text-slate-400 leading-relaxed">
+                                <p className="text-xs text-slate-400 leading-relaxed">
                                     We use cookies to enhance your browsing experience.{' '}
                                     <Link
                                         to="/privacy"
                                         aria-label="Read our Privacy Policy"
                                         className="text-violet-400 hover:text-violet-300 underline underline-offset-2 decoration-violet-400/30 hover:decoration-violet-300/50 transition-all"
                                     >
-                                        Read our Privacy Policy
+                                        Privacy Policy
                                     </Link>
                                 </p>
                             </div>
@@ -488,7 +489,7 @@ export function CookieConsentBanner() {
                                 onClick={handleAcceptAll}
                                 className={cn(
                                     "relative flex-1 group overflow-hidden",
-                                    "px-6 py-4 rounded-2xl font-semibold text-white",
+                                    "px-4 py-2.5 rounded-xl font-semibold text-sm text-white",
                                     "bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600",
                                     "shadow-xl shadow-violet-500/20",
                                     "transition-all duration-300"
@@ -510,7 +511,7 @@ export function CookieConsentBanner() {
                                 onClick={() => showCustomize ? handleSavePreferences() : setShowCustomize(true)}
                                 className={cn(
                                     "flex-1 group",
-                                    "px-6 py-4 rounded-2xl font-semibold",
+                                    "px-4 py-2.5 rounded-xl font-semibold text-sm",
                                     "bg-white/[0.05] hover:bg-white/[0.08]",
                                     "border border-white/10 hover:border-white/20",
                                     "text-white transition-all duration-300"
@@ -538,7 +539,7 @@ export function CookieConsentBanner() {
                                 whileTap={{ scale: 0.98 }}
                                 onClick={handleRejectAll}
                                 className={cn(
-                                    "sm:px-5 py-4 rounded-2xl font-medium",
+                                    "sm:px-4 py-2.5 rounded-xl font-medium text-sm",
                                     "text-slate-400 hover:text-slate-200",
                                     "transition-all duration-300"
                                 )}
