@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -33,10 +33,25 @@ import { GalleryImage } from '@/types/gallery';
 
 const ImageModal = lazy(() => import('@/components/gallery/ImageModal').then(module => ({ default: module.ImageModal })));
 
+// Static files that should NOT be treated as usernames
+const STATIC_FILES = new Set([
+    'sitemap.xml', 'robots.txt', 'ads.txt', 'manifest.json',
+    'manifest.webmanifest', 'favicon.ico', 'sw.js', 'registerSW.js'
+]);
+
 export default function ProfilePage() {
     const navigate = useNavigate();
     const params = useParams<{ username: string }>();
     const isMobile = useIsMobile();
+
+    // Check if this is a static file request - redirect to actual file
+    useEffect(() => {
+        const username = params.username;
+        if (username && (STATIC_FILES.has(username) || username.includes('.'))) {
+            // This is a static file, force reload to let server handle it
+            window.location.href = `/${username}`;
+        }
+    }, [params.username]);
 
     // Connect to Logic
     const {

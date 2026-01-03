@@ -14,43 +14,8 @@ import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 import { initGA, trackPageView } from "@/lib/analytics";
 import { useDevToolsProtection } from "@/hooks/useDevToolsProtection";
 
-/**
- * StaticFileRedirect - Forces navigation to static files
- * When navigating client-side to static files like sitemap.xml,
- * we need to force a full page reload to bypass React Router
- * 
- * Solution: We add a cache-busting parameter on the first redirect,
- * then on server-side (Vercel), the rewrite handles it correctly.
- */
-function StaticFileRedirect({ file }: { file: string }) {
-  useEffect(() => {
-    // Check if we already have the redirect marker
-    const url = new URL(window.location.href);
-    const hasRedirectMarker = url.searchParams.has('_static');
-
-    if (!hasRedirectMarker) {
-      // First time: add marker and force reload
-      // This ensures we don't loop infinitely
-      url.searchParams.set('_static', '1');
-      window.location.replace(url.toString());
-    } else {
-      // We're in a loop, just navigate to the raw file
-      // This shouldn't happen if Vercel rewrites work correctly
-      // But as a fallback, open in new tab
-      window.open(`/${file}`, '_self');
-    }
-  }, [file]);
-
-  // This should rarely be visible as redirect happens immediately
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="flex flex-col items-center gap-4">
-        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-violet-500" />
-        <p className="text-sm text-muted-foreground">Loading {file}...</p>
-      </div>
-    </div>
-  );
-}
+// Static files (sitemap.xml, robots.txt, etc.) are handled directly by Vercel
+// through rewrites in vercel.json - NO React Router handling needed
 
 /**
  * Reserved paths that should NOT be treated as usernames
@@ -198,16 +163,9 @@ function AnimatedRoutes() {
       }
     >
       <Routes>
-        {/* ============================================
-         * STATIC FILES - MUST BE FIRST!
-         * These routes MUST come before any dynamic routes
-         * to prevent React Router from matching them as usernames
-         * ============================================ */}
-        <Route path="/sitemap.xml" element={<StaticFileRedirect file="sitemap.xml" />} />
-        <Route path="/robots.txt" element={<StaticFileRedirect file="robots.txt" />} />
-        <Route path="/ads.txt" element={<StaticFileRedirect file="ads.txt" />} />
-        <Route path="/manifest.json" element={<StaticFileRedirect file="manifest.json" />} />
-        <Route path="/favicon.ico" element={<StaticFileRedirect file="favicon.ico" />} />
+        {/* Static files (sitemap.xml, robots.txt, etc.) are NOT here
+         * They are handled by Vercel rewrites in vercel.json
+         * DO NOT add React Router routes for static files! */}
 
         {/* Landing Page (No Layout) */}
         <Route path="/" element={<LandingPage />} />
