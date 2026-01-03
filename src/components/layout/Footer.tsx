@@ -42,6 +42,8 @@ export function Footer() {
                             <img
                                 src="/arti_studio.png"
                                 alt="Arti Studio"
+                                width="32"
+                                height="32"
                                 className="h-8 w-auto"
                             />
                         </Link>
