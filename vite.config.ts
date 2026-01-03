@@ -103,7 +103,7 @@ export default defineConfig(({ mode }) => ({
     mode === "development" && componentTagger(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "robots.txt"],
+      includeAssets: ["favicon.ico", "robots.txt", "sitemap.xml", "ads.txt"],
       manifest: {
         name: "Arti Studio",
         short_name: "Arti Studio",
@@ -131,6 +131,8 @@ export default defineConfig(({ mode }) => ({
         ],
       },
       workbox: {
+        // Exclude critical static files from SPA navigation fallback
+        navigateFallbackDenylist: [/^\/sitemap\.xml$/, /^\/robots\.txt$/, /^\/ads\.txt$/],
         runtimeCaching: [
           {
             urlPattern: ({ request }) => request.destination === "image",
