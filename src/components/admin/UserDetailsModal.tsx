@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import type { Profile } from '@/types/database.types';
 import { getAvatarUrl } from '@/lib/avatar';
