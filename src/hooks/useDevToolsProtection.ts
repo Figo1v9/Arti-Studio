@@ -30,7 +30,6 @@ export function useDevToolsProtection() {
         const warningStyle = 'color: red; font-size: 24px; font-weight: bold;';
         const infoStyle = 'color: #888; font-size: 14px;';
 
-        console.clear();
         console.log('%c⛔ STOP!', warningStyle);
         console.log('%cThis browser feature is intended for developers.', infoStyle);
         console.log('%cIf someone told you to paste something here, it\'s likely a scam.', infoStyle);
@@ -107,20 +106,7 @@ export function useDevToolsProtection() {
             }
         };
 
-        // --- 5. Periodic Console Clear (Subtle) ---
-        // This makes it harder to see network responses in console
-        const clearConsoleInterval = setInterval(() => {
-            // Only clear if DevTools might be open (heuristic check)
-            const threshold = 160; // DevTools usually adds >160px
-            const widthDiff = window.outerWidth - window.innerWidth;
-            const heightDiff = window.outerHeight - window.innerHeight;
 
-            if (widthDiff > threshold || heightDiff > threshold) {
-                console.clear();
-                console.log('%c⛔ Inspection Detected', warningStyle);
-                console.log('%cThis area is protected.', infoStyle);
-            }
-        }, 2000);
 
         // Add event listeners
         document.addEventListener('keydown', handleKeyDown, { capture: true });
@@ -132,7 +118,6 @@ export function useDevToolsProtection() {
             document.removeEventListener('keydown', handleKeyDown, { capture: true });
             document.removeEventListener('contextmenu', handleContextMenu);
             document.removeEventListener('dragstart', handleDragStart);
-            clearInterval(clearConsoleInterval);
         };
     }, []);
 }
