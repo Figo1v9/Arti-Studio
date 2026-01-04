@@ -3,7 +3,7 @@ main = "src/index.ts"
 compatibility_date = "2024-01-01"
 
 [vars]
-ALLOWED_ORIGINS = "http://localhost:8080,http://localhost:8081,https://your-production-domain.com"
+ALLOWED_ORIGINS = "http://localhost:8080,http://localhost:8081,https://artistudio.fun,https://www.artistudio.fun"
 ADMIN_UPLOAD_SECRET = "arti-admin-secret-2024-xyz"
 
 [[r2_buckets]]
