@@ -54,29 +54,71 @@ export function Header({ selectedCategory, onCategoryChange }: HeaderProps) {
     }
   }, [isDragging]);
 
-  // Wheel scroll translation (Vertical -> Horizontal)
+  // Wheel scroll with smooth animation (60fps lerp)
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
 
-    const handleWheel = (e: WheelEvent) => {
-      // Only intercept if scrolling vertically
-      if (e.deltaY !== 0) {
-        // Prevent default only if we can scroll
-        if (
-          (container.scrollLeft === 0 && e.deltaY < 0) ||
-          (container.scrollLeft >= container.scrollWidth - container.clientWidth && e.deltaY > 0)
-        ) {
-          return; // At edges, let parent scroll
-        }
+    let targetScroll = container.scrollLeft;
+    let animationFrameId: number;
+    let isAnimating = false;
 
-        e.preventDefault();
-        container.scrollLeft += e.deltaY;
+    // Smooth interpolation function
+    const lerp = (start: number, end: number, factor: number) => {
+      return start + (end - start) * factor;
+    };
+
+    const updateScroll = () => {
+      if (!container) return;
+
+      const currentScroll = container.scrollLeft;
+      // 0.15 factor gives a nice balance between smooth and responsive
+      const newScroll = lerp(currentScroll, targetScroll, 0.15);
+      const diff = Math.abs(targetScroll - newScroll);
+
+      if (diff > 0.5) {
+        container.scrollLeft = newScroll;
+        animationFrameId = requestAnimationFrame(updateScroll);
+      } else {
+        container.scrollLeft = targetScroll;
+        isAnimating = false;
       }
     };
 
+    const handleWheel = (e: WheelEvent) => {
+      // Strictly map vertical scroll to horizontal if vertical delta is dominant
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Initialize target on first scroll event of a sequence
+        if (!isAnimating) {
+          targetScroll = container.scrollLeft;
+        }
+
+        // Add delta to target (multiplier for speed if needed, 1.0 is standard)
+        targetScroll += e.deltaY;
+
+        // Clamp target to bounds
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        targetScroll = Math.max(0, Math.min(maxScroll, targetScroll));
+
+        // Start animation loop if not running
+        if (!isAnimating) {
+          isAnimating = true;
+          cancelAnimationFrame(animationFrameId);
+          animationFrameId = requestAnimationFrame(updateScroll);
+        }
+      }
+    };
+
+    // { passive: false } is mandatory to allow preventDefault
     container.addEventListener('wheel', handleWheel, { passive: false });
-    return () => container.removeEventListener('wheel', handleWheel);
+
+    return () => {
+      container.removeEventListener('wheel', handleWheel);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (
