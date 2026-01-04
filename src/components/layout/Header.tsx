@@ -51,117 +51,118 @@ export function Header({ selectedCategory, onCategoryChange }: HeaderProps) {
       if (scrollContainerRef.current) {
         scrollContainerRef.current.style.cursor = 'grab';
       }
-      // Wheel scroll translation (Vertical -> Horizontal)
-      useEffect(() => {
-        const container = scrollContainerRef.current;
-        if (!container) return;
+    }
+  }, [isDragging]);
 
-        const handleWheel = (e: WheelEvent) => {
-          // Only intercept if scrolling vertically
-          if (e.deltaY !== 0) {
-            // Prevent default only if we can scroll
-            if (
-              (container.scrollLeft === 0 && e.deltaY < 0) ||
-              (container.scrollLeft >= container.scrollWidth - container.clientWidth && e.deltaY > 0)
-            ) {
-              return; // At edges, let parent scroll
-            }
+  // Wheel scroll translation (Vertical -> Horizontal)
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
 
-            e.preventDefault();
-            container.scrollLeft += e.deltaY;
-          }
-        };
+    const handleWheel = (e: WheelEvent) => {
+      // Only intercept if scrolling vertically
+      if (e.deltaY !== 0) {
+        // Prevent default only if we can scroll
+        if (
+          (container.scrollLeft === 0 && e.deltaY < 0) ||
+          (container.scrollLeft >= container.scrollWidth - container.clientWidth && e.deltaY > 0)
+        ) {
+          return; // At edges, let parent scroll
+        }
 
-        container.addEventListener('wheel', handleWheel, { passive: false });
-        return () => container.removeEventListener('wheel', handleWheel);
-      }, []);
+        e.preventDefault();
+        container.scrollLeft += e.deltaY;
+      }
+    };
 
+    container.addEventListener('wheel', handleWheel, { passive: false });
+    return () => container.removeEventListener('wheel', handleWheel);
+  }, []);
 
+  return (
+    <header className="sticky top-0 z-30 glass border-b border-border/30">
+      <div className="flex items-center justify-between px-6 py-4">
+        {/* Category Pills */}
+        <div
+          ref={scrollContainerRef}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className={cn(
+            "flex items-center gap-2 overflow-x-auto hide-scrollbar py-1 w-full",
+            "cursor-grab select-none touch-pan-x"
+          )}
+        >
+          <button
+            onClick={() => !isDragging && onCategoryChange(null)}
+            className={cn(
+              'px-4 py-2.5 rounded-xl text-sm font-medium transition-colors whitespace-nowrap relative',
+              !selectedCategory
+                ? 'text-white'
+                : 'bg-secondary/40 text-muted-foreground hover:text-foreground hover:bg-secondary/60 border border-border/40'
+            )}
+          >
+            {!selectedCategory && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute inset-0 bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 rounded-xl"
+                transition={{ duration: 0.2 }}
+              />
+            )}
+            <span className="relative z-10">All</span>
+          </button>
 
-      return (
-        <header className="sticky top-0 z-30 glass border-b border-border/30">
-          <div className="flex items-center justify-between px-6 py-4">
-            {/* Category Pills */}
-            <div
-              ref={scrollContainerRef}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              className={cn(
-                "flex items-center gap-2 overflow-x-auto hide-scrollbar py-1 w-full",
-                "cursor-grab select-none touch-pan-x"
-              )}
-            >
+          {categories.map((cat) => {
+            // Compare using slug for clean URL matching
+            const catSlug = getCategorySlug(cat.id);
+            const selectedSlug = selectedCategory ? getCategorySlug(selectedCategory) : null;
+            const isActive = selectedSlug === catSlug;
+            const gradient = getCategoryGradient(cat.color);
+            const IconComponent = getIconByName(cat.icon);
+
+            return (
               <button
-                onClick={() => !isDragging && onCategoryChange(null)}
+                key={cat.id}
+                onClick={() => !isDragging && onCategoryChange(isActive ? null : cat.id as Category)}
                 className={cn(
-                  'px-4 py-2.5 rounded-xl text-sm font-medium transition-colors whitespace-nowrap relative',
-                  !selectedCategory
+                  'px-4 py-2.5 rounded-xl text-sm font-medium transition-colors whitespace-nowrap relative group',
+                  isActive
                     ? 'text-white'
-                    : 'bg-secondary/40 text-muted-foreground hover:text-foreground hover:bg-secondary/60 border border-border/40'
+                    : 'bg-secondary/40 text-muted-foreground hover:text-foreground border border-border/40'
                 )}
               >
-                {!selectedCategory && (
+                {isActive && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="absolute inset-0 bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500 rounded-xl"
+                    className={cn(
+                      "absolute inset-0 bg-gradient-to-r rounded-xl",
+                      gradient
+                    )}
                     transition={{ duration: 0.2 }}
                   />
                 )}
-                <span className="relative z-10">All</span>
-              </button>
-
-              {categories.map((cat) => {
-                // Compare using slug for clean URL matching
-                const catSlug = getCategorySlug(cat.id);
-                const selectedSlug = selectedCategory ? getCategorySlug(selectedCategory) : null;
-                const isActive = selectedSlug === catSlug;
-                const gradient = getCategoryGradient(cat.color);
-                const IconComponent = getIconByName(cat.icon);
-
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => !isDragging && onCategoryChange(isActive ? null : cat.id as Category)}
+                <span className="relative z-10 flex items-center gap-2">
+                  <IconComponent className="w-4 h-4" />
+                  {cat.label}
+                </span>
+                {!isActive && (
+                  <div
                     className={cn(
-                      'px-4 py-2.5 rounded-xl text-sm font-medium transition-colors whitespace-nowrap relative group',
-                      isActive
-                        ? 'text-white'
-                        : 'bg-secondary/40 text-muted-foreground hover:text-foreground border border-border/40'
+                      'absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity rounded-xl',
+                      gradient
                     )}
-                  >
-                    {isActive && (
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        className={cn(
-                          "absolute inset-0 bg-gradient-to-r rounded-xl",
-                          gradient
-                        )}
-                        transition={{ duration: 0.2 }}
-                      />
-                    )}
-                    <span className="relative z-10 flex items-center gap-2">
-                      <IconComponent className="w-4 h-4" />
-                      {cat.label}
-                    </span>
-                    {!isActive && (
-                      <div
-                        className={cn(
-                          'absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-10 transition-opacity rounded-xl',
-                          gradient
-                        )}
-                      />
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </header>
-      );
-    }
+                  />
+                )}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </header>
+  );
+}
