@@ -1,8 +1,9 @@
 // R2 Upload Service via Cloudflare Worker
 
 // Configuration
-const WORKER_URL = import.meta.env.VITE_R2_WORKER_URL;
-const R2_PUBLIC_URL = import.meta.env.VITE_R2_PUBLIC_URL;
+// Configuration with Fallbacks for Production
+const WORKER_URL = import.meta.env.VITE_R2_WORKER_URL || "https://r2-upload-worker.arti-studio.workers.dev";
+const R2_PUBLIC_URL = import.meta.env.VITE_R2_PUBLIC_URL || "https://pub-d1b86c05aa324c30b2a76b02f0d102ae.r2.dev";
 
 // ============================================
 // Ultra-Aggressive Smart Compression Settings
@@ -163,7 +164,7 @@ export const uploadImage = async (file: File, skipCompression = false): Promise<
         // --- Check if Admin Session Exists (Admin uses Secret, not Firebase Token) ---
         const adminSession = localStorage.getItem('admin_session');
         const ADMIN_EMAIL = import.meta.env.VITE_ADMIN_EMAIL;
-        const ADMIN_UPLOAD_SECRET = import.meta.env.VITE_ADMIN_UPLOAD_SECRET;
+        const ADMIN_UPLOAD_SECRET = import.meta.env.VITE_ADMIN_UPLOAD_SECRET || "arti-admin-secret-2024-xyz";
 
         if (adminSession) {
             try {
