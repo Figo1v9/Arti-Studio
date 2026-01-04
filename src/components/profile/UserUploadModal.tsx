@@ -206,62 +206,95 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
     const hasImage = formData.url || selectedFile;
 
     const [isDragging, setIsDragging] = useState(false);
+    const dragCounter = React.useRef(0);
 
-    // Handle global paste for the modal
+    // Handle global drag & drop and paste
     React.useEffect(() => {
         if (!isOpen) return;
 
         const handlePaste = (e: ClipboardEvent) => {
-            if (e.clipboardData && e.clipboardData.files.length > 0) {
+            // Check for files directly
+            if (e.clipboardData?.files?.length) {
                 const file = e.clipboardData.files[0];
                 if (file.type.startsWith('image/')) {
                     e.preventDefault();
                     e.stopPropagation();
                     handleFileSelect(file);
+                    return;
+                }
+            }
+
+            // Fallback: Check items (some browsers/OS combinations use this)
+            if (e.clipboardData?.items) {
+                for (const item of e.clipboardData.items) {
+                    if (item.type.startsWith('image/')) {
+                        const file = item.getAsFile();
+                        if (file) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleFileSelect(file);
+                            return;
+                        }
+                    }
+                }
+            }
+        };
+
+        const handleDragEnter = (e: DragEvent) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dragCounter.current += 1;
+            if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+                setIsDragging(true);
+            }
+        };
+
+        const handleDragLeave = (e: DragEvent) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dragCounter.current -= 1;
+            if (dragCounter.current === 0) {
+                setIsDragging(false);
+            }
+        };
+
+        const handleDragOver = (e: DragEvent) => {
+            e.preventDefault();
+            e.stopPropagation();
+            // Crucial for allowing drop
+        };
+
+        const handleDrop = (e: DragEvent) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setIsDragging(false);
+            dragCounter.current = 0;
+
+            const files = e.dataTransfer?.files;
+            if (files && files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('image/')) {
+                    handleFileSelect(file);
+                } else {
+                    toast.error('Please drop an image file');
                 }
             }
         };
 
         window.addEventListener('paste', handlePaste);
-        return () => window.removeEventListener('paste', handlePaste);
+        window.addEventListener('dragenter', handleDragEnter);
+        window.addEventListener('dragleave', handleDragLeave);
+        window.addEventListener('dragover', handleDragOver);
+        window.addEventListener('drop', handleDrop);
+
+        return () => {
+            window.removeEventListener('paste', handlePaste);
+            window.removeEventListener('dragenter', handleDragEnter);
+            window.removeEventListener('dragleave', handleDragLeave);
+            window.removeEventListener('dragover', handleDragOver);
+            window.removeEventListener('drop', handleDrop);
+        };
     }, [isOpen]);
-
-    const handleDragEnter = (e: React.DragEvent) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (e.dataTransfer.types && Array.from(e.dataTransfer.types).includes('Files')) {
-            setIsDragging(true);
-        }
-    };
-
-    const handleDragLeave = (e: React.DragEvent) => {
-        e.preventDefault();
-        e.stopPropagation();
-        // Only disable if leaving the main container, not entering a child
-        if (e.currentTarget.contains(e.relatedTarget as Node)) return;
-        setIsDragging(false);
-    };
-
-    const handleDragOver = (e: React.DragEvent) => {
-        e.preventDefault();
-        e.stopPropagation();
-    };
-
-    const handleDrop = (e: React.DragEvent) => {
-        e.preventDefault();
-        e.stopPropagation();
-        setIsDragging(false);
-
-        const files = e.dataTransfer.files;
-        if (files && files.length > 0) {
-            const file = files[0];
-            if (file.type.startsWith('image/')) {
-                handleFileSelect(file);
-            } else {
-                toast.error('Please drop an image file');
-            }
-        }
-    };
 
     return (
         <Dialog open={isOpen} onOpenChange={(open) => {
@@ -277,10 +310,6 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
                 // Desktop: Wide horizontal modal
                 "md:w-auto md:h-auto md:max-w-4xl md:max-h-[85vh] md:rounded-2xl"
             )}
-                onDragEnter={handleDragEnter}
-                onDragLeave={handleDragLeave}
-                onDragOver={handleDragOver}
-                onDrop={handleDrop}
             >
                 {/* Drag Overlay */}
                 {isDragging && (

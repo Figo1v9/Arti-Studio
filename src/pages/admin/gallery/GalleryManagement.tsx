@@ -40,12 +40,29 @@ export default function GalleryManagement() {
     // Handle global paste for easy upload
     React.useEffect(() => {
         const handlePaste = (e: ClipboardEvent) => {
-            if (e.clipboardData && e.clipboardData.files.length > 0) {
+            // Standard check
+            if (e.clipboardData?.files?.length) {
                 const file = e.clipboardData.files[0];
                 if (file.type.startsWith('image/')) {
                     e.preventDefault();
                     formState.handleFileSelect(file);
                     formState.setIsAddModalOpen(true);
+                    return;
+                }
+            }
+
+            // Fallback for some browsers/OS
+            if (e.clipboardData?.items) {
+                for (const item of e.clipboardData.items) {
+                    if (item.type.startsWith('image/')) {
+                        const file = item.getAsFile();
+                        if (file) {
+                            e.preventDefault();
+                            formState.handleFileSelect(file);
+                            formState.setIsAddModalOpen(true);
+                            return;
+                        }
+                    }
                 }
             }
         };

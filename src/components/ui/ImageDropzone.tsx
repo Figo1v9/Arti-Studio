@@ -71,32 +71,7 @@ export default function ImageDropzone({
         }
     }, [onRemoveImage]);
 
-    // Handle paste event
-    React.useEffect(() => {
-        const handlePaste = (e: ClipboardEvent) => {
-            if (disabled || uploading) return;
 
-            const items = e.clipboardData?.items;
-            if (!items) return;
-
-            for (const item of items) {
-                if (item.type.startsWith('image/')) {
-                    const file = item.getAsFile();
-                    if (file) {
-                        e.preventDefault();
-                        setPreviewUrl(URL.createObjectURL(file));
-                        onFileSelect(file);
-                        return; // Handle only the first image
-                    }
-                }
-            }
-        };
-
-        window.addEventListener('paste', handlePaste);
-        return () => {
-            window.removeEventListener('paste', handlePaste);
-        };
-    }, [disabled, uploading, onFileSelect]);
 
     const displayUrl = previewUrl || currentImageUrl;
 
