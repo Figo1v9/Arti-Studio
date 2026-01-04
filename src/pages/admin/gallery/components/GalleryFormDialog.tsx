@@ -35,6 +35,8 @@ interface GalleryFormState {
     handleSubmit: (e: React.FormEvent) => void;
     resetForm: () => void;
     setSelectedFile: (file: File | null) => void;
+    previewUrl: string | null;
+    setPreviewUrl: (url: string | null) => void;
 }
 
 interface GalleryFormDialogProps {
@@ -65,7 +67,9 @@ export function GalleryFormDialog({
         handleGenerateTags,
         handleSubmit,
         resetForm,
-        setSelectedFile
+        setSelectedFile,
+        previewUrl,
+        setPreviewUrl
     } = formState;
 
     const handleClose = (isOpen: boolean) => {
@@ -89,10 +93,14 @@ export function GalleryFormDialog({
                         <Label className="text-gray-300">Image File</Label>
                         <ImageDropzone
                             onFileSelect={handleFileSelect}
-                            currentImageUrl={formData.url}
+                            currentImageUrl={previewUrl || formData.url}
                             onRemoveImage={() => {
                                 setFormData({ ...formData, url: '' });
                                 setSelectedFile(null);
+                                if (previewUrl) {
+                                    URL.revokeObjectURL(previewUrl);
+                                    setPreviewUrl(null);
+                                }
                             }}
                             uploading={uploadingImage}
                             error={uploadError || undefined}

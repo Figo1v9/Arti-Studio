@@ -18,6 +18,7 @@ export function useGalleryForm(
     const [uploadError, setUploadError] = useState<string | null>(null);
     const [generatingTags, setGeneratingTags] = useState(false);
     const [aiProvider, setAiProvider] = useState<AIProvider>(getDefaultProvider());
+    const [previewUrl, setPreviewUrl] = useState<string | null>(null);
 
     const [formData, setFormData] = useState({
         url: '',
@@ -39,7 +40,15 @@ export function useGalleryForm(
         });
         setEditingImage(null);
         setSelectedFile(null);
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
+        setPreviewUrl(null);
         setUploadError(null);
+    };
+
+    // Cleanup preview
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const cleanupPreview = () => {
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
     };
 
     const handleFileSelect = async (file: File) => {
@@ -51,6 +60,10 @@ export function useGalleryForm(
 
         setUploadError(null);
         setSelectedFile(file);
+
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
+        const newPreview = URL.createObjectURL(file);
+        setPreviewUrl(newPreview);
 
         try {
             const dimensions = await getImageDimensions(file);
@@ -201,6 +214,8 @@ export function useGalleryForm(
         handleGenerateTags,
         openEditModal,
         handleSubmit,
-        setSelectedFile
+        setSelectedFile,
+        previewUrl,
+        setPreviewUrl
     };
 }

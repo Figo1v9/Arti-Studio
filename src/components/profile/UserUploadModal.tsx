@@ -53,6 +53,8 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
         aspect_ratio: 1.0,
     });
 
+    const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+
     React.useEffect(() => {
         if (isOpen && initialData) {
             setFormData({
@@ -63,6 +65,7 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
                 tags: Array.isArray(initialData.tags) ? initialData.tags.join(', ') : '',
                 aspect_ratio: initialData.aspectRatio || 1.0,
             });
+            setPreviewUrl(null); // URL is in formData
         } else if (isOpen && !initialData) {
             resetForm();
         }
@@ -78,8 +81,17 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
             aspect_ratio: 1.0,
         });
         setSelectedFile(null);
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
+        setPreviewUrl(null);
         setUploadError(null);
     };
+
+    // Cleanup preview on unmount
+    React.useEffect(() => {
+        return () => {
+            if (previewUrl) URL.revokeObjectURL(previewUrl);
+        };
+    }, []);
 
     const handleFileSelect = async (file: File) => {
         const validation = validateImageFile(file);
@@ -90,6 +102,11 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
 
         setUploadError(null);
         setSelectedFile(file);
+
+        // Generate preview
+        if (previewUrl) URL.revokeObjectURL(previewUrl);
+        const newPreview = URL.createObjectURL(file);
+        setPreviewUrl(newPreview);
 
         try {
             const dimensions = await getImageDimensions(file);
@@ -188,6 +205,64 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
     const isEditMode = !!initialData;
     const hasImage = formData.url || selectedFile;
 
+    const [isDragging, setIsDragging] = useState(false);
+
+    // Handle global paste for the modal
+    React.useEffect(() => {
+        if (!isOpen) return;
+
+        const handlePaste = (e: ClipboardEvent) => {
+            if (e.clipboardData && e.clipboardData.files.length > 0) {
+                const file = e.clipboardData.files[0];
+                if (file.type.startsWith('image/')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    handleFileSelect(file);
+                }
+            }
+        };
+
+        window.addEventListener('paste', handlePaste);
+        return () => window.removeEventListener('paste', handlePaste);
+    }, [isOpen]);
+
+    const handleDragEnter = (e: React.DragEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (e.dataTransfer.types && Array.from(e.dataTransfer.types).includes('Files')) {
+            setIsDragging(true);
+        }
+    };
+
+    const handleDragLeave = (e: React.DragEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        // Only disable if leaving the main container, not entering a child
+        if (e.currentTarget.contains(e.relatedTarget as Node)) return;
+        setIsDragging(false);
+    };
+
+    const handleDragOver = (e: React.DragEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+    };
+
+    const handleDrop = (e: React.DragEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        setIsDragging(false);
+
+        const files = e.dataTransfer.files;
+        if (files && files.length > 0) {
+            const file = files[0];
+            if (file.type.startsWith('image/')) {
+                handleFileSelect(file);
+            } else {
+                toast.error('Please drop an image file');
+            }
+        }
+    };
+
     return (
         <Dialog open={isOpen} onOpenChange={(open) => {
             if (!open) {
@@ -201,7 +276,27 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
                 "w-full h-[100dvh] max-w-none max-h-none rounded-none",
                 // Desktop: Wide horizontal modal
                 "md:w-auto md:h-auto md:max-w-4xl md:max-h-[85vh] md:rounded-2xl"
-            )}>
+            )}
+                onDragEnter={handleDragEnter}
+                onDragLeave={handleDragLeave}
+                onDragOver={handleDragOver}
+                onDrop={handleDrop}
+            >
+                {/* Drag Overlay */}
+                {isDragging && (
+                    <div className="absolute inset-0 z-50 bg-violet-600/90 backdrop-blur-md flex items-center justify-center m-1 rounded-xl border-2 border-dashed border-white">
+                        <div className="text-center text-white space-y-4 animate-in fade-in zoom-in duration-200">
+                            <div className="bg-white/20 p-6 rounded-full inline-block">
+                                <Upload className="w-16 h-16 animate-bounce" />
+                            </div>
+                            <div>
+                                <h3 className="text-3xl font-bold">Drop Image Here</h3>
+                                <p className="text-white/80 text-lg">to upload it instantly</p>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
                 {/* Mobile Header - Only visible on mobile */}
                 <div className="md:hidden sticky top-0 z-10 bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-white/5">
                     <div className="flex items-center justify-between p-4 pt-[max(1rem,env(safe-area-inset-top))]">
@@ -251,10 +346,14 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
                         <div className="flex-1 flex items-center justify-center">
                             <ImageDropzone
                                 onFileSelect={handleFileSelect}
-                                currentImageUrl={formData.url}
+                                currentImageUrl={previewUrl || formData.url}
                                 onRemoveImage={() => {
                                     setFormData({ ...formData, url: '' });
                                     setSelectedFile(null);
+                                    if (previewUrl) {
+                                        URL.revokeObjectURL(previewUrl);
+                                        setPreviewUrl(null);
+                                    }
                                 }}
                                 uploading={uploadingImage}
                                 error={uploadError || undefined}
@@ -279,10 +378,14 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
                                 <Label className="text-sm text-muted-foreground">Image</Label>
                                 <ImageDropzone
                                     onFileSelect={handleFileSelect}
-                                    currentImageUrl={formData.url}
+                                    currentImageUrl={previewUrl || formData.url}
                                     onRemoveImage={() => {
                                         setFormData({ ...formData, url: '' });
                                         setSelectedFile(null);
+                                        if (previewUrl) {
+                                            URL.revokeObjectURL(previewUrl);
+                                            setPreviewUrl(null);
+                                        }
                                     }}
                                     uploading={uploadingImage}
                                     error={uploadError || undefined}

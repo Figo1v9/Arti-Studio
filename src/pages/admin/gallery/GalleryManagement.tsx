@@ -37,6 +37,23 @@ export default function GalleryManagement() {
         return Object.fromEntries(categories.map((cat) => [cat.id, cat.label]));
     }, [categories]);
 
+    // Handle global paste for easy upload
+    React.useEffect(() => {
+        const handlePaste = (e: ClipboardEvent) => {
+            if (e.clipboardData && e.clipboardData.files.length > 0) {
+                const file = e.clipboardData.files[0];
+                if (file.type.startsWith('image/')) {
+                    e.preventDefault();
+                    formState.handleFileSelect(file);
+                    formState.setIsAddModalOpen(true);
+                }
+            }
+        };
+
+        window.addEventListener('paste', handlePaste);
+        return () => window.removeEventListener('paste', handlePaste);
+    }, [formState]);
+
     return (
         <div className="space-y-6">
             <div className="flex items-center justify-between flex-wrap gap-4">
