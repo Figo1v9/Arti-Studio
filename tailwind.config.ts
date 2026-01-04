@@ -5,6 +5,17 @@ import containerQueries from "@tailwindcss/container-queries";
 export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  safelist: [
+    {
+      pattern: /from-(violet|purple|blue|cyan|amber|orange|pink|rose|red|emerald|teal|yellow)-(400|500|600)/,
+    },
+    {
+      pattern: /to-(violet|purple|blue|cyan|amber|orange|pink|rose|red|emerald|teal|yellow)-(400|500|600)/,
+    },
+    {
+      pattern: /via-(violet|purple|blue|cyan|amber|orange|pink|rose|red|emerald|teal|yellow)-(400|500|600)/,
+    },
+  ],
   prefix: "",
   theme: {
     screens: {
