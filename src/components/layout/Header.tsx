@@ -54,61 +54,7 @@ export function Header({ selectedCategory, onCategoryChange }: HeaderProps) {
     }
   }, [isDragging]);
 
-  // Wheel scroll with smooth animation
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
 
-    let targetScroll = container.scrollLeft;
-    let animationFrameId: number;
-    let isAnimating = false;
-
-    const lerp = (start: number, end: number, factor: number) => {
-      return start + (end - start) * factor;
-    };
-
-    const updateScroll = () => {
-      const currentScroll = container.scrollLeft;
-      const newScroll = lerp(currentScroll, targetScroll, 0.08);
-      const diff = Math.abs(targetScroll - newScroll);
-
-      if (diff > 0.5) {
-        container.scrollLeft = newScroll;
-        animationFrameId = requestAnimationFrame(updateScroll);
-      } else {
-        container.scrollLeft = targetScroll;
-        isAnimating = false;
-      }
-    };
-
-    const handleWheel = (e: WheelEvent) => {
-      if (e.deltaY !== 0) {
-        e.preventDefault();
-
-        if (!isAnimating) {
-          targetScroll = container.scrollLeft;
-        }
-
-        targetScroll += e.deltaY;
-
-        const maxScroll = container.scrollWidth - container.clientWidth;
-        targetScroll = Math.max(0, Math.min(maxScroll, targetScroll));
-
-        if (!isAnimating) {
-          isAnimating = true;
-          cancelAnimationFrame(animationFrameId);
-          animationFrameId = requestAnimationFrame(updateScroll);
-        }
-      }
-    };
-
-    container.addEventListener('wheel', handleWheel, { passive: false });
-
-    return () => {
-      container.removeEventListener('wheel', handleWheel);
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, []);
 
   return (
     <header className="sticky top-0 z-30 glass border-b border-border/30">
@@ -122,7 +68,7 @@ export function Header({ selectedCategory, onCategoryChange }: HeaderProps) {
           onMouseLeave={handleMouseLeave}
           className={cn(
             "flex items-center gap-2 overflow-x-auto hide-scrollbar py-1 w-full",
-            "cursor-grab select-none"
+            "cursor-grab select-none touch-pan-x"
           )}
         >
           <button
