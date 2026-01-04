@@ -12,7 +12,7 @@ import { lazy, Suspense, useEffect } from "react";
 import { AnnouncementBar } from "@/components/common/AnnouncementBar";
 import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 import { initGA, trackPageView } from "@/lib/analytics";
-import { useDevToolsProtection } from "@/hooks/useDevToolsProtection";
+
 
 // Static files (sitemap.xml, robots.txt, etc.) are handled directly by Vercel
 // through rewrites in vercel.json - NO React Router handling needed
@@ -240,8 +240,7 @@ function AnimatedRoutes() {
 
 // Wrapper component to initialize analytics, notifications & protection
 function AppWithAnalytics({ children }: { children: React.ReactNode }) {
-  // DevTools Protection (Production Only)
-  useDevToolsProtection();
+
 
   useEffect(() => {
     // Initialize Google Analytics on mount
