@@ -242,38 +242,48 @@ function AnimatedRoutes() {
 function AppWithAnalytics({ children }: { children: React.ReactNode }) {
 
 
+  // Prevent browser from opening dropped files globally
   useEffect(() => {
-    // Initialize Google Analytics on mount
-    initGA();
-
-    // Initialize Foreground Notification Listener
-    const initNotifications = async () => {
-      try {
-        if ('serviceWorker' in navigator) {
-          // Service worker registration handled elsewhere
-        }
-
-        const { onMessageListener } = await import('@/services/notifications.service');
-        interface NotificationPayload {
-          notification?: { title?: string; body?: string };
-        }
-        const payload = (await onMessageListener()) as NotificationPayload;
-        if (payload?.notification) {
-          // Foreground notification received
-          toast(payload.notification.title || 'New Notification', {
-            description: payload.notification.body,
-            duration: 5000,
-          });
-        }
-      } catch (err) {
-        console.warn('Notification listener setup failed:', err);
-      }
+    const handleGlobalDrag = (e: DragEvent) => e.preventDefault();
+    window.addEventListener('dragover', handleGlobalDrag);
+    window.addEventListener('drop', handleGlobalDrag);
+    return () => {
+      window.removeEventListener('dragover', handleGlobalDrag);
+      window.removeEventListener('drop', handleGlobalDrag);
     };
-
-    initNotifications();
   }, []);
 
-  return <>{children}</>;
+  // Initialize Google Analytics on mount
+  initGA();
+
+  // Initialize Foreground Notification Listener
+  const initNotifications = async () => {
+    try {
+      if ('serviceWorker' in navigator) {
+        // Service worker registration handled elsewhere
+      }
+
+      const { onMessageListener } = await import('@/services/notifications.service');
+      interface NotificationPayload {
+        notification?: { title?: string; body?: string };
+      }
+      const payload = (await onMessageListener()) as NotificationPayload;
+      if (payload?.notification) {
+        // Foreground notification received
+        toast(payload.notification.title || 'New Notification', {
+          description: payload.notification.body,
+          duration: 5000,
+        });
+      }
+    } catch (err) {
+      console.warn('Notification listener setup failed:', err);
+    }
+  };
+
+  initNotifications();
+}, []);
+
+return <>{children}</>;
 }
 
 // Route Guard to prevent invalid usernames (like sitemap.xml) from hitting ProfilePage
