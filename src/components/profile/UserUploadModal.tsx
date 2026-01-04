@@ -244,7 +244,13 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
             e.preventDefault();
             e.stopPropagation();
             dragCounter.current += 1;
-            if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
+
+            // Checked strictly for Files to avoid triggering on text selection drags
+            const hasFiles = e.dataTransfer?.types
+                ? Array.from(e.dataTransfer.types).includes('Files')
+                : false;
+
+            if (hasFiles) {
                 setIsDragging(true);
             }
         };
@@ -261,7 +267,6 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
         const handleDragOver = (e: DragEvent) => {
             e.preventDefault();
             e.stopPropagation();
-            // Crucial for allowing drop
         };
 
         const handleDrop = (e: DragEvent) => {
@@ -282,17 +287,17 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
         };
 
         window.addEventListener('paste', handlePaste);
-        window.addEventListener('dragenter', handleDragEnter);
-        window.addEventListener('dragleave', handleDragLeave);
-        window.addEventListener('dragover', handleDragOver);
-        window.addEventListener('drop', handleDrop);
+        document.addEventListener('dragenter', handleDragEnter);
+        document.addEventListener('dragleave', handleDragLeave);
+        document.addEventListener('dragover', handleDragOver);
+        document.addEventListener('drop', handleDrop);
 
         return () => {
             window.removeEventListener('paste', handlePaste);
-            window.removeEventListener('dragenter', handleDragEnter);
-            window.removeEventListener('dragleave', handleDragLeave);
-            window.removeEventListener('dragover', handleDragOver);
-            window.removeEventListener('drop', handleDrop);
+            document.removeEventListener('dragenter', handleDragEnter);
+            document.removeEventListener('dragleave', handleDragLeave);
+            document.removeEventListener('dragover', handleDragOver);
+            document.removeEventListener('drop', handleDrop);
         };
     }, [isOpen]);
 
@@ -310,7 +315,15 @@ export function UserUploadModal({ isOpen, onClose, onSuccess, initialData }: Use
                 // Desktop: Wide horizontal modal
                 "md:w-auto md:h-auto md:max-w-4xl md:max-h-[85vh] md:rounded-2xl"
             )}
+                aria-describedby="upload-description"
             >
+                <div className="sr-only">
+                    <DialogTitle>{isEditMode ? 'Edit Creation' : 'Share Creation'}</DialogTitle>
+                    <DialogDescription id="upload-description">
+                        {isEditMode ? 'Update your artwork details' : 'Share your AI art with the community'}
+                    </DialogDescription>
+                </div>
+
                 {/* Drag Overlay */}
                 {isDragging && (
                     <div className="absolute inset-0 z-50 bg-violet-600/90 backdrop-blur-md flex items-center justify-center m-1 rounded-xl border-2 border-dashed border-white">
