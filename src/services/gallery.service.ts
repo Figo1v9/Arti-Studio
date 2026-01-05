@@ -274,6 +274,9 @@ export const fetchGalleryImages = async (limit = 50): Promise<GalleryImage[]> =>
  * Copies are less frequent but still batched
  */
 export const incrementCopies = async (imageId: string): Promise<void> => {
+    // Ensure tracking is running if used
+    if (!isBatchTrackingInitialized) initViewTracking();
+
     copyBatch.set(imageId, (copyBatch.get(imageId) || 0) + 1);
 };
 

@@ -10,7 +10,22 @@ import { Footer } from '@/components/layout/Footer';
 export default function LandingPage() {
     const { user, loading } = useAuth();
 
-    if (!loading && user) {
+    // Show minimal loader while checking auth to prevent flash
+    if (loading) {
+        return (
+            <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+                <div className="relative">
+                    {/* Outer glow */}
+                    <div className="absolute inset-0 rounded-full bg-violet-500/20 blur-xl animate-pulse" />
+                    {/* Spinner */}
+                    <div className="relative w-10 h-10 rounded-full border-2 border-white/10 border-t-violet-500 animate-spin" />
+                </div>
+            </div>
+        );
+    }
+
+    // Redirect logged-in users to explore
+    if (user) {
         return <Navigate to="/explore" replace />;
     }
 

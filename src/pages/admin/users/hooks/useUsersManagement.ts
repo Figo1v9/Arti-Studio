@@ -46,22 +46,31 @@ async function fetchUserStats(userIds: string[]): Promise<Map<string, UserStats>
     });
 
     // Fetch all data in parallel for maximum performance
+    // Note: Supabase default limit is 1000 rows, we use range to get more if needed
     const [followersResult, imagesResult, favoritesResult] = await Promise.all([
         // 1. Get followers count for each user
         supabase
             .from('follows')
-            .select('following_id'),
+            .select('following_id')
+            .range(0, 9999),
 
         // 2. Get images with their copies for each user
         supabase
             .from('gallery_images')
-            .select('author_id, copies'),
+            .select('author_id, copies')
+            .range(0, 9999),
 
         // 3. Get favorites count for images (by image author)
         supabase
             .from('favorites')
             .select('image_id, gallery_images!inner(author_id)')
+            .range(0, 9999)
     ]);
+
+    // Log errors if any
+    if (followersResult.error) console.error('Error fetching followers:', followersResult.error);
+    if (imagesResult.error) console.error('Error fetching images:', imagesResult.error);
+    if (favoritesResult.error) console.error('Error fetching favorites:', favoritesResult.error);
 
     // Process followers
     if (followersResult.data) {
@@ -81,17 +90,19 @@ async function fetchUserStats(userIds: string[]): Promise<Map<string, UserStats>
 
     // Process images and copies
     if (imagesResult.data) {
+
         const imageCounts = new Map<string, number>();
         const copyCounts = new Map<string, number>();
 
-        imagesResult.data.forEach((img: { author_id: string; copies: number }) => {
+        imagesResult.data.forEach((img: { author_id: string; copies: number | null }) => {
             // Count images
             const currentImages = imageCounts.get(img.author_id) || 0;
             imageCounts.set(img.author_id, currentImages + 1);
 
-            // Sum copies
+            // Sum copies - handle null/undefined values safely
+            const copiesValue = typeof img.copies === 'number' ? img.copies : 0;
             const currentCopies = copyCounts.get(img.author_id) || 0;
-            copyCounts.set(img.author_id, currentCopies + (img.copies || 0));
+            copyCounts.set(img.author_id, currentCopies + copiesValue);
         });
 
         imageCounts.forEach((count, userId) => {
@@ -107,6 +118,8 @@ async function fetchUserStats(userIds: string[]): Promise<Map<string, UserStats>
                 stats.totalCopies = count;
             }
         });
+
+
     }
 
     // Process favorites
