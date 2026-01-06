@@ -225,7 +225,7 @@ export function ImageModal({ image, onClose, similarImages, onSimilarClick }: Im
             <meta property="article:published_time" content={safeDate(image.createdAt)} />
             <meta property="article:modified_time" content={safeDate(image.createdAt)} />
 
-            <link rel="canonical" href={`${window.location.origin}/image/${image.id}`} />
+            <link rel="canonical" href={`https://artistudio.fun/image/${image.id}`} />
 
             {/* Schema.org JSON-LD - Enhanced for Maximum SEO */}
             <script type="application/ld+json">

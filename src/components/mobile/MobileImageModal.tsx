@@ -319,7 +319,7 @@ export function MobileImageModal({ image, onClose, similarImages, onSimilarClick
             <meta property="article:published_time" content={new Date(image.createdAt).toISOString()} />
             <meta property="article:modified_time" content={new Date(image.createdAt).toISOString()} />
 
-            <link rel="canonical" href={`${window.location.origin}/image/${image.id}`} />
+            <link rel="canonical" href={`https://artistudio.fun/image/${image.id}`} />
 
             {/* Schema.org JSON-LD */}
             <script type="application/ld+json">

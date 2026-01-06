@@ -228,37 +228,18 @@ async function generateSitemap() {
 
 User-agent: *
 Allow: /
-Crawl-delay: 1
-
-# Priority pages
-Allow: /explore
-Allow: /trends
-Allow: /image/*
-Allow: /user/*
-Allow: /category/*
-
-# Protected routes
-Disallow: /admin*
+Disallow: /admin/
 Disallow: /api/
 Disallow: /auth/
 Disallow: /login
 Disallow: /upload
 Disallow: /profile
+Disallow: /settings
 Disallow: /favorites
 Disallow: /following
-Disallow: /settings
-
-# Google
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Social bots
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+Disallow: /dashboard/
+Disallow: /_next/
+Disallow: /private/
 
 # Sitemap
 Sitemap: ${DOMAIN}/sitemap.xml
