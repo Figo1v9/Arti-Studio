@@ -5,6 +5,7 @@ import { HeroSection } from '@/components/landing/HeroSection';
 import { CategoryReveal } from '@/components/landing/CategoryReveal';
 import { LandingHeader } from '@/components/landing/LandingHeader';
 import { Footer } from '@/components/layout/Footer';
+import { LandingContent } from '@/components/landing/LandingContent';
 
 
 export default function LandingPage() {
@@ -114,6 +115,9 @@ export default function LandingPage() {
                 images={artImages}
                 theme="rose"
             />
+
+            {/* Rich Content Section for SEO & AdSense */}
+            <LandingContent />
 
             {/* Final CTA Section could go here, or handled by Footer */}
             <div className="h-[50vh] flex items-center justify-center bg-slate-950">

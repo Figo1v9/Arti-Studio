@@ -228,6 +228,10 @@ async function generateSitemap() {
 
 User-agent: *
 Allow: /
+Allow: /user/
+Allow: /image/
+Allow: /tag/
+Allow: /category/
 Disallow: /admin/
 Disallow: /api/
 Disallow: /auth/
