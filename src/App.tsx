@@ -177,34 +177,10 @@ function AnimatedRoutes() {
         {/* Landing Page (No Layout) */}
         <Route path="/" element={<LandingPage />} />
 
-        {/* App Layout Routes (Shared Sidebar) */}
-        <Route element={<AppLayout />}>
-          <Route path="/explore" element={<Index />} />
-          <Route path="/following" element={<FollowingPage />} />
-          <Route path="/category/:category" element={<Index />} />
-          <Route path="/image/:imageId" element={<Index />} />
-          <Route path="/trends" element={<TrendsPage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
-          <Route path="/search" element={<SearchPage />} />
-          <Route path="/tag/:tagName" element={<TagPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/user/:username" element={<ProfilePage />} />
-          <Route path="/user/:username/collection/:slug" element={<CollectionPage />} />
-
-          {/* Dynamic username route - MUST BE LAST in this group */}
-          {/* Dynamic username route - MUST BE LAST in this group */}
-          <Route path="/:username" element={<UserProfileRoute />} />
-        </Route>
-
-        {/* Auth Routes with Shared Layout Animations */}
-        <Route element={<AuthAnimationWrapper />}>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
-        </Route>
-        <Route path="/auth/callback" element={<AuthCallback />} />
-
-        {/* Legal & Info Pages (Required for AdSense) */}
+        {/* ═══════════════════════════════════════════════════════════════
+         * IMPORTANT: Legal & Info Pages MUST come BEFORE AppLayout routes
+         * to prevent /:username from catching them
+         * ═══════════════════════════════════════════════════════════════ */}
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/terms" element={<TermsOfServicePage />} />
         <Route path="/cookies" element={<CookiePolicyPage />} />
@@ -212,7 +188,15 @@ function AnimatedRoutes() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
 
-        {/* Admin Routes */}
+        {/* Auth Routes - Also BEFORE AppLayout */}
+        <Route element={<AuthAnimationWrapper />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        </Route>
+        <Route path="/auth/callback" element={<AuthCallback />} />
+
+        {/* Admin Routes - BEFORE AppLayout */}
         <Route path="/admin-mk-dashboard/login" element={<AdminLogin />} />
         <Route
           path="/admin-mk-dashboard"
@@ -235,7 +219,28 @@ function AnimatedRoutes() {
           <Route path="cleanup" element={<EmbeddingsCleanup />} />
         </Route>
 
-        {/* 404 */}
+        {/* ═══════════════════════════════════════════════════════════════
+         * App Layout Routes (Shared Sidebar)
+         * The /:username catch-all is at the END of this group
+         * ═══════════════════════════════════════════════════════════════ */}
+        <Route element={<AppLayout />}>
+          <Route path="/explore" element={<Index />} />
+          <Route path="/following" element={<FollowingPage />} />
+          <Route path="/category/:category" element={<Index />} />
+          <Route path="/image/:imageId" element={<Index />} />
+          <Route path="/trends" element={<TrendsPage />} />
+          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/tag/:tagName" element={<TagPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/user/:username" element={<ProfilePage />} />
+          <Route path="/user/:username/collection/:slug" element={<CollectionPage />} />
+
+          {/* Dynamic username route - ABSOLUTE LAST in all routes */}
+          <Route path="/:username" element={<UserProfileRoute />} />
+        </Route>
+
+        {/* 404 - Catch everything else */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
