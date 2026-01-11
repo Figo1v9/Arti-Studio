@@ -132,20 +132,94 @@ export default defineConfig(({ mode }) => ({
         ],
       },
       workbox: {
+        // ═══════════════════════════════════════════════════════════════
+        // 🔧 SMART CACHE STRATEGY - Enterprise Grade
+        // ═══════════════════════════════════════════════════════════════
+
+        // Clean old caches on activate
         cleanupOutdatedCaches: true,
-        // Exclude critical static files from SPA navigation fallback
+
+        // Skip waiting - activate new SW immediately
+        skipWaiting: true,
+
+        // Claim clients immediately - take over all open tabs
+        clientsClaim: true,
+
+        // Exclude static files from navigation fallback
         navigateFallbackDenylist: [/^\/sitemap\.xml$/, /^\/robots\.txt$/, /^\/ads\.txt$/],
+
+        // Don't precache index.html - always fetch fresh
+        globIgnores: ['**/index.html'],
+
         runtimeCaching: [
+          // ═══════════════════════════════════════════════════════════
+          // 1. HTML Pages - Network First (always fresh)
+          // ═══════════════════════════════════════════════════════════
           {
-            urlPattern: ({ request }) => request.destination === "image",
-            handler: "CacheFirst",
+            urlPattern: ({ request }) => request.destination === 'document',
+            handler: 'NetworkFirst',
             options: {
-              cacheName: "images-cache",
+              cacheName: 'html-cache',
               expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60, // 1 hour
+              },
+              networkTimeoutSeconds: 3,
+            },
+          },
+          // ═══════════════════════════════════════════════════════════
+          // 2. JS/CSS Bundles - StaleWhileRevalidate (fast + fresh)
+          // ═══════════════════════════════════════════════════════════
+          {
+            urlPattern: ({ request }) =>
+              request.destination === 'script' ||
+              request.destination === 'style',
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'static-resources',
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 24 * 60 * 60, // 24 hours
               },
             },
+          },
+          // ═══════════════════════════════════════════════════════════
+          // 3. Images - Cache First (performance)
+          // ═══════════════════════════════════════════════════════════
+          {
+            urlPattern: ({ request }) => request.destination === 'image',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'images-cache',
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 7 * 24 * 60 * 60, // 7 days
+              },
+            },
+          },
+          // ═══════════════════════════════════════════════════════════
+          // 4. Fonts - Cache First (rarely change)
+          // ═══════════════════════════════════════════════════════════
+          {
+            urlPattern: ({ request }) => request.destination === 'font',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'fonts-cache',
+              expiration: {
+                maxEntries: 20,
+                maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year
+              },
+            },
+          },
+          // ═══════════════════════════════════════════════════════════
+          // 5. API Calls - Network Only (always fresh data)
+          // ═══════════════════════════════════════════════════════════
+          {
+            urlPattern: ({ url }) =>
+              url.pathname.startsWith('/api') ||
+              url.hostname.includes('supabase') ||
+              url.hostname.includes('googleapis'),
+            handler: 'NetworkOnly',
           },
         ],
       },
