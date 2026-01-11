@@ -106,6 +106,86 @@ export function LandingContent() {
                     </div>
                 </div>
 
+                {/* Statistics Section */}
+                <div className="border-t border-white/5 pt-24">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Trusted by Creators Worldwide</h2>
+                        <p className="text-slate-400 max-w-2xl mx-auto">
+                            Join thousands of artists, designers, and creative professionals who use Arti Studio daily to find inspiration and share their AI-generated masterpieces.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        {[
+                            { value: "500K+", label: "AI Artworks" },
+                            { value: "10K+", label: "Active Creators" },
+                            { value: "150+", label: "Countries" },
+                            { value: "5K+", label: "Daily Uploads" }
+                        ].map((stat, i) => (
+                            <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                                <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-2">{stat.value}</div>
+                                <div className="text-slate-400 text-sm">{stat.label}</div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="border-t border-white/5 pt-24">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+                        <p className="text-slate-400">Everything you need to know about Arti Studio.</p>
+                    </div>
+
+                    <div className="max-w-3xl mx-auto space-y-4">
+                        {[
+                            {
+                                question: "What is Arti Studio?",
+                                answer: "Arti Studio is the premier platform for discovering, sharing, and creating AI-generated art. We provide a comprehensive ecosystem where artists and enthusiasts can explore thousands of AI artworks, learn from expert prompts, and showcase their own creations to a global community."
+                            },
+                            {
+                                question: "What AI models are supported?",
+                                answer: "Arti Studio supports prompts and content from all major AI image generation platforms including Midjourney, Stable Diffusion, DALL-E 3, Leonardo AI, and more. You can discover prompts optimized for any AI art generator."
+                            },
+                            {
+                                question: "Is Arti Studio free to use?",
+                                answer: "Yes! Browsing and discovering AI art on Arti Studio is completely free. We also offer premium features for creators who want advanced tools, higher visibility, and commercial usage rights for their generated content."
+                            },
+                            {
+                                question: "Can I use prompts commercially?",
+                                answer: "With a Pro subscription, you get full commercial usage rights for all prompts you create and share. This is perfect for businesses, freelancers, and content creators who need AI-generated assets for their professional work."
+                            },
+                            {
+                                question: "How do I share my AI art?",
+                                answer: "Simply create a free account, upload your AI-generated images along with the prompts used to create them, and share with our global community. You can organize your work into collections, gain followers, and build your creative portfolio."
+                            }
+                        ].map((faq, i) => (
+                            <div key={i} className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                                <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
+                                <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* About Section */}
+                <div className="border-t border-white/5 pt-24">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About Arti Studio</h2>
+                        <div className="text-slate-400 leading-relaxed space-y-4 text-left md:text-center">
+                            <p>
+                                Founded in 2025, Arti Studio has quickly become the go-to destination for AI art enthusiasts and professionals alike. Our mission is to democratize AI creativity by providing a platform where anyone can discover inspiration, learn prompt engineering techniques, and share their unique digital creations with the world.
+                            </p>
+                            <p>
+                                We believe that AI is not replacing human creativity—it's amplifying it. By combining the power of artificial intelligence with human imagination, we're witnessing a new renaissance in digital art. From photorealistic portraits to abstract masterpieces, from architectural concepts to fashion designs, Arti Studio showcases the full spectrum of what's possible when technology meets artistry.
+                            </p>
+                            <p>
+                                Our platform is built with creators in mind. We offer powerful tools for organizing your work into collections, tracking engagement on your posts, and connecting with like-minded artists from around the globe. Whether you're a seasoned professional or just starting your AI art journey, Arti Studio provides the resources and community you need to thrive.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     );

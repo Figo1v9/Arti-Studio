@@ -23,13 +23,13 @@ export function Footer() {
     const legalLinks = [
         { label: 'Privacy Policy', href: '/privacy', icon: Shield },
         { label: 'Terms of Service', href: '/terms', icon: FileText },
-        { label: 'Cookie Policy', href: '/privacy#cookies', icon: FileText }
+        { label: 'Cookie Policy', href: '/cookies', icon: FileText }
     ];
 
     const supportLinks = [
         { label: 'Help Center', href: '/contact', icon: HelpCircle },
         { label: 'Report Issue', href: '/contact', icon: Mail },
-        { label: 'DMCA', href: '/terms#dmca', icon: Shield }
+        { label: 'DMCA', href: '/dmca', icon: Shield }
     ];
 
     return (

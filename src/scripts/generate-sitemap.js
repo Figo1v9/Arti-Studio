@@ -53,6 +53,8 @@ const STATIC_ROUTES = [
     { path: '/contact', priority: '0.5', changefreq: 'monthly' },
     { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
     { path: '/terms', priority: '0.3', changefreq: 'yearly' },
+    { path: '/cookies', priority: '0.3', changefreq: 'yearly' },
+    { path: '/dmca', priority: '0.3', changefreq: 'yearly' },
 ];
 
 // ═══════════════════════════════════════════════════════════════

@@ -25,7 +25,7 @@ export const RESERVED_PATHS = new Set([
   'sitemap.xml', 'robots.txt', 'ads.txt', 'manifest.json', 'favicon.ico', 'sw.js',
   'explore', 'following', 'category', 'image', 'trends', 'favorites', 'search',
   'tag', 'profile', 'user', 'login', 'register', 'forgot-password', 'auth',
-  'privacy', 'terms', 'about', 'contact', 'admin-mk-dashboard',
+  'privacy', 'terms', 'cookies', 'dmca', 'about', 'contact', 'admin-mk-dashboard',
 ]);
 
 
@@ -44,6 +44,8 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 // Legal & Info Pages (Required for AdSense)
 const PrivacyPolicyPage = lazy(() => import("./pages/legal/PrivacyPolicyPage"));
 const TermsOfServicePage = lazy(() => import("./pages/legal/TermsOfServicePage"));
+const CookiePolicyPage = lazy(() => import("./pages/legal/CookiePolicyPage"));
+const DMCAPage = lazy(() => import("./pages/legal/DMCAPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 
@@ -205,6 +207,8 @@ function AnimatedRoutes() {
         {/* Legal & Info Pages (Required for AdSense) */}
         <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/terms" element={<TermsOfServicePage />} />
+        <Route path="/cookies" element={<CookiePolicyPage />} />
+        <Route path="/dmca" element={<DMCAPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
 
