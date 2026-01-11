@@ -65,8 +65,7 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    height: 100dvh;
-    overflow: hidden;
+    min-height: 100dvh;
     /* iOS Safari specific */
     -webkit-overflow-scrolling: touch;
   }

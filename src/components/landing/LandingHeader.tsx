@@ -34,6 +34,8 @@ export function LandingHeader() {
     const legalLinks = [
         { label: 'Privacy', href: '/privacy', icon: Shield },
         { label: 'Terms', href: '/terms', icon: FileText },
+        { label: 'Cookies', href: '/cookies', icon: Shield },
+        { label: 'DMCA', href: '/dmca', icon: FileText },
     ];
 
     return (
