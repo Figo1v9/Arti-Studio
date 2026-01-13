@@ -26,7 +26,31 @@
             "destination": "/ads.txt"
         },
         {
-            "source": "/((?!api/|assets/|.*\\.(?:webmanifest|\\w{2,4})$).*)",
+            "source": "/privacy.html",
+            "destination": "/privacy.html"
+        },
+        {
+            "source": "/terms.html",
+            "destination": "/terms.html"
+        },
+        {
+            "source": "/about.html",
+            "destination": "/about.html"
+        },
+        {
+            "source": "/contact.html",
+            "destination": "/contact.html"
+        },
+        {
+            "source": "/dmca.html",
+            "destination": "/dmca.html"
+        },
+        {
+            "source": "/cookies.html",
+            "destination": "/cookies.html"
+        },
+        {
+            "source": "/((?!api/|assets/|.*\\.(?:webmanifest|html|xml|txt|ico|png|jpg|jpeg|gif|svg|js|css|woff|woff2|\\w{2,4})$).*)",
             "destination": "/index.html"
         }
     ],
