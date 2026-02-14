@@ -156,20 +156,18 @@ export function MobileImageModal({ image, onClose, similarImages, onSimilarClick
   const handleCopyPrompt = useCallback(async () => {
     if (!image) return;
 
-    handleProtectedAction(async () => {
-      try {
-        await navigator.clipboard.writeText(image.prompt);
-        setCopied(true);
-        trackCopy.mutate(image.id);
-        trackInteraction(image, 'copy');
-        haptic('medium');
-        toast.success('Prompt copied!');
-        setTimeout(() => setCopied(false), 2000);
-      } catch (err) {
-        toast.error('Copy failed');
-      }
-    }, 'Sign in to copy prompts');
-  }, [image, handleProtectedAction, trackCopy, haptic]);
+    try {
+      await navigator.clipboard.writeText(image.prompt);
+      setCopied(true);
+      trackCopy.mutate(image.id);
+      trackInteraction(image, 'copy');
+      haptic('medium');
+      toast.success('Prompt copied!');
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      toast.error('Copy failed');
+    }
+  }, [image, trackCopy, haptic]);
 
   // Handle share
   const handleShare = useCallback(async () => {
@@ -208,11 +206,17 @@ export function MobileImageModal({ image, onClose, similarImages, onSimilarClick
   }, [image, handleProtectedAction, toggleFavorite, haptic]);
 
   // Navigate to creator profile
-  const handleCreatorClick = useCallback(() => {
+  const handleCreatorClick = useCallback((e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
     if (image?.authorUsername) {
       haptic('light');
       onClose();
       navigate(`/user/${image.authorUsername}`);
+    } else if (image?.authorId) {
+      haptic('light');
+      onClose();
+      navigate(`/user/${image.authorId}`);
     }
   }, [image, navigate, onClose, haptic]);
 
@@ -607,47 +611,28 @@ export function MobileImageModal({ image, onClose, similarImages, onSimilarClick
                   <span className="text-sm font-medium text-white">Prompt</span>
                 </div>
 
-                {user ? (
-                  <>
-                    <motion.p
-                      layout
-                      className={cn(
-                        "text-sm text-foreground/85 leading-relaxed pr-14",
-                        !isPromptExpanded && "line-clamp-3"
-                      )}
-                      dir="ltr"
-                    >
-                      {image.prompt}
-                    </motion.p>
-
-                    {/* Show More / Less Button */}
-                    {image.prompt.length > 100 && (
-                      <button
-                        onClick={() => setIsPromptExpanded(!isPromptExpanded)}
-                        className="text-xs font-medium text-violet-400 active:text-violet-300 transition-colors flex items-center gap-1 mt-2"
-                      >
-                        {isPromptExpanded ? 'Show less' : 'Show more'}
-                      </button>
+                <>
+                  <motion.p
+                    layout
+                    className={cn(
+                      "text-sm text-foreground/85 leading-relaxed pr-14",
+                      !isPromptExpanded && "line-clamp-3"
                     )}
-                  </>
-                ) : (
-                  /* Blurred Prompt for non-authenticated users */
-                  <div className="relative">
-                    <p className="text-sm text-foreground/60 leading-relaxed blur-sm select-none line-clamp-3">
-                      Sign in to view the full prompt details and specifications used to generate this amazing AI image...
-                    </p>
-                    <motion.button
-                      whileTap={{ scale: 0.95 }}
-                      onClick={() => navigate('/login')}
-                      className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px] rounded-lg"
+                    dir="ltr"
+                  >
+                    {image.prompt}
+                  </motion.p>
+
+                  {/* Show More / Less Button */}
+                  {image.prompt.length > 100 && (
+                    <button
+                      onClick={() => setIsPromptExpanded(!isPromptExpanded)}
+                      className="text-xs font-medium text-violet-400 active:text-violet-300 transition-colors flex items-center gap-1 mt-2"
                     >
-                      <span className="flex items-center gap-2 bg-violet-600 text-white text-xs px-4 py-2 rounded-full font-semibold shadow-lg">
-                        <Lock className="w-3.5 h-3.5" />
-                        View Prompt
-                      </span>
-                    </motion.button>
-                  </div>
-                )}
+                      {isPromptExpanded ? 'Show less' : 'Show more'}
+                    </button>
+                  )}
+                </>
 
                 {/* Copy button */}
                 <motion.button

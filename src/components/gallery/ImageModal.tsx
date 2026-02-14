@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
 import { X, Copy, Check, Eye, Heart, Share2, Tag, Calendar, Sparkles, Flag, Link2, Twitter, MessageCircle, UserPlus, UserMinus, Loader2, Edit2, FolderPlus } from 'lucide-react';
@@ -117,18 +117,16 @@ export function ImageModal({ image, onClose, similarImages, onSimilarClick }: Im
 
   const handleCopyPrompt = async () => {
     if (!image) return;
-    handleProtectedAction(async () => {
-      try {
-        await navigator.clipboard.writeText(image.prompt);
-        setCopied(true);
-        toast.success('Prompt copied to clipboard!');
-        // Track copy
-        trackCopy.mutate(image.id);
-        setTimeout(() => setCopied(false), 2000);
-      } catch (err) {
-        toast.error('Failed to copy prompt');
-      }
-    });
+    try {
+      await navigator.clipboard.writeText(image.prompt);
+      setCopied(true);
+      toast.success('Prompt copied to clipboard!');
+      // Track copy
+      trackCopy.mutate(image.id);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      toast.error('Failed to copy prompt');
+    }
   };
 
   const handleShare = async () => {
@@ -352,9 +350,13 @@ export function ImageModal({ image, onClose, similarImages, onSimilarClick }: Im
                 <div className="flex items-center justify-between mb-4">
                   <div
                     className="flex items-center gap-3 cursor-pointer hover:bg-white/5 p-2 -ml-2 rounded-xl transition-colors flex-1 min-w-0"
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
                       if (image.authorUsername) {
                         navigate(`/user/${image.authorUsername}`);
+                      } else if (image.authorId) {
+                        navigate(`/user/${image.authorId}`);
                       }
                     }}
                   >
@@ -419,21 +421,12 @@ export function ImageModal({ image, onClose, similarImages, onSimilarClick }: Im
                 <div className="bg-secondary/30 rounded-lg p-4 transition-all overflow-hidden relative border border-white/5">
                   <p className={cn(
                     "text-sm text-foreground/80 leading-relaxed transition-all font-mono",
-                    !isPromptExpanded && "line-clamp-3",
-                    !user && "blur-sm select-none"
+                    !isPromptExpanded && "line-clamp-3"
                   )}>
-                    {user ? image.prompt : "Sign in to view the full prompt details and specifications used to generate this image."}
+                    {image.prompt}
                   </p>
 
-                  {!user && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/10 backdrop-blur-[1px]">
-                      <button onClick={() => navigate('/login')} className="bg-violet-600/90 hover:bg-violet-600 text-white text-xs px-3 py-1.5 rounded-full font-medium shadow-lg backdrop-blur-md transition-all hover:scale-105">
-                        View Prompt
-                      </button>
-                    </div>
-                  )}
-
-                  {user && image.prompt.length > 150 && (
+                  {image.prompt.length > 150 && (
                     <button
                       onClick={() => setIsPromptExpanded(!isPromptExpanded)}
                       className="mt-2 text-xs font-medium text-violet-400 hover:text-violet-300 transition-colors flex items-center gap-1"
@@ -445,7 +438,7 @@ export function ImageModal({ image, onClose, similarImages, onSimilarClick }: Im
 
                 <div className="mt-6">
                   <h4 className="text-sm font-medium text-muted-foreground mb-2">Category</h4>
-                  <button onClick={() => { navigate(`/explore?category=${image.category}`); handleClose(); }} className="badge-category capitalize hover:bg-violet-500/20 hover:text-violet-300 transition-colors cursor-pointer">
+                  <button onClick={() => { navigate(`/explore?category=${image.category}`); }} className="badge-category capitalize hover:bg-violet-500/20 hover:text-violet-300 transition-colors cursor-pointer">
                     {category?.label || image.category}
                   </button>
                 </div>

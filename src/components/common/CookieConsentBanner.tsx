@@ -260,8 +260,9 @@ export function CookieConsentBanner() {
                 setIsVisible(true);
             }
         } else {
-            // Show after 5 seconds of usage
-            setTimeout(() => setIsVisible(true), 10000);
+            // Show after 2 minutes of usage (120000ms)
+            const timer = setTimeout(() => setIsVisible(true), 120000);
+            return () => clearTimeout(timer);
         }
     }, []);
 

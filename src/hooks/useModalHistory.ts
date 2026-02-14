@@ -103,9 +103,18 @@ export function useModalHistory(
      */
     useEffect(() => {
         if (!isOpen && hasPushedState.current) {
-            // Modal was closed but we still have a history entry
-            // Go back to remove it (this won't trigger our popstate handler because isOpen is already false)
-            window.history.back();
+            // Modal was closed. We need to reconcile history.
+            // ONLY go back if the current history state is actually the one we pushed.
+            // If the user navigated FORWARD (e.g. clicked a link in the modal), current state will be a new page.
+            // In that case, we should NOT go back, as that would undo the navigation.
+
+            const currentState = window.history.state as ModalHistoryState | null;
+
+            if (currentState?.modal && currentState.timestamp === pushedStateTimestamp.current) {
+                window.history.back();
+            }
+
+            // Always clear our tracking since the modal is closed
             hasPushedState.current = false;
             pushedStateTimestamp.current = null;
         }
@@ -117,7 +126,14 @@ export function useModalHistory(
     useEffect(() => {
         return () => {
             if (hasPushedState.current) {
-                window.history.back();
+                // Ensure we only go back if we are still on the modal history state
+                // If the user navigated away (unmounting this component), we shouldn't go back
+                const currentState = window.history.state as ModalHistoryState | null;
+
+                if (currentState?.modal && currentState.timestamp === pushedStateTimestamp.current) {
+                    window.history.back();
+                }
+
                 hasPushedState.current = false;
                 pushedStateTimestamp.current = null;
             }
