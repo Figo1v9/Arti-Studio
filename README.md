@@ -1,73 +1,147 @@
-# Welcome to your Lovable project
+<div align="center">
 
-## Project info
+# 🎨 Arti Studio
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**The #1 AI Art & Prompt Inspiration Platform**
 
-## How can I edit this code?
+[![Website](https://img.shields.io/badge/Website-artistudio.fun-blue?style=for-the-badge&logo=globe)](https://artistudio.fun)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Creators](https://img.shields.io/badge/Creators-10K%2B-orange?style=for-the-badge)](https://artistudio.fun/explore)
+[![Artworks](https://img.shields.io/badge/Artworks-500K%2B-purple?style=for-the-badge)](https://artistudio.fun/explore)
 
-There are several ways of editing your application.
+*Discover, learn, and create with the power of AI*
 
-**Use Lovable**
+[Explore Gallery](https://artistudio.fun/explore) · [Trending](https://artistudio.fun/trends) · [Sign Up](https://artistudio.fun/register)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+</div>
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📌 What is Arti Studio?
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Arti Studio** is the premier platform for discovering, sharing, and creating AI-generated art. We bring together thousands of curated prompts and a thriving global community to help artists, designers, and creators unlock the full potential of AI image generation tools.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+> We believe AI doesn't replace human creativity — it amplifies it.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ✨ Key Features
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+| Feature | Description |
+|---------|-------------|
+| 🧠 **Prompt Engineering** | Thousands of expert-crafted prompts for Midjourney, Stable Diffusion, DALL-E, and more |
+| 🌍 **Global Community** | Connect and collaborate with creators from 150+ countries |
+| 📁 **Organized Collections** | Build mood boards and save your favorite prompts for your next project |
+| ⚖️ **Commercial Rights** | Clear guidelines on commercial use and intellectual property |
+| 🔍 **Advanced Search** | Filter artworks by style, AI model, or category |
+| 📈 **Trending Feed** | Discover the most popular artworks and prompts uploaded daily |
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🗂️ Categories
+
+- 🎨 Design & Graphic Art
+- 🏛️ Architecture & Interior
+- 👗 Fashion & Style
+- 📸 Photography
+- 🖼️ Digital Art & Abstract
+- 🪧 Posters & Thumbnails
+- 💻 Coding & Tech
+
+---
+
+## 🤖 Supported AI Models
+
+```
+Midjourney  •  Stable Diffusion  •  DALL-E 3  •  Leonardo AI  •  and more...
+```
+
+---
+
+## 🚀 How It Works
+
+```
+1. Discover  →  Browse thousands of artworks and filter by your taste
+2. Analyze   →  View the exact prompt and parameters used to create it
+3. Create    →  Use the prompts as-is or remix them into something new
+```
+
+---
+
+## 📊 Platform Stats
+
+<div align="center">
+
+| 🖼️ 500K+ | 👥 10K+ | 🌍 150+ | 📤 5K+ |
+|-----------|---------|---------|--------|
+| AI Artworks | Active Creators | Countries | Daily Uploads |
+
+</div>
+
+---
+
+## 🛠️ Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/artistudio.fun.git
+
+# Navigate into the project directory
+cd artistudio.fun
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+> **Note:** Make sure to create a `.env` file based on `.env.example` before running the project.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## ⚙️ Environment Variables
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```env
+DATABASE_URL=your_database_url
+NEXT_PUBLIC_API_URL=https://api.artistudio.fun
+AUTH_SECRET=your_auth_secret
+```
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🤝 Contributing
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Contributions are welcome! Here's how to get started:
 
-## How can I deploy this project?
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'feat: add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 📬 Contact & Support
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- 🌐 **Website:** [artistudio.fun](https://artistudio.fun)
+- 📧 **Email:** support@artistudio.fun
+- 🔒 **Privacy Policy:** [artistudio.fun/privacy](https://artistudio.fun/privacy)
+- 📋 **Terms of Service:** [artistudio.fun/terms](https://artistudio.fun/terms)
+- ⚠️ **DMCA:** [artistudio.fun/dmca](https://artistudio.fun/dmca)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+Made with ❤️ by the **Arti Studio** team — © 2025-2026 All rights reserved.
+
+</div>
