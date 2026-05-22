@@ -13,7 +13,7 @@ type DataLayerItem = [GtagCommand, ...unknown[]];
 
 declare global {
     interface Window {
-        gtag: (command: GtagCommand, targetOrEventName: string | Date, params?: GtagEventParams) => void;
+        gtag: (command: string, targetOrEventName: any, params?: any) => void;
         dataLayer: DataLayerItem[];
     }
 }
@@ -36,9 +36,18 @@ export function initGA(): void {
 
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function gtag(command: GtagCommand, targetOrEventName: string | Date, params?: GtagEventParams) {
-        window.dataLayer.push([command, targetOrEventName, params] as DataLayerItem);
+    window.gtag = function gtag(command: string, targetOrEventName: any, params?: any) {
+        window.dataLayer.push([command, targetOrEventName, params] as unknown as DataLayerItem);
     };
+
+    // Set default consent mode v2 to denied (GDPR/ePrivacy compliance)
+    window.gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+    });
 
     window.gtag('js', new Date());
     window.gtag('config', GA_MEASUREMENT_ID, {

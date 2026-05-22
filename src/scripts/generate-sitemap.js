@@ -320,6 +320,13 @@ Disallow: /*?sort=
 Disallow: /*?filter=
 Disallow: /*?page=
 
+# Allow Google AdSense and Ads bots
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
 # Crawl-delay for some heavy search engine crawlers to save server load
 User-agent: Yandex
 Crawl-delay: 2

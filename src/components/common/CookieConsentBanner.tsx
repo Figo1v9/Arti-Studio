@@ -267,6 +267,14 @@ export function CookieConsentBanner() {
     }, []);
 
     const applyPreferences = (prefs: ConsentPreferences) => {
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('consent', 'update', {
+                'ad_storage': prefs.marketing ? 'granted' : 'denied',
+                'analytics_storage': prefs.analytics ? 'granted' : 'denied',
+                'ad_user_data': prefs.marketing ? 'granted' : 'denied',
+                'ad_personalization': prefs.marketing ? 'granted' : 'denied'
+            });
+        }
         if (prefs.analytics) console.log('✅ Analytics enabled');
         if (prefs.marketing) console.log('✅ Marketing enabled');
         if (prefs.preferences) console.log('✅ Preferences enabled');

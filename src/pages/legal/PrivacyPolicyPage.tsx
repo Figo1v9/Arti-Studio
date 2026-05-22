@@ -86,6 +86,18 @@ export default function PrivacyPolicyPage() {
                 { icon: UserCheck, text: 'Preference Cookies', desc: 'Remember your settings' },
                 { icon: Bell, text: 'Marketing Cookies', desc: 'Personalized ads (optional)' }
             ]
+        },
+        {
+            icon: Sparkles,
+            title: 'Google AdSense & Analytics',
+            gradient: 'from-amber-500 to-yellow-500',
+            shadowColor: 'shadow-amber-500/20',
+            items: [
+                { icon: Shield, text: 'Google Analytics 4', desc: 'Used to measure site traffic and visitor engagement' },
+                { icon: Database, text: 'Google AdSense & DoubleClick', desc: 'Third-party vendors use cookies to serve ads based on prior visits' },
+                { icon: ExternalLink, text: 'Ad Personalization Settings', desc: 'Manage or opt out of personalized ads at: https://www.google.com/settings/ads' },
+                { icon: Globe, text: 'Advertising Privacy & Terms', desc: 'Learn more about Google advertising at: https://policies.google.com/technologies/ads' }
+            ]
         }
     ];
 

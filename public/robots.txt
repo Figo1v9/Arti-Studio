@@ -1,7 +1,7 @@
 # ═══════════════════════════════════════════════════════════════
 # 🌐 Arti Studio - robots.txt
 # Domain: https://artistudio.fun
-# Generated: 2026-05-22T08:51:28.056Z
+# Generated: 2026-05-22T09:07:09.239Z
 # ═══════════════════════════════════════════════════════════════
 
 # Allow all good search engines
@@ -27,6 +27,13 @@ Disallow: /search?
 Disallow: /*?sort=
 Disallow: /*?filter=
 Disallow: /*?page=
+
+# Allow Google AdSense and Ads bots
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
 
 # Crawl-delay for some heavy search engine crawlers to save server load
 User-agent: Yandex

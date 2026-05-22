@@ -3,6 +3,7 @@ import { useDebounce } from 'react-use';
 import { Helmet } from 'react-helmet-async';
 import { SEOService } from '@/services/seo/seo.service';
 import { GalleryGrid } from '@/components/gallery/GalleryGrid';
+import { AdUnit } from '@/components/common/AdUnit';
 import { useContentProtection } from '@/hooks/useContentProtection';
 import { useSearch } from '@/hooks/useSearch';
 import { useIsMobile } from '@/hooks/useIsMobile';
@@ -383,6 +384,16 @@ export default function Index() {
         "min-h-[50vh]",
         isMobile ? "px-4" : "pb-24 px-8"
       )}>
+        {/* AdSense Ad Unit above Gallery Grid with CLS protection */}
+        <div className="mb-8 w-full max-w-7xl mx-auto overflow-hidden rounded-xl">
+          <AdUnit
+            slotId="6483920194"
+            format="horizontal"
+            minHeight="90px"
+            className="w-full bg-slate-900/10 dark:bg-white/5 border border-slate-200 dark:border-white/10"
+          />
+        </div>
+
         <GalleryGrid
           images={displayImages}
           onImageClick={handleImageClick}

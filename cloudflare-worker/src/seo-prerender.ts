@@ -279,6 +279,7 @@ function generateMetaHTML(
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary Meta Tags -->
+  <meta name="google-adsense-account" content="ca-pub-5316139592191698">
   <title>${safeTitle}</title>
   <meta name="title" content="${safeTitle}">
   <meta name="description" content="${safeDesc}">
