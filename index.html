@@ -19,11 +19,14 @@
   <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
+  <!-- Preload primary brand icon for LCP performance -->
+  <link rel="preload" href="/arti_studio_icon.png" as="image" type="image/png" />
+
   <!-- Primary Meta Tags -->
-  <title>Arti Studio - AI Prompt Inspiration Platform | Discover AI Art & Prompts</title>
-  <meta name="title" content="Arti Studio - AI Prompt Inspiration Platform | Discover AI Art & Prompts" />
+  <title>Arti Studio - AI Art & Prompt Inspiration Platform</title>
+  <meta name="title" content="Arti Studio - AI Art & Prompt Inspiration Platform" />
   <meta name="description"
-    content="Discover stunning AI-generated images with their prompts. Find inspiration for design, architecture, fashion, art, and coding prompts. The #1 platform for AI art inspiration." />
+    content="Discover stunning AI-generated images with prompts. Find inspiration for design, architecture, fashion, and coding on the #1 AI prompt platform." />
   <meta name="keywords"
     content="AI Art, AI Prompts, Midjourney Prompts, Stable Diffusion, DALL-E, AI Image Generator, Design Inspiration, Creative Prompts, Arti Studio, AI Gallery, Prompt Engineering" />
   <meta name="author" content="Arti Studio" />
@@ -341,6 +344,30 @@
           "isPartOf": {
             "@id": "https://artistudio.fun/#website"
           }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://artistudio.fun/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://artistudio.fun"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Explore",
+              "item": "https://artistudio.fun/explore"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Trending",
+              "item": "https://artistudio.fun/trends"
+            }
+          ]
         }
       ]
     }

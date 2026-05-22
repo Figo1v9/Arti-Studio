@@ -177,12 +177,21 @@ export function useGalleryForm(
                 if (error) throw error;
                 toast.success('Image updated');
             } else {
-                const { error } = await supabase
+                const { data, error } = await supabase
                     .from('gallery_images')
-                    .insert([imageData]);
+                    .insert([imageData])
+                    .select('id')
+                    .single();
 
                 if (error) throw error;
                 toast.success('Image added');
+
+                // Send IndexNow notification to search engines instantly
+                if (data?.id) {
+                    import('@/services/seo/indexNow.service')
+                        .then(({ notifyNewImage }) => notifyNewImage(data.id))
+                        .catch(err => console.warn('IndexNow notification failed:', err));
+                }
             }
 
             setIsAddModalOpen(false);

@@ -11,6 +11,7 @@ import { MobileImageModal } from "@/components/mobile/MobileImageModal";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { getTrendingImages } from "@/services/recommendations.service";
 import { trackInteraction } from "@/services/recommendations.service";
+import { SEOService } from "@/services/seo/seo.service";
 
 export default function TrendsPage() {
   const isMobile = useIsMobile();
@@ -77,14 +78,87 @@ export default function TrendsPage() {
     }), { views: 0, copies: 0 });
   }, [trendingImages]);
 
+  // Dynamic SEO Data calculation
+  const seoData = useMemo(() => {
+    if (selectedImage) {
+      const title = `${selectedImage.title || 'AI Generated Art'} - ${SEOService.SITE_NAME}`;
+      const description = selectedImage.prompt
+        ? `${selectedImage.prompt.substring(0, 150)}...`
+        : 'Discover AI-generated artwork and prompts at Arti Studio';
+      const url = `${SEOService.SITE_URL}/image/${selectedImage.id}`;
+      return {
+        title,
+        description,
+        url,
+        image: selectedImage.url,
+        type: 'article' as const,
+        keywords: [
+          'AI Art',
+          'AI Prompt',
+          selectedImage.category || 'Digital Art',
+          ...(selectedImage.tags || []).slice(0, 5)
+        ],
+        author: selectedImage.author || undefined,
+        publishedTime: selectedImage.createdAt || undefined,
+      };
+    }
+
+    return {
+      title: `Trending AI Generated Art & Creative Prompts - ${SEOService.SITE_NAME}`,
+      description: `Discover the hottest, most popular AI prompt creations and images trending this week on ${SEOService.SITE_NAME}. Check views, copies, and copy prompts.`,
+      url: `${SEOService.SITE_URL}/trends`,
+      image: trendingImages[0]?.url || SEOService.DEFAULT_OG_IMAGE,
+      type: 'website' as const,
+      keywords: ['Trending AI Art', 'Popular AI Prompts', 'Midjourney Prompts', 'Stable Diffusion', 'Arti Studio Trends'],
+    };
+  }, [selectedImage, trendingImages]);
+
+  // Dynamic JSON-LD structured schemas
+  const schemas = useMemo(() => {
+    const list: any[] = [];
+    if (selectedImage) {
+      list.push(
+        SEOService.generateImageSchema({
+          id: selectedImage.id,
+          title: selectedImage.title,
+          prompt: selectedImage.prompt,
+          url: selectedImage.url,
+          author: selectedImage.author || undefined,
+          category: selectedImage.category || undefined,
+          tags: selectedImage.tags,
+          views: selectedImage.views,
+          copies: selectedImage.copies,
+          createdAt: selectedImage.createdAt,
+        })
+      );
+    } else {
+      list.push(
+        SEOService.generateBreadcrumbSchema([
+          { name: 'Home', url: '/' },
+          { name: 'Trending', url: '/trends' }
+        ])
+      );
+    }
+    return list;
+  }, [selectedImage]);
+
   return (
     <>
       <Helmet>
-        <title>Trending - Arti Studio</title>
-        <meta
-          name="description"
-          content="Discover the most popular and trending AI prompts and images on Arti Studio."
-        />
+        {seoData && <title>{seoData.title}</title>}
+        {seoData && Object.entries(SEOService.generateMetaTags(seoData)).map(([name, content]) => {
+          if (name === 'title') return null;
+          if (name.startsWith('og:')) {
+            return <meta key={name} property={name} content={content} />;
+          }
+          return <meta key={name} name={name} content={content} />;
+        })}
+        {seoData?.url && <link rel="canonical" href={seoData.url} />}
+        {schemas.map((schema, index) => (
+          <script key={index} type="application/ld+json">
+            {JSON.stringify(schema)}
+          </script>
+        ))}
       </Helmet>
 
       <div className="h-full flex flex-col">

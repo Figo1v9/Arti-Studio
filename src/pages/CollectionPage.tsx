@@ -3,7 +3,7 @@
  * Displays a single collection with all its images
  */
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -50,6 +50,7 @@ import { toast } from 'sonner';
 import { Helmet } from 'react-helmet-async';
 import type { GalleryImage } from '@/types/gallery';
 import { useModalHistory } from '@/hooks/useModalHistory';
+import { SEOService } from '@/services/seo/seo.service';
 
 export default function CollectionPage() {
     const { username, slug } = useParams<{ username: string; slug: string }>();
@@ -75,6 +76,85 @@ export default function CollectionPage() {
 
     // Check if current user is the owner
     const isOwner = user?.uid === collection?.user_id;
+
+    // Dynamic SEO Data calculation
+    const seoData = useMemo(() => {
+        if (selectedImage) {
+            const title = `${selectedImage.title || 'AI Generated Art'} - ${SEOService.SITE_NAME}`;
+            const description = selectedImage.prompt
+                ? `${selectedImage.prompt.substring(0, 150)}...`
+                : 'Discover AI-generated artwork and prompts at Arti Studio';
+            const url = `${SEOService.SITE_URL}/image/${selectedImage.id}`;
+            return {
+                title,
+                description,
+                url,
+                image: selectedImage.url,
+                type: 'article' as const,
+                keywords: [
+                    'AI Art',
+                    'AI Prompt',
+                    selectedImage.category || 'Digital Art',
+                    ...(selectedImage.tags || []).slice(0, 5)
+                ],
+                author: selectedImage.author || undefined,
+                publishedTime: selectedImage.createdAt || undefined,
+            };
+        }
+
+        if (!collection) return null;
+
+        const title = `${collection.name} AI Art Collection by @${username} - ${SEOService.SITE_NAME}`;
+        const description = collection.description || `Explore the "${collection.name}" AI art gallery by @${username} containing ${collection.image_count || 0} images and creative prompt styles.`;
+        const url = `${SEOService.SITE_URL}/${username}/collection/${slug}`;
+
+        return {
+            title,
+            description,
+            url,
+            image: collection.images?.[0]?.url || SEOService.DEFAULT_OG_IMAGE,
+            type: 'website' as const,
+            keywords: ['AI Art', 'AI Prompt', collection.name, 'Collection', 'Gallery', `@${username}`],
+        };
+    }, [selectedImage, collection, username, slug]);
+
+    // Dynamic JSON-LD structured schemas
+    const schemas = useMemo(() => {
+        const list: any[] = [];
+        if (selectedImage) {
+            list.push(
+                SEOService.generateImageSchema({
+                    id: selectedImage.id,
+                    title: selectedImage.title,
+                    prompt: selectedImage.prompt,
+                    url: selectedImage.url,
+                    author: selectedImage.author || undefined,
+                    category: selectedImage.category || undefined,
+                    tags: selectedImage.tags,
+                    views: selectedImage.views,
+                    copies: selectedImage.copies,
+                    createdAt: selectedImage.createdAt,
+                })
+            );
+        } else if (collection) {
+            list.push(
+                SEOService.generateCollectionSchema({
+                    id: collection.id,
+                    name: collection.name,
+                    description: collection.description || undefined,
+                    imageCount: collection.image_count || undefined,
+                })
+            );
+            list.push(
+                SEOService.generateBreadcrumbSchema([
+                    { name: 'Home', url: '/' },
+                    { name: `@${username}`, url: `/${username}` },
+                    { name: collection.name, url: `/${username}/collection/${slug}` }
+                ])
+            );
+        }
+        return list;
+    }, [selectedImage, collection, username, slug]);
 
     // Fetch collection
     useEffect(() => {
@@ -222,8 +302,20 @@ export default function CollectionPage() {
     return (
         <>
             <Helmet>
-                <title>{collection.name} | Collection by @{username}</title>
-                <meta name="description" content={collection.description || `A collection of ${collection.image_count} images by @${username}`} />
+                {seoData && <title>{seoData.title}</title>}
+                {seoData && Object.entries(SEOService.generateMetaTags(seoData)).map(([name, content]) => {
+                    if (name === 'title') return null;
+                    if (name.startsWith('og:')) {
+                        return <meta key={name} property={name} content={content} />;
+                    }
+                    return <meta key={name} name={name} content={content} />;
+                })}
+                {seoData?.url && <link rel="canonical" href={seoData.url} />}
+                {schemas.map((schema, index) => (
+                    <script key={index} type="application/ld+json">
+                        {JSON.stringify(schema)}
+                    </script>
+                ))}
             </Helmet>
 
             <div className="min-h-screen bg-background">

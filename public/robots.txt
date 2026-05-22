@@ -1,9 +1,10 @@
 # ═══════════════════════════════════════════════════════════════
 # 🌐 Arti Studio - robots.txt
 # Domain: https://artistudio.fun
-# Generated: 2026-01-13T12:07:38.593Z
+# Generated: 2026-05-22T08:51:28.056Z
 # ═══════════════════════════════════════════════════════════════
 
+# Allow all good search engines
 User-agent: *
 Allow: /
 Allow: /user/
@@ -22,6 +23,54 @@ Disallow: /following
 Disallow: /dashboard/
 Disallow: /_next/
 Disallow: /private/
+Disallow: /search?
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+
+# Crawl-delay for some heavy search engine crawlers to save server load
+User-agent: Yandex
+Crawl-delay: 2
+
+# Optimize social media sharing previews
+User-agent: Twitterbot
+Allow: /
+Allow: /image/
+Allow: /user/
+
+User-agent: facebookexternalhit
+Allow: /
+Allow: /image/
+Allow: /user/
+
+User-agent: LinkedInBot
+Allow: /
+Allow: /image/
+Allow: /user/
+
+User-agent: Pinterest
+Allow: /
+Allow: /image/
+Allow: /user/
+
+# Block SEO spam bots to protect data and server resources
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Rogerbot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
 
 # Sitemap
 Sitemap: https://artistudio.fun/sitemap.xml

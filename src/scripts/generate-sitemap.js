@@ -18,6 +18,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
+import https from 'https';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -134,14 +135,16 @@ async function generateSitemap() {
         }
 
         // ═══════════════════════════════════════════════════════
-        // 3. IMAGES (With full image metadata)
+        // 3. IMAGES (With full image metadata) & COLLECTION OF UNIQUE TAGS
         // ═══════════════════════════════════════════════════════
         console.log('🖼️ Fetching gallery images...');
         const { data: images, error: imgError } = await supabase
             .from('gallery_images')
-            .select('id, title, prompt, url, category, created_at')
+            .select('id, title, prompt, url, category, created_at, tags')
             .order('created_at', { ascending: false })
             .limit(5000); // Increased limit for better coverage
+
+        const uniqueTags = new Set();
 
         if (imgError) {
             console.error('❌ Error fetching images:', imgError.message);
@@ -152,6 +155,15 @@ async function generateSitemap() {
                 const cleanTitle = escapeXml(img.title || 'AI Generated Image');
                 const cleanPrompt = escapeXml((img.prompt || '').substring(0, 200));
                 const imageUrl = escapeXml(img.url);
+
+                // Collect tags
+                if (img.tags && Array.isArray(img.tags)) {
+                    img.tags.forEach(tag => {
+                        if (tag && typeof tag === 'string') {
+                            uniqueTags.add(tag.trim().toLowerCase());
+                        }
+                    });
+                }
 
                 // Calculate priority based on recency
                 const createdAt = new Date(img.created_at);
@@ -172,6 +184,23 @@ async function generateSitemap() {
       <image:title>${cleanTitle}</image:title>
       <image:caption>${cleanPrompt}</image:caption>
     </image:image>
+  </url>
+`;
+            });
+        }
+
+        // ═══════════════════════════════════════════════════════
+        // 3.5. DYNAMIC TAG PAGES
+        // ═══════════════════════════════════════════════════════
+        if (uniqueTags.size > 0) {
+            console.log(`🏷️ Adding ${uniqueTags.size} unique tag pages...`);
+            uniqueTags.forEach(tag => {
+                const tagSlug = escapeXml(encodeURIComponent(tag));
+                xml += `  <url>
+    <loc>${DOMAIN}/tag/${tagSlug}</loc>
+    <lastmod>${date}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
 `;
             });
@@ -204,6 +233,45 @@ async function generateSitemap() {
                 }
             });
         }
+
+        // ═══════════════════════════════════════════════════════
+        // 5. PUBLIC COLLECTIONS
+        // ═══════════════════════════════════════════════════════
+        console.log('📂 Fetching public collections...');
+        const { data: collections, error: colError } = await supabase
+            .from('collections')
+            .select('slug, updated_at, profiles(username)')
+            .eq('is_public', true)
+            .limit(1000);
+
+        if (colError) {
+            console.error('❌ Error fetching collections:', colError.message);
+        } else if (collections) {
+            console.log(`   Found ${collections.length} public collections`);
+
+            collections.forEach(col => {
+                let colUsername = null;
+                if (col.profiles) {
+                    if (Array.isArray(col.profiles)) {
+                        colUsername = col.profiles[0]?.username;
+                    } else {
+                        colUsername = col.profiles.username;
+                    }
+                }
+
+                if (col.slug && colUsername) {
+                    const username = encodeUrl(colUsername);
+                    const slug = encodeUrl(col.slug);
+                    xml += `  <url>
+    <loc>${DOMAIN}/user/${username}/collection/${slug}</loc>
+    <lastmod>${col.updated_at || date}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+`;
+                }
+            });
+        }
     }
 
     xml += `</urlset>`;
@@ -228,6 +296,7 @@ async function generateSitemap() {
 # Generated: ${date}
 # ═══════════════════════════════════════════════════════════════
 
+# Allow all good search engines
 User-agent: *
 Allow: /
 Allow: /user/
@@ -246,6 +315,54 @@ Disallow: /following
 Disallow: /dashboard/
 Disallow: /_next/
 Disallow: /private/
+Disallow: /search?
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*?page=
+
+# Crawl-delay for some heavy search engine crawlers to save server load
+User-agent: Yandex
+Crawl-delay: 2
+
+# Optimize social media sharing previews
+User-agent: Twitterbot
+Allow: /
+Allow: /image/
+Allow: /user/
+
+User-agent: facebookexternalhit
+Allow: /
+Allow: /image/
+Allow: /user/
+
+User-agent: LinkedInBot
+Allow: /
+Allow: /image/
+Allow: /user/
+
+User-agent: Pinterest
+Allow: /
+Allow: /image/
+Allow: /user/
+
+# Block SEO spam bots to protect data and server resources
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Rogerbot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
 
 # Sitemap
 Sitemap: ${DOMAIN}/sitemap.xml
@@ -256,7 +373,7 @@ Host: ${DOMAIN}
     console.log('✅ robots.txt generated successfully!');
 
     // ═══════════════════════════════════════════════════════════
-    // PING INDEXNOW (Optional)
+    // PING INDEXNOW
     // ═══════════════════════════════════════════════════════════
     console.log('');
     console.log('📊 Sitemap Statistics:');
@@ -264,11 +381,50 @@ Host: ${DOMAIN}
     console.log(`   - Total URLs: ${(xml.match(/<url>/g) || []).length}`);
     console.log(`   - File size: ${(xml.length / 1024).toFixed(2)} KB`);
     console.log('');
+
+    const sitemapUrl = `${DOMAIN}/sitemap.xml`;
+    const indexNowKey = 'arti-studio-indexnow-2026-key';
+    
+    await pingIndexNow(sitemapUrl, indexNowKey);
+
+    console.log('');
     console.log('🎯 Next steps:');
     console.log('   1. Deploy the site');
     console.log('   2. Submit sitemap to Google Search Console');
     console.log('   3. Submit sitemap to Bing Webmaster Tools');
-    console.log(`   4. Ping IndexNow: ${DOMAIN}/sitemap.xml`);
+}
+
+/**
+ * Ping IndexNow API using Node's native https module
+ */
+function pingIndexNow(sitemapUrl, key) {
+    return new Promise((resolve) => {
+        const keyLocation = `${DOMAIN}/arti-studio-indexnow-2026-key.txt`;
+        const encodedSitemapUrl = encodeURIComponent(sitemapUrl);
+        const encodedKeyLocation = encodeURIComponent(keyLocation);
+        const pingUrl = `https://api.indexnow.org/indexnow?url=${encodedSitemapUrl}&key=${key}&keyLocation=${encodedKeyLocation}`;
+
+        console.log(`🌐 Pinging IndexNow at: ${pingUrl}`);
+        
+        https.get(pingUrl, (res) => {
+            let data = '';
+            res.on('data', (chunk) => {
+                data += chunk;
+            });
+            res.on('end', () => {
+                if (res.statusCode === 200 || res.statusCode === 202) {
+                    console.log(`✅ IndexNow ping successful! Status: ${res.statusCode}`);
+                    resolve(true);
+                } else {
+                    console.error(`❌ IndexNow ping failed. Status: ${res.statusCode}, Body: ${data}`);
+                    resolve(false);
+                }
+            });
+        }).on('error', (err) => {
+            console.error('❌ IndexNow ping network error:', err.message);
+            resolve(false);
+        });
+    });
 }
 
 // Run the generator

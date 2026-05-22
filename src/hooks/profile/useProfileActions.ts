@@ -174,6 +174,13 @@ export const useProfileActions = ({ viewedProfile, setViewedProfile, currentUser
             toast.success('Changes saved');
             setIsEditing(false);
 
+            // Send IndexNow notification to search engines instantly
+            if (usernameToSave) {
+                import('@/services/seo/indexNow.service')
+                    .then(({ notifyNewProfile }) => notifyNewProfile(usernameToSave))
+                    .catch(err => console.warn('IndexNow profile notification failed:', err));
+            }
+
             // Should we update URL?
             // If current URL is /:username, we might want to navigate
         } catch (error) {

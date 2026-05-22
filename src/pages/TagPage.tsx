@@ -10,6 +10,7 @@ import { useIsMobile } from '@/hooks/useIsMobile';
 import { useGallery, useSimilarImages } from '@/hooks/useGallery';
 import { useModalHistory } from '@/hooks/useModalHistory';
 import { Button } from '@/components/ui/button';
+import { SEOService } from '@/services/seo/seo.service';
 
 // Lazy load modals
 const ImageModal = lazy(() => import('@/components/gallery/ImageModal').then(module => ({ default: module.ImageModal })));
@@ -87,6 +88,77 @@ export default function TagPage() {
         );
     }, [taggedImages]);
 
+    // Dynamic SEO Data calculation
+    const seoData = useMemo(() => {
+        if (selectedImage) {
+            const title = `${selectedImage.title || 'AI Generated Art'} - ${SEOService.SITE_NAME}`;
+            const description = selectedImage.prompt
+                ? `${selectedImage.prompt.substring(0, 150)}...`
+                : 'Discover AI-generated artwork and prompts at Arti Studio';
+            const url = `${SEOService.SITE_URL}/image/${selectedImage.id}`;
+            return {
+                title,
+                description,
+                url,
+                image: selectedImage.url,
+                type: 'article' as const,
+                keywords: [
+                    'AI Art',
+                    'AI Prompt',
+                    selectedImage.category || 'Digital Art',
+                    ...(selectedImage.tags || []).slice(0, 5)
+                ],
+                author: selectedImage.author || undefined,
+                publishedTime: selectedImage.createdAt || undefined,
+            };
+        }
+
+        if (!decodedTag) return null;
+
+        const title = `#${decodedTag} AI Art & Prompt Styles - ${SEOService.SITE_NAME}`;
+        const description = `Explore ${taggedImages.length} stunning AI-generated images and creative prompt styles tagged with #${decodedTag} on ${SEOService.SITE_NAME}.`;
+        const url = `${SEOService.SITE_URL}/tag/${encodeURIComponent(decodedTag)}`;
+
+        return {
+            title,
+            description,
+            url,
+            image: taggedImages[0]?.url || SEOService.DEFAULT_OG_IMAGE,
+            type: 'website' as const,
+            keywords: ['AI Art', 'AI Prompt', decodedTag, 'Tag Gallery', 'Midjourney Prompt', 'Stable Diffusion Prompt'],
+        };
+    }, [selectedImage, decodedTag, taggedImages]);
+
+    // Dynamic JSON-LD structured schemas
+    const schemas = useMemo(() => {
+        const list: any[] = [];
+        if (selectedImage) {
+            list.push(
+                SEOService.generateImageSchema({
+                    id: selectedImage.id,
+                    title: selectedImage.title,
+                    prompt: selectedImage.prompt,
+                    url: selectedImage.url,
+                    author: selectedImage.author || undefined,
+                    category: selectedImage.category || undefined,
+                    tags: selectedImage.tags,
+                    views: selectedImage.views,
+                    copies: selectedImage.copies,
+                    createdAt: selectedImage.createdAt,
+                })
+            );
+        } else if (decodedTag) {
+            list.push(
+                SEOService.generateBreadcrumbSchema([
+                    { name: 'Home', url: '/' },
+                    { name: 'Explore', url: '/explore' },
+                    { name: `#${decodedTag}`, url: `/tag/${encodeURIComponent(decodedTag)}` }
+                ])
+            );
+        }
+        return list;
+    }, [selectedImage, decodedTag]);
+
     if (!decodedTag) {
         navigate('/explore');
         return null;
@@ -95,13 +167,20 @@ export default function TagPage() {
     return (
         <>
             <Helmet>
-                <title>#{decodedTag} - Tag - Arti Studio</title>
-                <meta
-                    name="description"
-                    content={`Explore ${taggedImages.length} AI-generated images tagged with #${decodedTag} on Arti Studio. Discover creative prompts and inspiring artwork.`}
-                />
-                <meta property="og:title" content={`#${decodedTag} - Arti Studio`} />
-                <meta property="og:description" content={`${taggedImages.length} images tagged with #${decodedTag}`} />
+                {seoData && <title>{seoData.title}</title>}
+                {seoData && Object.entries(SEOService.generateMetaTags(seoData)).map(([name, content]) => {
+                    if (name === 'title') return null;
+                    if (name.startsWith('og:')) {
+                        return <meta key={name} property={name} content={content} />;
+                    }
+                    return <meta key={name} name={name} content={content} />;
+                })}
+                {seoData?.url && <link rel="canonical" href={seoData.url} />}
+                {schemas.map((schema, index) => (
+                    <script key={index} type="application/ld+json">
+                        {JSON.stringify(schema)}
+                    </script>
+                ))}
             </Helmet>
 
             <div className={cn("min-h-screen", isMobile ? "px-4 pb-24" : "px-8 pb-24")}>

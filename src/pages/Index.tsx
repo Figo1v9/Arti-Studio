@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useRef, lazy, Suspense } from 'react';
 import { useDebounce } from 'react-use';
 import { Helmet } from 'react-helmet-async';
+import { SEOService } from '@/services/seo/seo.service';
 import { GalleryGrid } from '@/components/gallery/GalleryGrid';
 import { useContentProtection } from '@/hooks/useContentProtection';
 import { useSearch } from '@/hooks/useSearch';
@@ -256,35 +257,124 @@ export default function Index() {
     }, { replace: true });
   }, [trackView, setSearchParams, openWithHistory]);
 
+  // Dynamic SEO Data calculation
+  const seoData = useMemo(() => {
+    if (selectedImage) {
+      const title = `${selectedImage.title || 'AI Generated Art'} - ${SEOService.SITE_NAME}`;
+      const description = selectedImage.prompt
+        ? `${selectedImage.prompt.substring(0, 150)}...`
+        : 'Discover AI-generated artwork and prompts at Arti Studio';
+      const url = `${SEOService.SITE_URL}/image/${selectedImage.id}`;
+      return {
+        title,
+        description,
+        url,
+        image: selectedImage.url,
+        type: 'article' as const,
+        keywords: [
+          'AI Art',
+          'AI Prompt',
+          selectedImage.category || 'Digital Art',
+          ...(selectedImage.tags || []).slice(0, 5)
+        ],
+        author: selectedImage.author || undefined,
+        publishedTime: selectedImage.createdAt || undefined,
+      };
+    }
+
+    if (activeCategory) {
+      const catLabel = matchedCategory?.label || activeCategory;
+      const title = `${catLabel} AI Prompts & Art - ${SEOService.SITE_NAME}`;
+      const description = `Explore stunning ${catLabel.toLowerCase()} AI-generated images and prompts. Find inspiration for your ${catLabel.toLowerCase()} projects at ${SEOService.SITE_NAME}.`;
+      const url = `${SEOService.SITE_URL}/category/${encodeURIComponent(activeCategory)}`;
+      return {
+        title,
+        description,
+        url,
+        image: SEOService.DEFAULT_OG_IMAGE,
+        type: 'website' as const,
+        keywords: ['AI Art', 'AI Prompt', catLabel, 'Midjourney', 'Stable Diffusion'],
+      };
+    }
+
+    if (query) {
+      const title = `Search Results for "${query}" - ${SEOService.SITE_NAME}`;
+      const description = `Explore stunning AI art and prompts related to "${query}" on ${SEOService.SITE_NAME}.`;
+      const url = `${SEOService.SITE_URL}/search?q=${encodeURIComponent(query)}`;
+      return {
+        title,
+        description,
+        url,
+        image: SEOService.DEFAULT_OG_IMAGE,
+        type: 'website' as const,
+      };
+    }
+
+    // Default Homepage
+    return {
+      title: 'Arti Studio - AI Art & Prompt Inspiration Platform',
+      description: 'Discover stunning AI-generated images with prompts. Find inspiration for design, architecture, fashion, and coding on the #1 AI prompt platform.',
+      url: SEOService.SITE_URL,
+      image: SEOService.DEFAULT_OG_IMAGE,
+      type: 'website' as const,
+      keywords: ['AI Art', 'AI Prompts', 'Midjourney', 'Stable Diffusion', 'DALL-E', 'Prompt Engineering'],
+    };
+  }, [selectedImage, activeCategory, matchedCategory, query]);
+
+  // Dynamic JSON-LD structured schemas
+  const schemas = useMemo(() => {
+    const list: any[] = [];
+    if (selectedImage) {
+      list.push(
+        SEOService.generateImageSchema({
+          id: selectedImage.id,
+          title: selectedImage.title,
+          prompt: selectedImage.prompt,
+          url: selectedImage.url,
+          author: selectedImage.author || undefined,
+          authorUsername: selectedImage.authorUsername || undefined,
+          category: selectedImage.category || undefined,
+          tags: selectedImage.tags,
+          views: selectedImage.views,
+          copies: selectedImage.copies,
+          createdAt: selectedImage.createdAt,
+        })
+      );
+    } else if (activeCategory) {
+      list.push(
+        SEOService.generateCollectionSchema({
+          id: activeCategory,
+          name: matchedCategory?.label || activeCategory,
+          description: `Explore the best ${matchedCategory?.label || activeCategory} AI prompts and art.`,
+          imageCount: displayImages.length || undefined,
+        })
+      );
+    } else if (!query) {
+      // General schemas for homepage
+      list.push(SEOService.generateWebsiteSchema());
+      list.push(SEOService.generateOrganizationSchema());
+    }
+    return list;
+  }, [selectedImage, activeCategory, matchedCategory, query, displayImages]);
+
   // Unified Render - Prevents layout thrashing/flickering
   return (
     <>
       <Helmet>
-        <title>
-          {activeCategory
-            ? `${matchedCategory?.label || activeCategory} AI Prompts - Arti Studio`
-            : query
-              ? `Search Results for "${query}" - Arti Studio`
-              : 'Arti Studio - AI Prompt Inspiration Platform'}
-        </title>
-        <meta
-          name="description"
-          content={
-            activeCategory
-              ? `Browse the best ${matchedCategory?.label || activeCategory} AI prompts and art. Find inspiration for your next generation.`
-              : query
-                ? `Explore stunning AI art and prompts related to "${query}".`
-                : "Discover stunning AI-generated images with their prompts. Find inspiration for design, architecture, fashion, art, and coding prompts at Arti Studio."
+        <title>{seoData.title}</title>
+        {Object.entries(SEOService.generateMetaTags(seoData)).map(([name, content]) => {
+          if (name === 'title') return null;
+          if (name.startsWith('og:')) {
+            return <meta key={name} property={name} content={content} />;
           }
-        />
-        <meta
-          property="og:title"
-          content={
-            activeCategory
-              ? `${matchedCategory?.label || activeCategory} AI Prompts`
-              : 'Arti Studio - AI Prompt Inspiration Platform'
-          }
-        />
+          return <meta key={name} name={name} content={content} />;
+        })}
+        {seoData.url && <link rel="canonical" href={seoData.url} />}
+        {schemas.map((schema, index) => (
+          <script key={index} type="application/ld+json">
+            {JSON.stringify(schema)}
+          </script>
+        ))}
       </Helmet>
 
       {/* Main Content Area */}

@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, lazy, Suspense, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,6 +14,7 @@ import { useAuth } from '@/components/auth';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { SEOService } from '@/services/seo/seo.service';
 
 const GalleryGrid = lazy(() => import('@/components/gallery/GalleryGrid').then(module => ({ default: module.GalleryGrid })));
 
@@ -49,6 +50,40 @@ export default function PublicProfile() {
     const [isSaving, setIsSaving] = useState(false);
 
     const isOwner = currentUser && profile && currentUser.uid === profile.id;
+
+    // Dynamic SEO Data calculation
+    const seoData = useMemo(() => {
+        if (!profile) return null;
+        const avatar = getAvatarUrl(profile.email || 'user', profile.avatar_url);
+        return {
+            title: `${profile.full_name} (@${profile.username}) AI Creator Profile - ${SEOService.SITE_NAME}`,
+            description: profile.bio || `Check out ${profile.full_name}'s AI-generated artwork, prompt styles, and creations on ${SEOService.SITE_NAME}.`,
+            url: `${SEOService.SITE_URL}/user/${profile.username}`,
+            image: avatar || SEOService.DEFAULT_OG_IMAGE,
+            type: 'profile' as const,
+            keywords: [profile.username, profile.full_name, 'AI Creator', 'AI Artist', 'Prompt Designer', 'AI Gallery'],
+            author: profile.full_name,
+        };
+    }, [profile]);
+
+    // Dynamic JSON-LD structured schemas
+    const schemas = useMemo(() => {
+        if (!profile) return [];
+        const avatar = getAvatarUrl(profile.email || 'user', profile.avatar_url);
+        return [
+            SEOService.generateProfileSchema({
+                username: profile.username,
+                fullName: profile.full_name,
+                bio: profile.bio || undefined,
+                avatarUrl: avatar || undefined
+            }),
+            SEOService.generateBreadcrumbSchema([
+                { name: 'Home', url: '/' },
+                { name: 'Explore', url: '/explore' },
+                { name: profile.full_name, url: `/user/${profile.username}` }
+            ])
+        ];
+    }, [profile]);
 
     useEffect(() => {
         if (username) {
@@ -196,7 +231,22 @@ export default function PublicProfile() {
 
     return (
         <div className="min-h-screen bg-background pb-20">
-            <Helmet><title>{profile.full_name} (@{profile.username}) - Arti Studio</title></Helmet>
+            <Helmet>
+                {seoData && <title>{seoData.title}</title>}
+                {seoData && Object.entries(SEOService.generateMetaTags(seoData)).map(([name, content]) => {
+                    if (name === 'title') return null;
+                    if (name.startsWith('og:')) {
+                        return <meta key={name} property={name} content={content} />;
+                    }
+                    return <meta key={name} name={name} content={content} />;
+                })}
+                {seoData?.url && <link rel="canonical" href={seoData.url} />}
+                {schemas.map((schema, index) => (
+                    <script key={index} type="application/ld+json">
+                        {JSON.stringify(schema)}
+                    </script>
+                ))}
+            </Helmet>
 
             {/* === HERO SECTION === */}
             <div className="relative h-48 md:h-64 w-full overflow-hidden">
