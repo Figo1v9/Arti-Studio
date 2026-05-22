@@ -11,7 +11,7 @@ interface MainLayoutProps {
 export function MainLayout({ children, sidebar, sidebarCollapsed }: MainLayoutProps) {
     return (
         <div
-            className="grid h-full w-full bg-background overflow-hidden transition-[grid-template-columns] duration-300 ease-out"
+            className="grid absolute inset-0 bg-background overflow-hidden transition-[grid-template-columns] duration-300 ease-out"
             style={{
                 gridTemplateColumns: sidebarCollapsed ? '4rem minmax(0, 1fr)' : '16rem minmax(0, 1fr)',
                 gridTemplateAreas: '"sidebar main"'

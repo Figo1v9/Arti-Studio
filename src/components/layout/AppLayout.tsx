@@ -43,7 +43,7 @@ export function AppLayout() {
             location.pathname.startsWith('/image/');
 
         return (
-            <div className="h-full bg-background no-select flex flex-col overflow-hidden relative">
+            <div className="absolute inset-0 bg-background no-select flex flex-col overflow-hidden">
                 {/* Email Verification Banner */}
                 <EmailVerificationBanner />
 
