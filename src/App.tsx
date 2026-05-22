@@ -329,8 +329,12 @@ const App = () => (
                   v7_relativeSplatPath: true,
                 }}
               >
-                <AnnouncementBar />
-                <AnimatedRoutes />
+                <div className="flex flex-col h-[100dvh] w-full overflow-hidden">
+                  <AnnouncementBar />
+                  <div className="flex-1 min-h-0 w-full relative">
+                    <AnimatedRoutes />
+                  </div>
+                </div>
                 <CookieConsentBanner />
               </BrowserRouter>
             </AppWithAnalytics>

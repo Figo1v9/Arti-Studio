@@ -385,14 +385,12 @@ export default function Index() {
         isMobile ? "px-4" : "pb-24 px-8"
       )}>
         {/* AdSense Ad Unit above Gallery Grid with CLS protection */}
-        <div className="mb-8 w-full max-w-7xl mx-auto overflow-hidden rounded-xl">
-          <AdUnit
-            slotId="6483920194"
-            format="horizontal"
-            minHeight="90px"
-            className="w-full bg-slate-900/10 dark:bg-white/5 border border-slate-200 dark:border-white/10"
-          />
-        </div>
+        <AdUnit
+          slotId="6483920194"
+          format="horizontal"
+          minHeight="90px"
+          className="w-full max-w-7xl mx-auto mb-8 overflow-hidden rounded-xl bg-slate-900/10 dark:bg-white/5 border border-slate-200 dark:border-white/10"
+        />
 
         <GalleryGrid
           images={displayImages}

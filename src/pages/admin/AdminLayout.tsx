@@ -91,7 +91,7 @@ export default function AdminLayout() {
     }, [isAdmin, navigate]);
 
     return (
-        <div className="h-[100dvh] overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+        <div className="h-full overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
             {/* Mobile Header */}
             <header className="lg:hidden fixed top-0 left-0 right-0 z-50 glass border-b border-white/10 bg-slate-900/80 backdrop-blur-md">
                 <div style={{ height: 'env(safe-area-inset-top)' }} className="w-full bg-slate-900/50" />

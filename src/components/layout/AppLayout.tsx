@@ -43,7 +43,7 @@ export function AppLayout() {
             location.pathname.startsWith('/image/');
 
         return (
-            <div className="min-h-[100dvh] bg-background no-select">
+            <div className="h-full bg-background no-select flex flex-col overflow-hidden relative">
                 {/* Email Verification Banner */}
                 <EmailVerificationBanner />
 
@@ -71,7 +71,7 @@ export function AppLayout() {
                 <main
                     data-scroll-container
                     className={cn(
-                        "overflow-y-auto h-[100dvh] pb-24 transition-[padding] duration-200",
+                        "overflow-y-auto flex-1 min-h-0 pb-24 transition-[padding] duration-200",
                         showCategoryBar
                             ? "pt-[calc(7rem+env(safe-area-inset-top))]" // Header (3.5) + Bar (3.5)
                             : "pt-[calc(3.5rem+env(safe-area-inset-top))]" // Header only

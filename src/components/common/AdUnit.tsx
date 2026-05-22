@@ -35,10 +35,12 @@ export function AdUnit({
 
     const initialized = useRef(false);
 
+    const isDev = import.meta.env.DEV;
+
     useEffect(() => {
         // Only load if in view, not already loaded, and not in error state
         if (inView && !initialized.current && !adError) {
-            if (process.env.NODE_ENV === 'production') {
+            if (!isDev) {
                 try {
                     // Double check if script is loaded
                     if (typeof window !== 'undefined') {
@@ -52,10 +54,10 @@ export function AdUnit({
                 }
             }
         }
-    }, [inView, adError]);
+    }, [inView, adError, isDev]);
 
     // Development Placeholder
-    if (process.env.NODE_ENV !== 'production') {
+    if (isDev) {
         return (
             <div
                 ref={ref}
@@ -87,7 +89,7 @@ export function AdUnit({
 
             <ins
                 className="adsbygoogle"
-                style={{ display: 'block', width: '100%', ...style }}
+                style={{ display: 'block', width: '100%', backgroundColor: 'transparent', ...style }}
                 data-ad-client="ca-pub-5316139592191698"
                 data-ad-slot={slotId}
                 data-ad-format={format}
