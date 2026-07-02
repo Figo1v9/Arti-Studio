@@ -1,7 +1,7 @@
 # ═══════════════════════════════════════════════════════════════
 # 🌐 Arti Studio - robots.txt
 # Domain: https://artistudio.fun
-# Generated: 2026-07-02T19:32:05.410Z
+# Generated: 2026-07-02T19:36:43.942Z
 # ═══════════════════════════════════════════════════════════════
 
 # Allow all good search engines
