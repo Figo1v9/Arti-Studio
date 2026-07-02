@@ -17,7 +17,13 @@ export function AnnouncementBar() {
         setAnnouncement(data);
     };
 
-    if (!announcement || !visible) return null;
+    const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+    const isExcludedPage = pathname.startsWith('/login') || 
+                            pathname.startsWith('/register') || 
+                            pathname.startsWith('/forgot-password') || 
+                            pathname.startsWith('/admin-mk-dashboard');
+
+    if (!announcement || !visible || isExcludedPage) return null;
 
     return (
         <div className="relative bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 text-white overflow-hidden">

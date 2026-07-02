@@ -54,7 +54,7 @@ export function AuthLayout({ children, title, subtitle, variant = 'login' }: Aut
     }, [variant]);
 
     return (
-        <div className="flex-1 min-h-full flex bg-slate-950">
+        <div className="min-h-screen flex bg-slate-950 w-full">
             {/* Left Panel - Branding Side (Hidden on mobile) */}
             <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden">
                 {/* Base gradient matching site background */}
@@ -198,7 +198,7 @@ export function AuthLayout({ children, title, subtitle, variant = 'login' }: Aut
             </div>
 
             {/* Right Panel - Form Side */}
-            <div className="flex-1 flex flex-col min-h-full relative">
+            <div className="flex-1 flex flex-col min-h-screen relative">
                 {/* Background for right panel */}
                 <div className="absolute inset-0 bg-slate-950">
                     {/* Subtle grid on mobile too */}
