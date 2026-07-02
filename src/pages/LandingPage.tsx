@@ -33,32 +33,32 @@ export default function LandingPage() {
     // We could fetch real images here, or use high-quality static placeholders for the landing page for speed
     // For now, I'll use some placeholder URLs or real ones if available
 
-    // Example placeholders - replace with curated best-of-platform images
+    // Highly reliable, active Unsplash image URLs for landing page presentation
     const photoImages = [
-        "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=600&q=60",
-        "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&q=60",
-        "https://images.unsplash.com/photo-1682687982501-1e58ab814714?w=600&q=60",
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=60",
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&q=60",
-        "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=600&q=60"
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1472214222541-d510753a8707?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&auto=format&fit=crop&q=60"
     ];
 
     const aiImages = [
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=60", // AI brain
-        "https://images.unsplash.com/photo-1686191129966-4d343466db9d?w=600&q=60", // Abstract 3D
-        "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=60", // Cyberpunk
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=60", // Liquid
-        "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=60", // Gradient
-        "https://images.unsplash.com/photo-1614728446136-69735186b4d9?w=600&q=60"  // Abstract
+        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=600&auto=format&fit=crop&q=60"
     ];
 
     const artImages = [
-        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&q=60",
-        "https://images.unsplash.com/photo-1563089145-599997674d42?w=600&q=60",
-        "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=600&q=60",
-        "https://images.unsplash.com/photo-1569982175971-d92b01cf8694?w=600&q=60",
-        "https://images.unsplash.com/photo-1549490349-8643362247b5?w=600&q=60",
-        "https://images.unsplash.com/photo-1578301978018-77f2892d9612?w=600&q=60"
+        "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&auto=format&fit=crop&q=60",
+        "https://images.unsplash.com/photo-1501472312651-726afd116ff1?w=600&auto=format&fit=crop&q=60"
     ];
 
     return (
