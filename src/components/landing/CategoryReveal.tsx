@@ -103,7 +103,7 @@ export function CategoryReveal({ title, subtitle, description, images, categoryI
                     <div
                         key={i}
                         className={cn(
-                            `image-card-${categoryId} absolute rounded-xl overflow-hidden shadow-2xl border ${style.border}`,
+                            `image-card-${categoryId} absolute rounded-xl overflow-hidden shadow-2xl border ${style.border} opacity-0`,
                             // Different positions for 6 images to frame the text
                             // This is a manual layout for 'organized chaos'
                             i === 0 ? "w-[20vw] h-[25vw] left-[5%] top-[15%]" :

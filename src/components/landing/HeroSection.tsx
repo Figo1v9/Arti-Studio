@@ -151,7 +151,7 @@ export function HeroSection() {
                 >
                     <h1
                         ref={textRef}
-                        className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[1.1]"
+                        className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[1.1] opacity-0"
                     >
                         {/* Desktop: Variable Proximity Effect */}
                         <span className="hidden lg:block">
@@ -221,13 +221,13 @@ export function HeroSection() {
                 <div className="overflow-hidden mb-12">
                     <p
                         ref={subtextRef}
-                        className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light tracking-wide"
+                        className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light tracking-wide opacity-0"
                     >
                         Experience a new era of digital creativity. Where imagination meets intelligence.
                     </p>
                 </div>
 
-                <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-6 opacity-0">
                     <RainbowButton
                         onClick={() => navigate('/login?signup=true')}
                         className="group"
