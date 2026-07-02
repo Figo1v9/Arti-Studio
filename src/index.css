@@ -544,22 +544,3 @@
   background-size: 300% 300%;
   animation: border-gradient-rotate 5s ease infinite;
 }
-
-/* Google AdSense Styling - Hide Unfilled Units and Force Transparent Backgrounds */
-ins.adsbygoogle,
-ins.adsbygoogle iframe,
-ins.adsbygoogle * {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* Collapse unfilled ad slots entirely to reclaim layout space and prevent white boxes */
-ins.adsbygoogle[data-ad-status="unfilled"],
-.ad-container:has(ins.adsbygoogle[data-ad-status="unfilled"]) {
-  display: none !important;
-  height: 0px !important;
-  min-height: 0px !important;
-  margin: 0px !important;
-  padding: 0px !important;
-  border: none !important;
-}

@@ -62,7 +62,7 @@ export default function LandingPage() {
     ];
 
     return (
-        <div className="fixed inset-0 bg-slate-950 text-white overflow-y-auto overflow-x-hidden">
+        <div className="fixed inset-0 bg-slate-950 text-white overflow-y-auto overflow-x-hidden landing-scroll-container">
             <Helmet>
                 <title>Arti Studio - AI Creative Suite & Prompt Marketplace</title>
                 <meta name="description" content="The ultimate AI creative suite. Generate, share, and discover top-tier AI art and prompts for Midjourney, Stable Diffusion, and DALL-E." />
