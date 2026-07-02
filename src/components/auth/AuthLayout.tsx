@@ -22,6 +22,26 @@ const springTransition = {
 export function AuthLayout({ children, title, subtitle, variant = 'login' }: AuthLayoutProps) {
     const location = useLocation();
 
+    React.useEffect(() => {
+        // Force slate-950 background on body and html to avoid ugly black viewport gaps on mobile scroll
+        const originalBodyBg = document.body.style.backgroundColor;
+        const originalHtmlBg = document.documentElement.style.backgroundColor;
+        
+        document.body.style.backgroundColor = '#020617'; // slate-950 hex
+        document.documentElement.style.backgroundColor = '#020617';
+        
+        // Also add classes if any styling relies on it
+        document.body.classList.add('bg-slate-950');
+        document.documentElement.classList.add('bg-slate-950');
+        
+        return () => {
+            document.body.style.backgroundColor = originalBodyBg;
+            document.documentElement.style.backgroundColor = originalHtmlBg;
+            document.body.classList.remove('bg-slate-950');
+            document.documentElement.classList.remove('bg-slate-950');
+        };
+    }, []);
+
     // Memoize variant config to prevent unnecessary re-renders
     const config = useMemo(() => {
         const configs = {
@@ -198,7 +218,7 @@ export function AuthLayout({ children, title, subtitle, variant = 'login' }: Aut
             </div>
 
             {/* Right Panel - Form Side */}
-            <div className="flex-1 flex flex-col min-h-screen relative">
+            <div className="flex-1 flex flex-col min-h-screen relative bg-slate-950">
                 {/* Background for right panel */}
                 <div className="absolute inset-0 bg-slate-950">
                     {/* Subtle grid on mobile too */}
