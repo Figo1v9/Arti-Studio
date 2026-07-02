@@ -33,12 +33,9 @@ export function CategoryReveal({ title, subtitle, description, images, categoryI
     const style = THEMES[theme];
 
     useGSAP(() => {
-        const scrollerNode = document.querySelector(".landing-scroll-container");
-
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                scroller: scrollerNode || window,
                 start: "top top",
                 end: "+=150%", // Pins for a while
                 pin: true,

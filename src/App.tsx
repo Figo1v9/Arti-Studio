@@ -329,9 +329,9 @@ const App = () => (
                   v7_relativeSplatPath: true,
                 }}
               >
-                <div className="flex flex-col h-[100dvh] w-full overflow-hidden">
+                <div className="flex flex-col min-h-screen w-full relative">
                   <AnnouncementBar />
-                  <div className="flex-1 min-h-0 w-full relative">
+                  <div className="flex-1 w-full relative">
                     <AnimatedRoutes />
                   </div>
                 </div>
